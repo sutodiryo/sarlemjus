@@ -780,9 +780,9 @@ p {
     03. Hero CSS
 ===========================*/
 .hero-section {
-  padding-top: 20px;
+  padding-top: 100px;
   position: relative;
-  height: 900px;
+  height: 870px;
   display: flex;
   align-items: center;
 }
@@ -853,7 +853,7 @@ p {
 .hero-section .hero-img {
   position: absolute;
   right: 0;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   width: 48%;
   text-align: right;
