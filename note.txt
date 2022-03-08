@@ -1,0 +1,194 @@
+/opt/lampp/lampp startapache && /opt/lampp/lampp startmysql
+
+/opt/lampp/lampp stopapache && /opt/lampp/lampp stopmysql
+
+===================================================================================================
+password dlink
+admin
+P4ssw012d
+
+123empat
+
+https://supersuplement.com/wp-admin
+usr:supersup
+pass:supersup@earth
+===================================================================================================
+$P$BeWgzwK9QrYADoEUu.LlfleHu6bQWy.
+
+jst280 945673
+
+dell latitude 7370 & dell latitude 7470 
+
+No olshop
+Admin berapa level? semua akses, penjualan, inventory, keuangan ?
+Member berapa level ? atau per level aksesnya sama cuma beda perhitungan bonus dan poin saja?
+
+
+zendesk color theme :
+    first = #03363d  (#ed1b23)
+    second = #17494d (#ed1b45)
+
+
+    6c1hdv
+    https://console.idcloudhost.com/referral/6c1hdv
+    yoxgii
+
+//
+warna corporate : merah, putih, kuning, orange
+
+dasbor member : klasemen top rekrut (5), top belanja (5), pengumuman
+minimal pencairan komisi : ?
+
+PAGE JOIN BISNIS
+Kenapa Harus join bisnis Sarlemjus ?
+
+ 1.Bisnis Sarlemjus bisa mulai usaha tanpa moda, alias 0%.
+ 2.Produk SARLEMJUS adalah produk berkualitas & teruji kesehatannya. 
+ 3.Pasar luas & potensi repeat order tinggi alias keuntungan tanpa batas.
+ 4.Sarlemjus Tersertifikasi BPOM & halal MUI.
+ 5.Poin REWARD & bonus menarik.
+ 6.Komisi refferal setiap bulannya.
+ 7.Free kelas bimbingan/pendampingan Belajar Bisnis Online SARLEMJUS  (BBOS) + grup komunitas diskusi. 
+ 8.Bisnis mudah & Terbuka untuk siapa saja.
+ 9.Sudah banyak yang ikut dan membuktikan keberhasilannya. 
+ 10.Team support & admin Sarlemjus yang siap membantu.
+
+Untuk siapa saja bisnis Sarlemjus ini cocok 
+
+1. Pelajar/mahasiswa yang ingin memiliki tambahan uang jajan.
+2. Ibu rumah tangga, yang ingin memiliki penghasilan tambahan dari rumah.
+3. Kamu yang baru ingin mencoba berbisnis tapi bingung mulai dari mana dan bingung jual produk apa.
+4. Kamu yang hobi/suka berjualan.
+5. Dan kamu yang ingin sehat sekaligus sukses dan bebas financial bareng SARLEMJUS.  ^^
+
+
+
+
+PAGE ABOUT US & CONTACT US
+Sarlemjus
+
+Sarlemjus adalah sebuah brand/perusahaan yang  sudah berjalan sejak tahun 2015 dan memiliki tujuan untuk mendukung pola gaya hidup sehat Anda dengan produk-produk Sarlemjus yaitu, Sarlemjus Sarilemon,  Sarlemjus Tea, Sarlemjus Chocolate, Sarlemjus Coffee, & Sarlemjus Ugula.
+isi Sarlemjus
+
+Menjadikan brand produk minuman sehat yang bermanfaat dan disukai oleh konsumen Sarlemjus. Dan visi kami ingin membantu sebanyak banyaknya orang sadar akan gaya hidup sehat. Melalui produk produk Sarlemjus yang sudah teruji khasiat dan kualitas sebagai produk minuman yang sehat. 
+
+Misi Sarlemjus
+
+Menjadikan brand produk minuman sehat yang bermanfaat dan disukai oleh konsumen Sarlemjus. Dan visi kami ingin membantu sebanyak banyaknya orang sadar akan gaya hidup sehat. Melalui produk produk Sarlemjus yang sudah teruji khasiat dan kualitas sebagai produk minuman yang sehat.
+
+
+page:
+
+Homapage✅
+Join bisnis✅
+Shopping
+About us✅
+Contact us✅
+Dashboard member Ds
+Dashboard admin
+
+dll:
+Lp (6)
+konten blog
+testymoni cust & mitra
+Materi kelas
+
+page:
+
+Homapage✅
+Join bisnis✅
+Shopping
+Blog
+About us✅
+Contact us✅
+Dashboard member Ds
+Dashboard admin
+
+dll:
+Lp (6)
+konten blog
+testymoni cust & mitra
+Materi kelas
+
+
+
+
+
+
+
+<VirtualHost *:80>
+ServerName 103.214.113.153
+Redirect 403 /
+ErrorDocument 403 "Sorry, Direct IP access not allowed"
+DocumentRoot /var/www/html
+</VirtualHost>
+
+
+
+
+
+
+
+perkenalkan, nama lengkap saya adalah yogi sulistianto, bisa dipanggil yogi
+saat ini saya sedang bekerja sebagai part time developer di beberapa perusahaan
+saya bekerja di bidang software developer sejak dua ribu lima belas atau sekitar enam tahun
+
+saya pernah mengerjakan berbagai macam projek, mulai dari website, sistem informasi, enterprise resource planning, sistem penjualan, sistem manajemen iklan, sistem penjualan dan lain lain 
+
+untuk skills backend saya biasa memakai bahasa php dan python, untuk php framework codeigniter saya punya nilai sembilan dari sepuluh, untuk php framework laravel nilainya delapan, untuk python framework django nilainya juga delapan, untuk node js nilainya tujuh
+
+untuk skills front end saya sekarang memilih memakai next js yang nilainya delapan, untuk yang lain misal react js nilainya tujuh, vanilla atau plain javascript nilainya delapan, vue js enam, css sembilan, html sembilan
+
+untuk database saya prefer menggunakan mysql yang saya nilai sembilan, dan delapan untuk sql server dan postgree sql
+untuk nosql saya pernah mempelajari mongodb jadi saya bisa memberi nilai tujuh
+
+untuk skills server saya pernah menggunakan virtual private cloud menggunakan debian & litespeed web server, dan untuk skills linux server saya beri nilai delapan
+dan saya pernah mempelajari amazon web service jadi saya bisa beri nilai 7 dan nilai yang sama untuk google cloud platform
+
+
+
+tetapi berdasarkan pengalaman, setelah saya mencoba beberapa kesempatan
+saya punya beberapa kesesuaian pekerjaan, yaitu saya prefer peerjaan backend or fullstack dengan php entah itu menggunakan native PHP atau pakai framework CI atau Laravel
+
+selain yang saya sebutkan diatas saya lihat dan pertimbangkan terlebih dahulu
+
+
+frontpage
+Menu home tambah blog (wordpress)
+
+Member page
+-menu home ok
+-menu kelas
+    langsung daftar artikel X
+    ketika di klik buka arikel lengkap di dalam
+
+-Menu team saya
+    isinya pemantauan team : nama member, kontak, pembelian bulan ini, total poin trus ada action lihat transaksi pembelian
+    
+-Menu poin isinya Pembelian pribadi : nama produk, jumlah pembelian, poin yang didapatkan
+-menu gabung dibuang 
+-Menu gabung isinya : 
+    1. tombol join komunitas telegram
+    2. tombol join komunitas sehat telegram
+-Menu box saran isinya form saran. 
+-floating button cs
+-explore isinya panduan pemakaian
+-menu list transaksi
+
+menu profile :
+    1.update data pribadi
+    2.alamat Pengiriman
+
+-Menu store :
+    1. ongkir belum (set Alamat Pengiriman)
+    2. tampilan produk grid 2 per page
+    3. Tf manual, ketika udah tf ubah status manual di page admin
+    4. Diskon by quatity kolom nya dihapus
+    status transaksi :
+        1. pending/belum dibayar
+        2. dibayar
+        3. dikirim update resi
+        4. diterima update by member= selesai
+
+
+        https://api.whatsapp.com/send/?phone=6282232313366&text=saya%20ingin%20pesan%20nasi%20kuning%20harga%2025rb

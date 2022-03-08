@@ -55,11 +55,11 @@
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url() ?>"><?php echo ($page == 'homepage') ? '<b>Home</b>' : 'Home'; ?></a></li>
                 <!-- <li class="nav-item"><a class="page-scroll" href="<?= base_url('join') ?>"><?php echo ($page == 'join') ? '<b>Join Bisnis</b>' : 'Join Bisnis'; ?></a></li> -->
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url('about') ?>"><?php echo ($page == 'about') ? '<b>About Us</b>' : 'About Us'; ?></a></li>
-                <li class="nav-item"><a class="page-scroll" href="<?= base_url('#') ?>"><?php echo ($page == 'shop') ? '<b>Shop</b>' : 'Shop'; ?></a></li>
                 <!-- <li class="nav-item"><a class="page-scroll" href="<?= base_url('contact') ?>"><?php echo ($page == 'contact') ? '<b>Contact Us</b>' : 'Contact Us'; ?></a></li> -->
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url('lp') ?>">Blog</a></li>
+                <li class="nav-item"><a class="page-scroll" href="<?= base_url('#') ?>"><?php echo ($page == 'shop') ? '<b>Shop</b>' : 'Shop'; ?></a></li>
               </ul>
-              <a href="javascript:void(0)" class="theme-btn">Daftar</a>
+              <a href="javascript:void(0)" class="theme-btn">Daftar/Login</a>
               <!--
               <form action="#" class="search-form">
                 <input type="text" placeholder="Search">

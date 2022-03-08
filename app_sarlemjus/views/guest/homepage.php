@@ -5,11 +5,11 @@
 		<div class="row align-items-center">
 			<div class="col-xl-7 col-lg-6">
 				<div class="hero-content-wrapper">
-					<h1 class="mb-0 wow fadeInDown" data-wow-delay=".2s">SARLEMJUS<br>Make your NATURAL<br>HEALTHY life</h1>
+					<h1 class="mb-0 wow fadeInDown" data-wow-delay=".2s"><img src="<?php echo FRONT_ASSETS ?>img/logo-text.png" alt="" width="220px" class="image wow fadeInRight" data-wow-delay=".5s"><br>Make your NATURAL<br>HEALTHY life</h1>
 					<h2 class="mb-25 wow fadeInDown" data-wow-delay=".2s">Minuman kesehatan, untuk kebutuhan anda !!</h2>
 					<!-- <p class="mb-35 wow fadeInLeft" data-wow-delay=".4s">Minuman kesehatan, untuk kebutuhan anda !!</p> -->
 
-					<!-- <a href="javascript:void(0)" class="theme-btn mt-25">DAFTAR DROPSHIP !</a> -->
+					<a href="javascript:void(0)" class="theme-btn mt-25">Beli Sekarang</a>
 				</div>
 			</div>
 			<div class="col-xl-5 col-lg-6">
@@ -27,6 +27,229 @@
 	</div>
 </section>
 
+<!-- <section class="client-logo-section pt-50">
+	<div class="container">
+		<div class="client-logo-wrapper">
+			<div class="tns-outer" id="tns1-ow">
+				<div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">13 to 16</span> of 5</div>
+				<div id="tns1-mw" class="tns-ovh">
+					<div class="tns-inner" id="tns1-iw">
+						<div class="client-logo-carousel d-flex align-items-center justify-content-between  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transform: translate3d(-57.1429%, 0px, 0px); transition-duration: 0s;">
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item" id="tns1-item0" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item" id="tns1-item3" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-active" id="tns1-item4">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned tns-slide-active">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned tns-slide-active">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned tns-slide-active">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
+							</div>
+							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<section class="feature-section pt-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h4>Responsive Design</h4>
+						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
+							labor dolore magna.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h4>Web Development</h4>
+						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
+							labor dolore magna.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h4>Business Analysis</h4>
+						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
+							labor dolore magna.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feature-section pt-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 text-center">
+				<img src="<?php echo FRONT_ASSETS ?>img/home-2.png" alt="" class="" width="250px">
+			</div>
+			<div class="col-lg-6 col-md-6" style="margin: auto;">
+				<div class="feature-box">
+					<div class="box-content-style feature-content ">
+						<h2>Tentang Sarlemjus</h2>
+						<p class="pt-40">Sarlemjus adalah sebuah brand / perusahaan yang sudah berjalan sejak tahun 2015 dan memiliki tujuan untuk mendukung pola gaya hidup sehat Anda dengan produk-produk Sarlemjus.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feature-section pt-75">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 pt-100">
+				<div class="feature-box box-style" style="background-color: red;">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center" style="color: white;">200k</h3>
+						<h6 class="text-center pt-20" style="color: white;">Ipsum fugiat</h6>
+						<p class="text-center pt-20" style="color: white;">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 pt-50">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">200k</h3>
+						<h6 class="text-center pt-20">Ipsum fugiat</h6>
+						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">200k</h3>
+						<h6 class="text-center pt-20">Ipsum fugiat</h6>
+						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feature-section pt-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 text-center">
+				<div class="feature-box box-style">
+					<img src="<?php echo FRONT_ASSETS ?>img/dropship.jpg" style="width:450px;">
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6" style="margin: auto;">
+				<div class="feature-box">
+					<div class="box-content-style feature-content">
+						<h3>Apa Aja Benefits Join Bisnis Sarlemjus?</h3>
+						<h5 class="pt-20">-Timeless business</h5>
+						<h5>-100% membantu menyehatkan tubuh</h5>
+						<h5>-Produk alami tanpa pengawet</h5>
+						<h5>-Langsung jualan tanpa ribet</h5>
+						<h5>-GRATIS foto + materi posting</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feature-section pt-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-6 text-center">
+				<div class="feature-box box-style">
+					<img src="<?php echo FRONT_ASSETS ?>img/dropship.jpg" style="width:450px;">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section id="home" class="hero-section">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-xl-6 col-lg-6">
+				<div class="about-img-wrapper">
+					<div class="d-inline-block hero-img-right">
+						<img src="<?php echo FRONT_ASSETS ?>img/chocolate.png" alt="" class="image" data-wow-delay=".5s">
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="hero-content-wrapper">
+					<div class="section-title">
+						<span class="wow fadeInUp" data-wow-delay=".2s" style="color: black;">Sekarang minum coklat Enak dan bikin sehat emang ada ?Ada dong.. coklat adalah salah satu makanan/minuman yang banyak sekalii disukai, untuk itu mau nyoklat terus..enak dan sehat ya tentu saja Sarlemjus Chocolate.</span>
+					</div>
+					<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut...</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section id="about" class="">
 	<div class="about-section">
@@ -162,7 +385,7 @@
 		<br>
 		<br>
 	</div>
-</section>
+</section> -->
 
 <!-- <section class="client-logo-section pt-100">
 	<div class="container">
@@ -343,7 +566,7 @@
 <!-- </div>
 </section> -->
 
-<section id="contact" class="contact-section cta-bg img-bg pt-110 pb-100" style="background-image: url('<?php echo FRONT_ASSETS ?>img/cta-bg.jpg');">
+<!-- <section id="contact" class="contact-section cta-bg img-bg pt-110 pb-100" style="background-image: url('<?php echo FRONT_ASSETS ?>img/cta-bg.jpg');">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-xl-8 col-lg-7">
@@ -364,7 +587,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <!-- <section id="pricing" class="pricing-section pt-140 pb-100">
 	<div class="container">
