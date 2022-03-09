@@ -220,8 +220,39 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 text-center">
-				<div class="feature-box img-box-style">
-					<img src="<?php echo FRONT_ASSETS ?>img/chocolate.png" style="max-width:100%; max-height:100%;" >
+				<div class="feature-box img-box-style-full-width ">
+					<img src="<?php echo FRONT_ASSETS ?>img/ugula.png" style="max-width:100%; height: auto;">
+				</div>
+				<h3 class="pt-20">Sarlemjus Lemon</h3>
+				<p class="pt-10">Studi mengatakan bagi yang mengkonsumsi Lemon dapat 75% hidup lebih lama dibanding yang tidak, ini dikarenakan Lemon memiliki kandungan Vitamin C yang dimana zat yang sangat dibutuhkan oleh tubuh kita.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 pt-50">
+				<div class="feature-box box-style" style="background-color: red;">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center" style="color: white;">200k</h3>
+						<h6 class="text-center pt-20" style="color: white;">Ipsum fugiat</h6>
+						<p class="text-center pt-20" style="color: white;">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 pt-50">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">200k</h3>
+						<h6 class="text-center pt-20">Ipsum fugiat</h6>
+						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 pt-50">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">200k</h3>
+						<h6 class="text-center pt-20">Ipsum fugiat</h6>
+						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+					</div>
 				</div>
 			</div>
 		</div>
