@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$config['base_url']                 = 'http://localhost/sarlemjus/';
+$config['base_url']                 = 'http://localhost/project/sarlemjus/';
 
 $config['index_page']               = '';
 
