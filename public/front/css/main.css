@@ -961,6 +961,7 @@ p {
 }
 
 .box-style {
+  /* padding: 0px 0px; */
   padding: 40px 30px;
   border: 1px solid #F4EEFB;
   border-radius: 10px;
@@ -968,6 +969,21 @@ p {
   align-items: center;
   /* justify-content: center; */
   transition: all 0.3s ease-out 0s;
+}
+
+.img-box-style img {
+  max-width: 100%;
+  padding: 0px 0px;
+  /* padding: 40px 30px; */
+  border: 1px solid #F4EEFB;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+  /* justify-content: center; */
+  transition: all 0.3s ease-out 0s;
+  /* object-fit: contain; */
+  /* object-fit: cover; */
+  object-fit: fill;
 }
 
 .box-style:hover {

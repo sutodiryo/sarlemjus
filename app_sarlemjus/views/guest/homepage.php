@@ -196,19 +196,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 text-center">
-				<div class="feature-box box-style">
-					<img src="<?php echo FRONT_ASSETS ?>img/dropship.jpg" style="width:450px;">
+				<div class="feature-box img-box-style">
+					<img src="<?php echo FRONT_ASSETS ?>img/dropship.jpg" style="max-width:100%; max-height:100%;" class="img-benefit">
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6" style="margin: auto;">
 				<div class="feature-box">
 					<div class="box-content-style feature-content">
 						<h3>Apa Aja Benefits Join Bisnis Sarlemjus?</h3>
-						<h5 class="pt-20">-Timeless business</h5>
-						<h5>-100% membantu menyehatkan tubuh</h5>
-						<h5>-Produk alami tanpa pengawet</h5>
-						<h5>-Langsung jualan tanpa ribet</h5>
-						<h5>-GRATIS foto + materi posting</h5>
+						<h5 class="pt-20">1. Timeless business</h5>
+						<h5 class="pt-10">2. 100% membantu menyehatkan tubuh</h5>
+						<h5 class="pt-10">3. Produk alami tanpa pengawet</h5>
+						<h5 class="pt-10">4. Langsung jualan tanpa ribet</h5>
+						<h5 class="pt-10">5. GRATIS foto + materi posting</h5>
 					</div>
 				</div>
 			</div>
@@ -219,9 +219,9 @@
 <section class="feature-section pt-50">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-6 text-center">
-				<div class="feature-box box-style">
-					<img src="<?php echo FRONT_ASSETS ?>img/dropship.jpg" style="width:450px;">
+			<div class="col-lg-12 col-md-12 text-center">
+				<div class="feature-box img-box-style">
+					<img src="<?php echo FRONT_ASSETS ?>img/chocolate.png" style="max-width:100%; max-height:100%;" >
 				</div>
 			</div>
 		</div>
