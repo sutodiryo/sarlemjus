@@ -5,11 +5,22 @@
 		<div class="row align-items-center">
 			<div class="col-xl-7 col-lg-6">
 				<div class="hero-content-wrapper">
-					<h1 class="mb-0 wow fadeInDown" data-wow-delay=".2s"><img src="<?php echo FRONT_ASSETS ?>img/logo-text.png" alt="" width="220px" class="image wow fadeInRight" data-wow-delay=".5s"><br>Make your NATURAL<br>HEALTHY life</h1>
-					<h2 class="mb-25 wow fadeInDown" data-wow-delay=".2s">Minuman kesehatan, untuk kebutuhan anda !!</h2>
+					<h1 class="mb-0 wow fadeInDown" data-wow-delay=".2s">
+						<img src="<?php echo FRONT_ASSETS ?>img/logo-text.png" alt="" width="220px" class="image wow fadeInRight" data-wow-delay=".5s">
+						<br>Make your NATURAL<br>HEALTHY life
+					</h1>
+					<h2 class="mb-20 wow fadeInDown" data-wow-delay=".2s">Minuman kesehatan, untuk kebutuhan anda !!</h2>
 					<!-- <p class="mb-35 wow fadeInLeft" data-wow-delay=".4s">Minuman kesehatan, untuk kebutuhan anda !!</p> -->
 
 					<a href="javascript:void(0)" class="theme-btn mt-25">Beli Sekarang</a>
+					<div class="footer-social-links pt-50">
+						<ul class="d-flex">
+							<li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+							<!-- <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
+							<li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li> -->
+							<li><a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="col-xl-5 col-lg-6">
@@ -158,6 +169,47 @@
 	</div>
 </section>
 
+<section class="feature-section pt-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-6 pt-50">
+				<div class="feature-box">
+					<div class="box-content-style feature-content">
+						<h2>Our Product</h2>
+						<p class="pt-20">Ipsum fugiat veniam irure tempor ut</p>
+						<!-- <p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p> -->
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-6 pt-50">
+				<div class="product-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+					<!-- <div class="box-content-style feature-content"> -->
+					<!-- <h3 class="text-center">200k</h3>
+						<h6 class="text-center pt-20">Ipsum fugiat</h6>
+						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p> -->
+					<!-- </div> -->
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-6 pt-50">
+				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 pt-50">
+				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 pt-50">
+				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 pt-50">
+				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="feature-section pt-75">
 	<div class="container">
 		<div class="row">
@@ -192,7 +244,7 @@
 	</div>
 </section>
 
-<section class="feature-section pt-50">
+<section class="feature-section pt-80">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 text-center">
@@ -216,42 +268,98 @@
 	</div>
 </section>
 
-<section class="feature-section pt-50">
+<section class="feature-section pt-70">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 text-center">
-				<div class="feature-box img-box-style-full-width ">
-					<img src="<?php echo FRONT_ASSETS ?>img/ugula.png" style="max-width:100%; height: auto;">
+			<div class="col-lg-12 col-md-12">
+				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
 				</div>
-				<h3 class="pt-20">Sarlemjus Lemon</h3>
-				<p class="pt-10">Studi mengatakan bagi yang mengkonsumsi Lemon dapat 75% hidup lebih lama dibanding yang tidak, ini dikarenakan Lemon memiliki kandungan Vitamin C yang dimana zat yang sangat dibutuhkan oleh tubuh kita.</p>
+				<h3 class="pt-10">Sarlemjus Lemon.</h3>
+				<div class="col-7">
+					<p class="pt-10 text-justify" style="text-align: justify;">Studi mengatakan bagi yang mengkonsumsi Lemon dapat 75% hidup lebih lama dibanding yang tidak, ini dikarenakan Lemon memiliki kandungan Vitamin C yang dimana zat yang sangat dibutuhkan oleh tubuh kita.</p>
+				</div>
+				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-4 col-md-6 pt-50">
-				<div class="feature-box box-style" style="background-color: red;">
-					<div class="box-content-style feature-content">
-						<h3 class="text-center" style="color: white;">200k</h3>
-						<h6 class="text-center pt-20" style="color: white;">Ipsum fugiat</h6>
-						<p class="text-center pt-20" style="color: white;">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
-					</div>
+			<div class="col-lg-6 col-md-12 pt-50">
+				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
 				</div>
+				<h3 class="pt-20">Sarlemjus Kopi.</h3>
+				<p class="pt-10" style="text-align: justify;">Kopi Sarlemjus kopi herbal perpaduan mix kopi dengan lemon. Sarlemjus Coffe alias kopi lemon bagus untuk yang lagi DIET.. kopi instant gampang banget diminum, buat kamu yang penasaran rasanya seperti apa..yuk tunggu apalagi cobain sekarang !!!</p>
+				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 			</div>
-			<div class="col-lg-4 col-md-6 pt-50">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
-						<h3 class="text-center">200k</h3>
-						<h6 class="text-center pt-20">Ipsum fugiat</h6>
-						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
-					</div>
+			<div class="col-lg-6 col-md-12 pt-50">
+				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
 				</div>
+				<h3 class="pt-20">Sarlemjus U Gula.</h3>
+				<p class="pt-10" style="text-align: justify;">9 dari 10 orang setuju kalau konsumsi yang manis berlebihan itu tidak sehat,tapi coba ganti deh ganti dengan Sarlemjus Ugula aja, gula aren bubuk yang manis nya ga jauh beda dari gula pada umum nya yang tentu saja lebih sehat yaa.</p>
+				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 			</div>
-			<div class="col-lg-4 col-md-6 pt-50">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
-						<h3 class="text-center">200k</h3>
-						<h6 class="text-center pt-20">Ipsum fugiat</h6>
-						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+			<div class="col-lg-6 col-md-12 pt-50">
+				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				</div>
+				<h3 class="pt-20">Sarlemjus Chocolate.</h3>
+				<p class="pt-10" style="text-align: justify;">Sekarang minum coklat Enak dan bikin sehat emang ada ?Ada dong.. coklat adalah salah satu makanan/minuman yang banyak sekalii disukai, untuk itu mau nyoklat terus..enak dan sehat ya tentu saja Sarlemjus Chocolate.</p>
+				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
+			</div>
+			<div class="col-lg-6 col-md-12 pt-50">
+				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				</div>
+				<h3 class="pt-20">Sarlemjus Tea.</h3>
+				<p class="pt-10" style="text-align: justify;">Sarlemjus Tea adalah teh herbal yang terbuat dari ekstrak kulit lemon, sensasi aroma dari kulit lemon yang nikmat dan bikin sehat. Bagus banget untuk Anda yang suka minum teh sekaligus sehat.</p>
+				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="about" class="pt-100">
+	<div class="about-section" style="background-color: red;">
+		<div class="container">
+			<div class="row">
+				<!-- <div class="col-xl-6 col-lg-6">
+					<div class="about-img-wrapper">
+						<div class="about-img position-relative d-inline-block wow fadeInLeft" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+							<img src="assets/img/about/about-img.png" alt="">
+
+							<div class="about-experience">
+								<h3>5 Year Of Working Experience</h3>
+								<p>We Crafted an aweso design library that is robust and intuitive to use.</p>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="col-xl-8 col-lg-12">
+					<div class="about-content-wrapper">
+						<div class="section-title">
+							<h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight; color:white;">Anda Mau jadi Reseller Sarlemjus??</h2>
+							<span class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color:white;">Gabung menjadi Reseller Sarlemjus itu seru banget lohh... ada banyak sekali keuntungan yang bisa anda dapat seperti :</span>
+						</div>
+						<div class="about-content">
+							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Menggunakan suport system berupa platfrom Dropship.Sarlemjus.com yang sangat mudah digunakan.</p>
+							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Anda akan mendapatkan Reward/keuntungan yang terdiri dari Potongan Harga, Bonus Belanja, Bonus Refferal, Top Belanja, & Top Rekrut.</p>
+							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Bonus-Bonus lainnya.</p>
+							<p class="mt-10 mb-45 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Baru awam berbisnis?? tenang aja karena di Sarlemjus Anda akan wajib mengikuti kelas yang kita sediakan untuk belajar bisnis dari A-Z.</p>
+
+							<!-- <div class="counter-up wow fadeInUp" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+								<div class="counter">
+									<span id="secondo" class="countup count color-1" cup-end="30" cup-append="k">30k</span>
+									<h4>Happy Client</h4>
+									<p>We Crafted an awesome design <br class="d-none d-md-block d-lg-none d-xl-block"> library that is robust and</p>
+								</div>
+								<div class="counter">
+									<span id="secondo" class="countup count color-2" cup-end="42" cup-append="k">42k</span>
+									<h4>Project Done</h4>
+									<p>We Crafted an awesome design <br class="d-none d-md-block d-lg-none d-xl-block"> library that is robust and</p>
+								</div>
+							</div> -->
+						</div>
+						<div class="section-title">
+							<span class="wow fadeInUp" data-wow-delay=".2s" style="color:white;">Dan banyak lagii</span>
+						</div>
+						<br>
+						<a href="javascript:void(0)" class="theme-btn-white mt-25" style=" background-color: white; border: none;">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -259,6 +367,33 @@
 	</div>
 </section>
 
+<section class="feature-section pt-130 pb-130">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-12 col-md-6">
+				<div class="feature-box box-style" style="background-color: #FFF8F1;">
+					<!-- <div class="feature-icon box-icon-style">
+						<i class="lni lni-layers"></i>
+					</div> -->
+					<div class="box-content-style feature-content">
+						<div class="row">
+
+							<div class="col-sm-8">
+								<h4>SHOP NOW, PAY LATER</h4>
+								<p>laborum aliquip anim. Culpa do anim esse consectetur adipisicing</p>
+							</div>
+							<div class="col-sm-4">
+								<a href="javascript:void(0)" class="theme-btn mt-25">Find Out More</i></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- <section id="home" class="hero-section">
 	<div class="container">
