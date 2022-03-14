@@ -1028,7 +1028,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     /* background-color: red;
     background-repeat: no-repeat;
     background-size: cover; */
-    min-height: 250px;
+    min-height: 370px;
 }
 
 .product-box-full-width{

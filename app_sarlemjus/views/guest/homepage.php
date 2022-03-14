@@ -121,30 +121,20 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
+				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/natural.png'); background-color: #e62129; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
+					<!-- <div class="box-content-style feature-content">
 						<h4>Responsive Design</h4>
 						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
 							labor dolore magna.</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
-						<h4>Web Development</h4>
-						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-							labor dolore magna.</p>
-					</div>
+				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/mui-bpom.png'); background-color: #e62129; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
-						<h4>Business Analysis</h4>
-						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-							labor dolore magna.</p>
-					</div>
+				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/bisnis.png'); background-color: #e62129; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
 				</div>
 			</div>
 		</div>
@@ -182,7 +172,7 @@
 				</div>
 			</div>
 			<div class="col-lg-5 col-md-6 pt-50">
-				<div class="product-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>ugula.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover;">
 					<!-- <div class="box-content-style feature-content"> -->
 					<!-- <h3 class="text-center">200k</h3>
 						<h6 class="text-center pt-20">Ipsum fugiat</h6>
@@ -191,15 +181,15 @@
 				</div>
 			</div>
 			<div class="col-lg-5 col-md-6 pt-50">
-				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background-color: red; background: url('<?= base_url('public/upload/product/') ?>sarlemjus-lemon-500.jpg'); background-repeat: no-repeat; background-size: cover;">
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 pt-50">
-				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background-color: red; background: url('<?= base_url('public/upload/product/') ?>kopi.jpg'); background-repeat: no-repeat; background-size: cover;">
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 pt-50">
-				<div class="product-box box-style" style="background-color: red; background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background-color: red; background: url('<?= base_url('public/upload/product/') ?>sarlemjus-coklat.jpg'); background-repeat: no-repeat; background-size: cover;">
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 pt-50">
@@ -272,7 +262,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
-				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/lemon-full-width.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover;">
 				</div>
 				<h3 class="pt-10">Sarlemjus Lemon.</h3>
 				<div class="col-7">
@@ -283,28 +273,28 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-12 pt-50">
-				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>kopi.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;">
 				</div>
 				<h3 class="pt-20">Sarlemjus Kopi.</h3>
 				<p class="pt-10" style="text-align: justify;">Kopi Sarlemjus kopi herbal perpaduan mix kopi dengan lemon. Sarlemjus Coffe alias kopi lemon bagus untuk yang lagi DIET.. kopi instant gampang banget diminum, buat kamu yang penasaran rasanya seperti apa..yuk tunggu apalagi cobain sekarang !!!</p>
 				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 			</div>
 			<div class="col-lg-6 col-md-12 pt-50">
-				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>ugula.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;">
 				</div>
 				<h3 class="pt-20">Sarlemjus U Gula.</h3>
 				<p class="pt-10" style="text-align: justify;">9 dari 10 orang setuju kalau konsumsi yang manis berlebihan itu tidak sehat,tapi coba ganti deh ganti dengan Sarlemjus Ugula aja, gula aren bubuk yang manis nya ga jauh beda dari gula pada umum nya yang tentu saja lebih sehat yaa.</p>
 				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 			</div>
 			<div class="col-lg-6 col-md-12 pt-50">
-				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>sarlemjus-coklat.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;">
 				</div>
 				<h3 class="pt-20">Sarlemjus Chocolate.</h3>
 				<p class="pt-10" style="text-align: justify;">Sekarang minum coklat Enak dan bikin sehat emang ada ?Ada dong.. coklat adalah salah satu makanan/minuman yang banyak sekalii disukai, untuk itu mau nyoklat terus..enak dan sehat ya tentu saja Sarlemjus Chocolate.</p>
 				<a href="javascript:void(0)" class="theme-btn mt-25">Lebih Lanjut <i class="lni lni-arrow-right"></i></a>
 			</div>
 			<div class="col-lg-6 col-md-12 pt-50">
-				<div class="product-box-full-width box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/ugula.png'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>sarlemjus-tea.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover; background-position: center;">
 				</div>
 				<h3 class="pt-20">Sarlemjus Tea.</h3>
 				<p class="pt-10" style="text-align: justify;">Sarlemjus Tea adalah teh herbal yang terbuat dari ekstrak kulit lemon, sensasi aroma dari kulit lemon yang nikmat dan bikin sehat. Bagus banget untuk Anda yang suka minum teh sekaligus sehat.</p>
