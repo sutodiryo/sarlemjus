@@ -2,9 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-4 col-lg-12 col-md-12">
-        <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
-          <a href="index.html" class="logo mb-30"><img src="<?php echo FRONT_ASSETS ?>img/logo-1.png" alt="logo"></a>
-          <div class="footer-social-links" style="align-items: center;">
+        <div class="footer-widget mb-60 wow fadeInLeft text-center" data-wow-delay=".2s">
+          <a href="<?= base_url() ?>" class="logo mb-10"><img src="<?php echo FRONT_ASSETS ?>img/logo-1.png" alt="logo"></a>
+          <p class="mb-10">South Jakarta, Indonesia.</p>
+          <div class="footer-social-links">
             <ul class="">
               <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
               <!-- <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
