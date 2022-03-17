@@ -69,9 +69,9 @@
                         <label>Navigation</label>
                     </li>
 
-                    <li class="nav-item <?php if ($page['id'] == "dashboard") {
+                    <!-- <li class="nav-item <?php if ($page['id'] == "dashboard") {
                                             echo "active";
-                                        } ?>"><a href="<?php echo base_url('member') ?>" class="nav-link"><span class="pcoded-micon"><i class="fas fa-home"></i></span><span class="pcoded-mtext">Home</span></a></li> <!-- fas fa-tachometer-alt -->
+                                        } ?>"><a href="<?php echo base_url('member') ?>" class="nav-link"><span class="pcoded-micon"><i class="fas fa-home"></i></span><span class="pcoded-mtext">Home</span></a></li> -->
 
                     <li class="nav-item <?php if ($page['id'] == "store") {
                                             echo "active";

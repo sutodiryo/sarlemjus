@@ -38,90 +38,11 @@
 	</div>
 </section>
 
-<!-- <section class="client-logo-section pt-50">
-	<div class="container">
-		<div class="client-logo-wrapper">
-			<div class="tns-outer" id="tns1-ow">
-				<div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">13 to 16</span> of 5</div>
-				<div id="tns1-mw" class="tns-ovh">
-					<div class="tns-inner" id="tns1-iw">
-						<div class="client-logo-carousel d-flex align-items-center justify-content-between  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transform: translate3d(-57.1429%, 0px, 0px); transition-duration: 0s;">
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item" id="tns1-item0" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item" id="tns1-item3" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-active" id="tns1-item4">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned tns-slide-active">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned tns-slide-active">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned tns-slide-active">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/graygrids-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/uideck-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/pagebulb-logo.svg" alt="">
-							</div>
-							<div class="client-logo tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-								<img src="<?php echo FRONT_ASSETS ?>img/client-logo/lineicons-logo.svg" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-
 <section class="feature-section pt-50">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/natural.png'); background-color: #e62129; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
+				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/natural.png'); background-color: #FFF8F1; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
 					<!-- <div class="box-content-style feature-content">
 						<h4>Responsive Design</h4>
 						<p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
@@ -130,11 +51,11 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/mui-bpom.png'); background-color: #e62129; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
+				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/mui-bpom.png'); background-color: #FFF8F1; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/bisnis.png'); background-color: #e62129; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
+				<div class="feature-box box-style" style="background: url('<?php echo FRONT_ASSETS ?>img/bisnis.png'); background-color: #FFF8F1; background-repeat: no-repeat; background-size: contain; background-position: center; height: 300px;">
 				</div>
 			</div>
 		</div>
@@ -163,16 +84,16 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 col-md-6 pt-50">
-				<div class="feature-box">
+				<div class="feature-box" style="margin: auto;">
 					<div class="box-content-style feature-content">
-						<h2>Our Product</h2>
-						<p class="pt-20">Ipsum fugiat veniam irure tempor ut</p>
+						<h1>Our New Product</h1>
+						<!-- <p class="pt-20">Ipsum fugiat veniam irure tempor ut</p> -->
 						<!-- <p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p> -->
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-5 col-md-6 pt-50">
-				<div class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>ugula.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover;">
+				<div onclick="href='<?= base_url() ?>'" class="product-box box-style" style="background: url('<?= base_url('public/upload/product/') ?>ugula.jpg'); background-color: red; background-repeat: no-repeat; background-size: cover;">
 					<!-- <div class="box-content-style feature-content"> -->
 					<!-- <h3 class="text-center">200k</h3>
 						<h6 class="text-center pt-20">Ipsum fugiat</h6>

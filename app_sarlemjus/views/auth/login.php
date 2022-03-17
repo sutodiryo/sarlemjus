@@ -24,7 +24,7 @@
             <div class="col-sm-10 auth-content w-auto">
                 <img src="<?php echo ASSETS ?>images/logo-mini.png" alt="" class="img-fluid">
                 <h1 class="text-white my-4">Welcome Back!</h1>
-                <h4 class="text-white font-weight-normal">Signin to your account and get explore the Able pro Dashboard Template.<br />Do not forget to play with live customizer</h4>
+                <!-- <h4 class="text-white font-weight-normal">Signin to your account and get explore the Able pro Dashboard Template.<br />Do not forget to play with live customizer</h4> -->
             </div>
         </div>
         <div class="auth-side-form">
@@ -48,14 +48,14 @@
                         <label class="custom-control-label" for="customCheck1">Ingat informasi log in saya</label>
                     </div>
                     <button class="btn btn-block btn-primary mb-4">Sign In</button>
-                    <!-- <div class="text-center">
+                    <div class="text-center">
                         <div class="saprator my-4"><span>OR</span></div>
-                        <button class="btn text-white bg-facebook mb-2 mr-2  wid-40 px-0 hei-40 rounded-circle"><i class="fab fa-facebook-f"></i></button>
+                        <!-- <button class="btn text-white bg-facebook mb-2 mr-2  wid-40 px-0 hei-40 rounded-circle"><i class="fab fa-facebook-f"></i></button>
                         <button class="btn text-white bg-googleplus mb-2 mr-2 wid-40 px-0 hei-40 rounded-circle"><i class="fab fa-google-plus-g"></i></button>
-                        <button class="btn text-white bg-twitter mb-2  wid-40 px-0 hei-40 rounded-circle"><i class="fab fa-twitter"></i></button>
-                        <p class="mb-2 mt-4 text-muted">Forgot password? <a href="auth-reset-password-img-side.html" class="f-w-400">Reset</a></p>
-                        <p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup-img-side.html" class="f-w-400">Signup</a></p>
-                    </div> -->
+                        <button class="btn text-white bg-twitter mb-2  wid-40 px-0 hei-40 rounded-circle"><i class="fab fa-twitter"></i></button> -->
+                        <!-- <p class="mb-2 mt-4 text-muted">Forgot password? <a href="<?=base_url('resetpassword')?>" class="f-w-400">Reset</a></p> -->
+                        <p class="mb-0 text-muted">Don’t have an account? <a href="<?=base_url('reg')?>" class="f-w-400">Daftar</a></p>
+                    </div>
                 </form>
             </div>
         </div>

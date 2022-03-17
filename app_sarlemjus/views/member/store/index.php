@@ -23,20 +23,58 @@
     <div class="row">
 
       <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row align-items-center m-l-0">
+              <div class="col-sm-6">
+              </div>
+              <div class="col-sm-6 text-right">
+                <a data-toggle="modal" href="#modal_cart" class="btn btn-primary">Large modal</a>
+
+                <a class="btn btn-info btn-sm btn-round has-ripple" href="#cart"><i class="feather icon-shopping-cart"></i> Keranjang Belanja</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row">
 
-          <?php foreach ($product as $p) { ?>
+          <?php foreach ($product as $p) {
+            $stock = $p->stock_plus - $p->stock_min;
+            ?>
 
             <div class="col-md-6 col-xl-4">
               <div class="card mb-3">
                 <img class="img-fluid card-img-top" src="<?= "" . base_url('public/upload/product/') . "$p->image" ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"><?= $p->name ?></h5>
-                  <p class="card-text"><?= " . idr($p->selling_price) . " ?></p>
+                  <!-- <p class="card-text"><?= idr($p->selling_price) ?></p> -->
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h4 class="text-c-yellow"><?= idr($p->selling_price) ?></h4>
+                      <h6 class="text-muted m-b-0">Stok : <?= "$stock $p->unit" ?></h6>
+                    </div>
+                    <div class="col-4 text-center">
+                      <input type='number' name='quantity' id='qty_<?= $p->id ?>' value='1' min='1' max='<?= $stock ?>' class='quantity form-control form-control-sm'>
+                      <p class="text-muted m-b-0">Quantity (<?= $p->unit ?>)</p>
+                      <!-- <i class="feather icon-bar-chart-2 f-28"></i> -->
+                    </div>
+                  </div>
+
+                  <!-- <button class='add_cart btn btn-icon btn-info' data-produkid='<?= $p->id ?>'><i class='fas fa-cart-plus'></i></button> -->
                   <!-- <p class="card-text"><?= substr($c->article, 0, 200) ?> . . .</p> -->
                   <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                   <!-- <a class="btn btn-primary btn-sm has-ripple" href="<?= base_url('member/course/detail/') . $c->slug ?>">Read More<span class="ripple ripple-animate"></span></a> -->
                 </div>
+                <button class="card-footer bg-c-yellow add_cart" data-produkid='<?= $p->id ?>'>
+                  <div class="row align-items-center">
+                    <div class="col-9">
+                      <p class="text-white m-b-0">Tambah ke keranjang</p>
+                    </div>
+                    <div class="col-3 text-right">
+                      <i class="feather icon-shopping-cart text-white f-16"></i>
+                    </div>
+                  </div>
+                </button>
               </div>
             </div>
 
@@ -46,108 +84,77 @@
       </div>
     </div>
 
-    <div class="row">
-
-      <div class="col-lg-12">
-
-        <div class="card">
-          <div class="card-body">
-            <div class="row align-items-center m-l-0">
-              <div class="col-sm-6">
-              </div>
-              <div class="col-sm-6 text-right">
-                <a class="btn btn-info btn-sm btn-round has-ripple" href="#cart"><i class="feather icon-shopping-cart"></i> Keranjang Belanja</a>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <table id="table-store" class="table mb-0">
-                <thead class="thead-light">
-                  <tr>
-                    <th width="35%">Produk</th>
-                    <th width="20%">Harga</th>
-                    <th width="15%">Diskon</th>
-                    <th width="10%">Stok</th>
-                    <th width="10%">Jumlah</th>
-                    <th width="10%"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($product as $p) {
-
-                    $stock = $p->stock_plus - $p->stock_min;
-
-                    echo "<tr>
-                            <td class='align-middle'>
-                              <img src='" . base_url('public/upload/product/') . "$p->image' alt='contact-img' title='contact-img' class='rounded mr-3' height='48' />
-                              <p class='m-0 d-inline-block align-middle font-16'>
-                              <a href='#!' class='text-body'>$p->name</a>
-                            </td>
-                            <td class='align-middle'>" . idr($p->selling_price) . "</td>
-                            <td class='align-middle'>
-                              0%
-                            </td>
-                            <td class='align-middle'>
-                              <span class='badge badge-success'>$stock</span>
-                            </td>
-                            <td>
-                              <input type='number' name='quantity' id='qty_$p->id' value='1' min='1' max='$stock' class='quantity form-control form-control-sm'>
-                            </td>
-                            <td class='table-action'>
-                              <button class='add_cart btn btn-icon btn-info' data-produkid='$p->id' ><i class='fas fa-cart-plus'></i></button>
-                            </td>
-                          </tr>";
-                  } ?>
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card" id="cart">
-          <div class="card-header text-center">
-            <h4>Keranjang Belanja</h4>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th width="40%">Produk</th>
-                    <th width="20%">Harga</th>
-                    <th width="10%">Jumlah Barang</th>
-                    <th width="25%" class="text-right">Subtotal</th>
-                    <th width="5%"></th>
-                  </tr>
-                </thead>
-
-                <tbody id="detail_cart">
-
-                </tbody>
-
-                <tr id="btn_checkout">
-
-                </tr>
-
-                <form method="POST" action="<?php echo base_url('member/store/act_add_transaction/') ?>" id="act_checkout_form">
-                  <input type="hidden" name="shipping_costs" id="shipping_costs_checkout">
-                  <input type="hidden" name="courier_name" id="courier_name">
-                </form>
-
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
 
   </div>
 </div>
 
 <?php $this->load->view('member/_/footer'); ?>
 
+<div class="modal fade bd-example-modal-lg" id="modal_cart" tabindex="-1" role="document" aria-labelledby="modal_cartTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <!-- <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h4" id="myLargeModalLabel">Large Modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div> -->
+    <!-- </div> -->
+
+    <!-- <div class="modal-dialog modal-dialog-centered modal-lg" role="document"> -->
+    <!-- <div class="modal-content">
+        <div class="modal-body"> -->
+
+    <div class="modal-content">
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+          <div class="card" id="cart">
+            <div class="card-header text-center">
+              <h4>Keranjang Belanja</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th width="40%">Produk</th>
+                      <th width="20%">Harga</th>
+                      <th width="10%">Jumlah Barang</th>
+                      <th width="25%" class="text-right">Subtotal</th>
+                      <th width="5%"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="detail_cart">
+
+                  </tbody>
+
+                  <tr id="btn_checkout">
+
+                  </tr>
+
+                  <form method="POST" action="<?php echo base_url('member/store/act_add_transaction/') ?>" id="act_checkout_form">
+                    <input type="hidden" name="shipping_costs" id="shipping_costs_checkout">
+                    <input type="hidden" name="courier_name" id="courier_name">
+                  </form>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- </div>
+      </div> -->
+  </div>
+</div>
 
 <script type="text/javascript">
   let id_promo = 0;

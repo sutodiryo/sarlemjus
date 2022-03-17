@@ -68,12 +68,11 @@
 									</div>
 								</div>
 							</div>
-							<ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
+							<!-- <ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
 								<li class="nav-item">
 									<a class="nav-link text-reset active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true"><i class="feather icon-user mr-2"></i>Profil</a>
 								</li>
-								
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
@@ -81,7 +80,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-8 order-md-2">
+			<div class="col-md-12 order-md-6">
 				<div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 						<div class="card">
@@ -92,7 +91,7 @@
 								</button>
 							</div>
 							<div class="card-body border-top pro-det-edit collapse show" id="pro-det-edit-1">
-								<form>
+								<form >
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label font-weight-bolder">Full Name</label>
 										<div class="col-sm-9">
@@ -105,8 +104,10 @@
 											<?php
 											if ($member->gender == "L") {
 												echo "Laki-laki";
-											} else {
+											} elseif ($member->gender == "P") {
 												echo "Perempuan";
+											} else{
+												echo "-";
 											}
 											?>
 										</div>
@@ -120,7 +121,7 @@
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label font-weight-bolder">Level Member</label>
 										<div class="col-sm-9">
-											<?= $member->level_name ?>
+											<?= $member->level = (NULL) ? "-" :  "$member->level " ?>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -155,7 +156,7 @@
 												<input type='radio' id='gender2' name='gender' class='custom-control-input'>
 												<label class='custom-control-label' for='gender2'>Perempuan</label>
 											</div>";
-											} else {
+											} elseif ($member->gender == "L") {
 												echo "<div class='custom-control custom-radio custom-control-inline'>
 												<input type='radio' id='gender1' name='gender' class='custom-control-input'>
 												<label class='custom-control-label' for='gender1'>Laki-laki</label>
@@ -164,8 +165,18 @@
 												<input type='radio' id='gender2' name='gender' class='custom-control-input' checked>
 												<label class='custom-control-label' for='gender2'>Perempuan</label>
 											</div>";
+											} else {
+												echo "<div class='custom-control custom-radio custom-control-inline'>
+												<input type='radio' id='gender1' name='gender' class='custom-control-input'>
+												<label class='custom-control-label' for='gender1'>Laki-laki</label>
+											</div>
+											<div class='custom-control custom-radio custom-control-inline'>
+												<input type='radio' id='gender2' name='gender' class='custom-control-input'>
+												<label class='custom-control-label' for='gender2'>Perempuan</label>
+											</div>";
 											}
 											?>
+
 										</div>
 									</div>
 									<!-- <div class="form-group row">
@@ -345,10 +356,10 @@ $member->postal_code"; ?></textarea>
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
-			<div class="col-md-4 order-md-1">
+			<!-- <div class="col-md-4 order-md-1">
 				<div class="card new-cust-card">
 					<div class="card-header">
 						<h5>Downline</h5>
@@ -390,7 +401,7 @@ $member->postal_code"; ?></textarea>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<!-- profile body end -->
 	</div>

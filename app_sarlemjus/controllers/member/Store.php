@@ -165,7 +165,7 @@ class Store extends CI_Controller
       $output .= '<tr>
                     <th style="text-align:right;"><small><font color="red" >Anda belum mengatur alamat pengiriman</font></small></th>
                     <th style="text-align:right;">
-                    <a data-toggle="modal" href="' . base_url('member/profile/address') . '" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></a>
+                    <a href="' . base_url('member/profile') . '" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></a>
                     </th>
                   </tr>';
     }

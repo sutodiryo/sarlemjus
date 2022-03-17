@@ -59,7 +59,7 @@
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url('lp') ?>">Blog</a></li>
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url('#') ?>"><?php echo ($page == 'shop') ? '<b>Shop</b>' : 'Shop'; ?></a></li>
               </ul>
-              <a href="javascript:void(0)" class="theme-btn">Daftar/Login</a>
+              <a href="<?= base_url('login') ?>" class="theme-btn">Daftar/Login</a>
               <!--
               <form action="#" class="search-form">
                 <input type="text" placeholder="Search">
