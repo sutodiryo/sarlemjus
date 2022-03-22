@@ -183,19 +183,20 @@ class Transaction_data extends CI_Model
 
     function get_transaction_list()
     {
-        return "SELECT    t.id,t.invoice_number,t.id_member,t.total,t.date_created,t.receipt,t.date_paid,t.date_accepted,t.status,t.type,
-                            m.name AS member_name
+        return "SELECT  t.id,t.invoice_number,t.id_member,t.total,t.date_created,t.receipt,t.date_paid,t.date_accepted,t.status,t.shipping_costs,t.discount_value,t.type,
+                        m.name AS member_name
                     FROM transaction t
                     LEFT JOIN member m ON t.id_member=m.id";
     }
 
     function get_transaction_list_by_member_id($id)
     {
-        return $this->db->query("SELECT t.id,t.invoice_number,t.id_member,t.total,t.date_created,t.receipt,t.date_paid,t.date_accepted,t.status,
+        return $this->db->query("SELECT t.id,t.invoice_number,t.id_member,t.total,t.date_created,t.receipt,t.date_paid,t.date_accepted,t.status,t.shipping_costs,t.discount_value,
                                         m.name AS member_name
                                 FROM transaction t
                                 LEFT JOIN member m ON t.id_member=m.id
-                                WHERE id_member='$id'")->result();
+                                WHERE t.id_member='$id'
+                                ORDER BY t.date_created DESC")->result();
     }
 
     function get_transaction_detail($id)

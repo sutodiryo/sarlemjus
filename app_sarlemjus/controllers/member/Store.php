@@ -56,6 +56,17 @@ class Store extends CI_Controller
     echo $this->cart_show(0); //tampilkan cart setelah added
   }
 
+  function cart_qty()
+  {
+    $tot_qty = array_sum(array_column($this->cart->contents(), 'qty'));
+    $output     = '';
+    $output .= '<strong>' . $tot_qty . '</strong>';
+
+    echo $output;
+
+    // echo $this->cart_show(0);
+  }
+
   function cart_load()
   {
     echo $this->cart_show(0);
@@ -161,12 +172,13 @@ class Store extends CI_Controller
                     </th>
                   <tr>';
     } else {
+      // <a href="' . base_url('member/profile') . '" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></a>
 
       $output .= '<tr>
-                    <th style="text-align:right;"><small><font color="red" >Anda belum mengatur alamat pengiriman</font></small></th>
-                    <th style="text-align:right;">
-                    <a href="' . base_url('member/profile') . '" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></a>
-                    </th>
+                    <div id="add_new_address_form">
+                      <th style="text-align:right;"><small><font color="red" >Anda belum mengatur alamat pengiriman</font></small></th>
+                      <th style="text-align:right;"><button onclick="add_new_address()" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></button></th>
+                    </div>
                   </tr>';
     }
 
@@ -284,6 +296,19 @@ class Store extends CI_Controller
     $this->cart->destroy();
 
     $q = $this->db->query("SELECT t.invoice_number FROM transaction t WHERE t.id='$insert_id'")->row();
+
+    $to = "yoxgii@gmail.com";
+    $subject = "-----------";
+    $message = "------------";
+    $from = "noreply.dev.std@gmail.com";
+    $nama = "aaa";
+
+
+    $this->load->library('Email');
+    $email = new Email;
+    $data = $email->send($to, $subject, $message, $from, $nama);
+    // $data = json_decode($data, true);
+
     $this->alert('info', 'Pesanan berhasil disimpan! Segera lunasi tagihan lalu tunggu konfirmasi dari admin...');
     redirect(base_url('member/transaction/invoice/' . $q->invoice_number . ''));
   }

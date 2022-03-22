@@ -11,6 +11,7 @@ class Profile extends CI_Controller
       redirect(base_url('login'));
     }
     $this->load->model('Member_data');
+    $this->load->model('Location_data');
   }
 
   function index()
@@ -30,6 +31,7 @@ class Profile extends CI_Controller
     $id = $this->session->userdata('log_id');
 
     $data['member'] = $this->Member_data->get_member_detail($id);
+    $data['province'] = $this->Location_data->get_province($id);
     $data['downline'] = $this->Member_data->get_member_downline($id);
 
     $this->load->view('member/profile/index', $data);
