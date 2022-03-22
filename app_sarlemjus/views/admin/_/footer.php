@@ -81,7 +81,9 @@
   <script src="<?php echo ASSETS ?>js/plugins/jquery.dataTables.min.js"></script>
   <script src="<?php echo ASSETS ?>js/plugins/dataTables.bootstrap4.min.js"></script>
   <script>
-    $('#table_transaction').DataTable();
+    $('#table_transaction').DataTable({
+      "aaSorting": []
+    });
   </script>
 <?php } elseif ($page == "member") { ?>
 
@@ -91,7 +93,9 @@
   <script src="<?php echo ASSETS ?>js/plugins/dataTables.bootstrap4.min.js"></script>
   <!-- <script src="<?php echo ASSETS ?>js/pages/data-basic-custom.js"></script> -->
   <script>
-    $('#table_member').DataTable();
+    $('#table_member').DataTable({
+      "aaSorting": []
+    });
   </script>
   <?php if ($title == "Detail Member") { ?>
 
@@ -153,12 +157,12 @@
     </script>
   <?php
     } elseif ($title == "Stok Produk ") { ?>
-      <script>
-        $('#table_stock_product_list').DataTable();
-      </script>
-      <script>
-        $('#table_stock_product_list_trans').DataTable();
-      </script>
+    <script>
+      $('#table_stock_product_list').DataTable();
+    </script>
+    <script>
+      $('#table_stock_product_list_trans').DataTable();
+    </script>
   <?php
     } ?>
 

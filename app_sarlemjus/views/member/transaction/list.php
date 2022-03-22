@@ -58,9 +58,11 @@
                     $date_created = new DateTime($t->date_created);
                     // <td><a href='#'>" . substr($t->name, 0, 30) . "</a></td>
 
+                    $total = ($t->total - $t->discount_value) + $t->shipping_costs;
+
                     echo "<tr>
                             <td class='text-center'><a href='" . base_url('member/transaction/invoice/') . "$t->invoice_number'>$t->invoice_number</a></td>
-                            <td class='text-right'>" . idr($t->total) . "</td>
+                            <td class='text-right'>" . idr($total) . "</td>
                             <td class='text-center'>" . $date_created->format('d M Y') . " <small>Pukul " . $date_created->format('H:i') . "</small></td>
                             <td class='text-center'>";
 

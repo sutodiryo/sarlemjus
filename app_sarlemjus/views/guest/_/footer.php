@@ -21,12 +21,12 @@
         <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
           <h4>Quick Link</h4>
           <ul class="footer-links">
-            <li><a href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">About Us</a></li>
-            <li><a href="javascript:void(0)">Blog</a></li>
-            <li><a href="javascript:void(0)">Shop</a></li>
-            <li><a href="javascript:void(0)">Login/Register</a></li>
-            <li><a href="javascript:void(0)">Terms & Condition</a></li>            
+            <li><a href="<?= base_url()?>">Home</a></li>
+            <li><a href="<?= base_url('about')?>">About Us</a></li>
+            <li><a href="<?= base_url('lp')?>">Blog</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="<?= base_url('login')?>">Login/Register</a></li>
+            <li><a href="<?= base_url('tc')?>">Terms & Condition</a></li>
           </ul>
         </div>
       </div>
@@ -41,17 +41,13 @@
       </div> -->
       <div class="col-xl-4 col-lg-3 col-md-6">
         <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
-          <h4>Newsletter</h4>
-          <ul class="footer-contact">
-            <li>
-              <p>+00983467367234</p>
-            </li>
-            <li>
-              <p>yourmail@gmail.com</p>
-            </li>
-            <li>
-              <p>United State Of America *12 Street House</p>
-            </li>
+          <h4>Contact</h4>
+          
+          <ul class="footer-links">
+            <li><a href="https://api.whatsapp.com/send/?phone=6281321351753"><i class="lni lni-whatsapp"></i> CS 1 : 081321351753</a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=6282123602448"><i class="lni lni-whatsapp"></i> CS 2 : 082123602448</a></li>
+            <li><a href="mailto:sarlemjusplus@gmail.com"><i class="lni lni-envelope"></i> sarlemjusplus@gmail.com</a></li>
+            <li><a href="#"><i class="lni lni-map-marker"></i> Perumahan Griya Ciledug<br>Jl Anggrek 2 Blok K No.1, Ciledug<br>Tangerang, Banten 15151</a></li>
           </ul>
         </div>
       </div>

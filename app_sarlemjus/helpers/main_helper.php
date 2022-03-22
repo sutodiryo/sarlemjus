@@ -3,7 +3,7 @@
 // Integer to IDR format
 function idr($v)
 {
-    return "Rp" . number_format($v, 0, ',', '.') . "";
+    return "Rp " . number_format($v, 0, ',', '.') . "";
 }
 
 // menampilkan hasil output status header & response ke json

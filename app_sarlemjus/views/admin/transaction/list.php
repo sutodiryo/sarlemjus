@@ -1,6 +1,5 @@
 <?php $this->load->view('admin/_/header'); ?>
 
-
 <div class="pcoded-main-container">
   <div class="pcoded-content">
     <div class="page-header">
@@ -27,7 +26,7 @@
               <div class="col-sm-6">
               </div>
               <div class="col-sm-6 text-right ">
-                <button type="button" class="btn btn-sm btn-info btn-round has-ripple" data-toggle="modal" data-target="#modal_add_transaction" data-whatever="@getbootstrap"><i class="feather icon-plus"></i> Transaksi Baru</button>
+                <!-- <button type="button" class="btn btn-sm btn-info btn-round has-ripple" data-toggle="modal" data-target="#modal_add_transaction" data-whatever="@getbootstrap"><i class="feather icon-plus"></i> Transaksi Baru</button> -->
               </div>
             </div>
             <div class="table-responsive">
@@ -48,6 +47,8 @@
                   foreach ($transaction as $t) {
 
                     $date_created = new DateTime($t->date_created);
+
+                    $total = ($t->total - $t->discount_value) + $t->shipping_costs;
 
                     echo "<tr>
                     <td><a href='" . base_url('admin/transaction/invoice/') . "$t->invoice_number' target='_blank'>$t->invoice_number</a></td>
@@ -71,7 +72,7 @@
                     }
 
                     echo "</td>
-                    <td class='text-right'>" . idr($t->total) . "</td>
+                    <td class='text-right'>" . idr($total) . "</td>
                     <td class='text-center'>
                       <a href='" . base_url('admin/transaction/invoice/') . "$t->invoice_number' target='_blank' class='btn btn-sm btn-outline-dark has-ripple'><i class='fas fa-eye icon-info'></i> Detail</a>
                     </td>

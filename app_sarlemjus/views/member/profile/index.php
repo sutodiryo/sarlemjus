@@ -54,26 +54,33 @@
 						<div class="col-md-8 mt-md-4">
 							<div class="row">
 								<div class="col-md-6">
-									<a href="mailto:<?= $member->email ?>" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><?= $member->email ?></a>
+									<a href="#" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><?= $member->email ?></a>
+									<!-- <a href="mailto:<?= $member->email ?>" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i><?= $member->email ?></a> -->
 									<div class="clearfix"></div>
-									<a href="https://wa.me/62<?= $member->phone ?>" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i>+62 <?= $member->phone ?></a>
+									<a href="#" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="fab fa-whatsapp mr-2 f-18"></i>+62 <?= $member->phone ?></a>
+									<!-- <a href="https://wa.me/62<?= $member->phone ?>" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i>+62 <?= $member->phone ?></a> -->
 								</div>
 								<div class="col-md-6">
 									<div class="media">
 										<i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
 										<div class="media-body">
-											<p class="mb-0 text-muted"><?php echo "$member->postal_code $member->district_name"; ?></p>
-											<p class="mb-0 text-muted"><?= $member->address ?></p>
+											<?php if (!empty($member->village)) { ?>
+												<p class="mb-0 text-muted"><?php echo "$member->postal_code $member->district_name"; ?></p>
+												<p class="mb-0 text-muted"><?= $member->address ?></p>
+											<?php
+											} else { ?>
+												<p class="mb-0 text-muted">Anda belum mengatur alamat.</p>
+												<p class="mb-0 text-muted"><a href="#alamat">Lengkapi sekarang...</a></p>
+											<?php } ?>
 										</div>
 									</div>
 								</div>
 							</div>
-							<ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
+							<!-- <ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
 								<li class="nav-item">
 									<a class="nav-link text-reset active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true"><i class="feather icon-user mr-2"></i>Profil</a>
 								</li>
-								
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
@@ -81,7 +88,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-8 order-md-2">
+			<div class="col-md-12 order-md-6">
 				<div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 						<div class="card">
@@ -94,7 +101,7 @@
 							<div class="card-body border-top pro-det-edit collapse show" id="pro-det-edit-1">
 								<form>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Full Name</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">Nama Lengkap</label>
 										<div class="col-sm-9">
 											<?= $member->name ?>
 										</div>
@@ -105,8 +112,10 @@
 											<?php
 											if ($member->gender == "L") {
 												echo "Laki-laki";
-											} else {
+											} elseif ($member->gender == "P") {
 												echo "Perempuan";
+											} else {
+												echo "-";
 											}
 											?>
 										</div>
@@ -120,11 +129,11 @@
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label font-weight-bolder">Level Member</label>
 										<div class="col-sm-9">
-											<?= $member->level_name ?>
+											<?= empty($member->level) ? "-" : "$member->level " ?>
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label font-weight-bolder">Location</label>
+										<label class="col-sm-3 col-form-label font-weight-bolder">Alamat</label>
 										<div class="col-sm-9">
 											<p class="mb-0 text-muted"><?php echo "$member->village_name, $member->subdistrict_name, $member->district_name,$member->province_name"; ?></p>
 											<p class="mb-0 text-muted"><?= $member->address ?></p>
@@ -155,7 +164,7 @@
 												<input type='radio' id='gender2' name='gender' class='custom-control-input'>
 												<label class='custom-control-label' for='gender2'>Perempuan</label>
 											</div>";
-											} else {
+											} elseif ($member->gender == "L") {
 												echo "<div class='custom-control custom-radio custom-control-inline'>
 												<input type='radio' id='gender1' name='gender' class='custom-control-input'>
 												<label class='custom-control-label' for='gender1'>Laki-laki</label>
@@ -164,8 +173,18 @@
 												<input type='radio' id='gender2' name='gender' class='custom-control-input' checked>
 												<label class='custom-control-label' for='gender2'>Perempuan</label>
 											</div>";
+											} else {
+												echo "<div class='custom-control custom-radio custom-control-inline'>
+												<input type='radio' id='gender1' name='gender' class='custom-control-input'>
+												<label class='custom-control-label' for='gender1'>Laki-laki</label>
+											</div>
+											<div class='custom-control custom-radio custom-control-inline'>
+												<input type='radio' id='gender2' name='gender' class='custom-control-input'>
+												<label class='custom-control-label' for='gender2'>Perempuan</label>
+											</div>";
 											}
 											?>
+
 										</div>
 									</div>
 									<!-- <div class="form-group row">
@@ -201,6 +220,7 @@ $member->postal_code"; ?></textarea>
 								</form>
 							</div>
 						</div>
+
 						<div class="card">
 							<div class="card-body d-flex align-items-center justify-content-between">
 								<h5 class="mb-0">Kontak</h5>
@@ -300,7 +320,7 @@ $member->postal_code"; ?></textarea>
 									</div>
 								</form>
 							</div>
-							<div class="card-body border-top pro-wrk-edit collapse " id="pro-wrk-edit-2">
+							<div class="card-body border-top pro-wrk-edit collapse" id="pro-wrk-edit-2">
 								<form>
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label font-weight-bolder">Occupation</label>
@@ -344,11 +364,148 @@ $member->postal_code"; ?></textarea>
 								</form>
 							</div>
 						</div>
+
+
+						<div class="card  select-card" id="alamat">
+							<div class="card-body d-flex align-items-center justify-content-between">
+								<h5 class="mb-0">Alamat Pengiriman</h5>
+								<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-address-edit" aria-expanded="false" aria-controls="pro-address-edit-1 pro-address-edit-2">
+									<i class="feather icon-edit"></i>
+								</button>
+							</div>
+							<div class="card-body border-top pro-address-edit collapse show" id="pro-address-edit-1">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Provinsi</label>
+										<div class="col-sm-9">
+											<?= $member->province_name ?>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Kota/Kabupaten</label>
+										<div class="col-sm-9">
+											<?= $member->district_name ?>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Kecamatan</label>
+										<div class="col-sm-9">
+											<?= $member->subdistrict_name ?>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Desa/Kelurahan</label>
+										<div class="col-sm-9">
+											<?= $member->village_name ?>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Alamat Lengkap</label>
+										<div class="col-sm-9">
+
+											<?php if (!empty($member->village)) { ?>
+												<p class="mb-0 text-muted"><?= "$member->village_name, $member->subdistrict_name, $member->district_name,$member->province_name"; ?></p>
+												<p class="mb-0 text-muted"><?= $member->address ?></p>
+												<p class="mb-0 text-muted"><?= $member->postal_code ?></p>
+											<?php
+											} else { ?>
+												<p class="mb-0 text-muted">Anda belum mengatur alamat.</p>
+												<p class="mb-0 text-muted"><a href="#alamat">Lengkapi Alamat</a></p>
+											<?php } ?>
+
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="card-body border-top pro-address-edit collapse" id="pro-address-edit-2">
+								<form action="#" method="POST">
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Provinsi</label>
+										<div class="col-sm-9">
+
+											<select class="js-example-basic-single form-control" id="province">
+												<option selected value="#">Pilih Provinsi</option>
+												<?php
+												foreach ($province as $pro) {
+													echo "<option value='$pro->id'>$pro->name</option>";
+												}
+												?>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Kota/Kabupaten</label>
+										<div class="col-sm-9">
+											<select class="js-example-basic-single form-control" id="district">
+												<option selected value="#">Pilih Kota/Kabupaten</option>
+												<?php
+												foreach ($province as $pro) {
+													echo "<option value='$pro->id'>$pro->name</option>";
+												}
+												?>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Kecamatan</label>
+										<div class="col-sm-9">
+											<select class="js-example-basic-single form-control">
+												<option selected value="#">Pilih Kecamatan</option>
+												<?php
+												foreach ($province as $pro) {
+													echo "<option value='$pro->id'>$pro->name</option>";
+												}
+												?>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Desa/Kelurahan</label>
+										<div class="col-sm-9">
+											<select class="js-example-basic-single form-control">
+												<option selected value="#">Pilih Desa/Kelurahan</option>
+												<?php
+												foreach ($province as $pro) {
+													echo "<option value='$pro->id'>$pro->name</option>";
+												}
+												?>
+											</select>
+										</div>
+									</div>
+
+
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Alamat Lengkap</label>
+										<div class="col-sm-9">
+
+											<?php if (!empty($member->village)) { ?>
+												<p class="mb-0 text-muted"><?= "$member->village_name, $member->subdistrict_name, $member->district_name,$member->province_name"; ?></p>
+												<!-- <p class="mb-0 text-muted"><?= $member->address ?></p> -->
+												<p class="mb-0 text-muted"><?= $member->postal_code ?></p>
+											<?php
+											} else { ?>
+												<p class="mb-0 text-muted">-</p>
+											<?php } ?>
+
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label"></label>
+										<div class="col-sm-9">
+											<button type="submit" class="btn btn-primary">Simpan</button>
+										</div>
+									</div>
+
+							</div>
+						</div>
 					</div>
-					
+
 				</div>
 			</div>
-			<div class="col-md-4 order-md-1">
+			<!-- <div class="col-md-4 order-md-1">
 				<div class="card new-cust-card">
 					<div class="card-header">
 						<h5>Downline</h5>
@@ -390,10 +547,184 @@ $member->postal_code"; ?></textarea>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<!-- profile body end -->
 	</div>
 </div>
 
 <?php $this->load->view('member/_/footer'); ?>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // $('[name="kode_bank"]').val("<?php echo $profile->kode_bank ?>");
+        // $('#kode_bank').select2().trigger('change');
+        // $('[name="id_location"]').val(<?php echo $profile->id_location ?>);
+        // $('#id_location').select2().trigger('change');
+
+        $('#province').select2({
+            placeholder: 'Pilih Provinsi',
+            language: "id"
+        });
+
+        $('#district').select2({
+            placeholder: 'Pilih kota/kabupaten',
+            language: "id"
+        });
+
+        $('#subdistrict').select2({
+            placeholder: 'Pilih Kecamatan',
+            language: "id"
+        });
+
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: "<?php echo base_url('member/get/province/0') ?>",
+            success: function(msg) {
+                $("select#id_province").html(msg);
+            }
+        });
+
+        $('#province').change(function() {
+            var idp = $('#province').val();
+
+            var province_name = $("#id_province option:selected").text();
+            $("#province_name").val(province_name);
+
+            $('#id_district').after('<i class="fa fa-spinner fa-pulse fa-2x fa-fw loading"></i>');
+            $('#id_district').load('<?php echo base_url('member/get/district/') ?>/' + idp, function(responseTxt, statusTxt, xhr) {
+                if (statusTxt === "success")
+                    $('.loading').remove();
+            });
+            return false;
+        });
+
+        $('#id_district').change(function() {
+            var idd = $('#id_district').val();
+
+            var district_name = $("#id_district option:selected").text();
+            $("#district_name").val(district_name);
+
+            $('#id_subdistrict').after('<i class="fa fa-spinner fa-pulse fa-2x fa-fw loading"></i>');
+            $('#id_subdistrict').load('<?php echo base_url('member/get/subdistrict/') ?>/' + idd, function(responseTxt, statusTxt, xhr) {
+                if (statusTxt === "success")
+                    $('.loading').remove();
+            });
+            return false;
+        });
+
+        $('#id_subdistrict').change(function() {
+            var province_name = $("#province_name").val();
+            var district_name = $("#district_name").val();
+            var subdistrict_name = $("#id_subdistrict option:selected").text();
+            $("#subdistrict_name").val(subdistrict_name);
+            $("#full_address").val('RT RW/Jalan No Rumah, Desa/Kelurahan, ' + subdistrict_name + ', ' + district_name + ', ' + province_name);
+            return false;
+        });
+
+
+        //EDT
+        // $('#id_province_edt').select2({
+        //     placeholder: 'Pilih Provinsi',
+        //     language: "id"
+        // });
+
+        // $('#id_district_edt').select2({
+        //     placeholder: 'Pilih kota/kabupaten',
+        //     language: "id"
+        // });
+
+        // $('#id_subdistrict_edt').select2({
+        //     placeholder: 'Pilih Kecamatan',
+        //     language: "id"
+        // });
+
+        // $.ajax({
+        //     type: "GET",
+        //     dataType: "html",
+        //     url: "<?php echo base_url('member/get/province/0') ?>",
+        //     success: function(msg) {
+        //         $("select#id_province_edt").html(msg);
+
+        //         var idp = $('#id_province_edt').val();
+        //         $('#id_district_edt').load('<?php echo base_url('member/get/district/') ?>/' + idp, function(responseTxt, statusTxt, xhr) {
+        //         if (statusTxt === "success")
+        //             $('.loading').remove();
+        //     });
+        //     }
+        // });
+
+        // $('#id_province_edt').change(function() {
+        //     var idp = $('#id_province_edt').val();
+
+        //     var province_name_edt = $("#id_province_edt option:selected").text();
+        //     $("#province_name_edt").val(province_name_edt);
+
+        //     $('#id_district_edt').after('<i class="fa fa-spinner fa-pulse fa-2x fa-fw loading"></i>');
+        //     $('#id_district_edt').load('<?php echo base_url('member/get/district/') ?>/' + idp, function(responseTxt, statusTxt, xhr) {
+        //         if (statusTxt === "success")
+        //             $('.loading').remove();
+        //     });
+        //     return false;
+        // });
+
+        // $('#id_district_edt').change(function() {
+        //     var idd = $('#id_district_edt').val();
+
+        //     var district_name_edt = $("#id_district_edt option:selected").text();
+        //     $("#district_name_edt").val(district_name_edt);
+
+        //     $('#id_subdistrict_edt').after('<i class="fa fa-spinner fa-pulse fa-2x fa-fw loading"></i>');
+        //     $('#id_subdistrict_edt').load('<?php echo base_url('member/get/subdistrict/') ?>/' + idd, function(responseTxt, statusTxt, xhr) {
+        //         if (statusTxt === "success")
+        //             $('.loading').remove();
+        //     });
+        //     return false;
+        // });
+
+        // $('#id_subdistrict_edt').change(function() {
+        //     var province_name_edt = $("#province_name_edt").val();
+        //     var district_name_edt = $("#district_name_edt").val();
+        //     var subdistrict_name_edt = $("#id_subdistrict_edt option:selected").text();
+        //     $("#subdistrict_name_edt").val(subdistrict_name_edt);
+        //     $("#full_address_edt").val('RT RW/Jalan No Rumah, Desa/Kelurahan, ' + subdistrict_name_edt + ', ' + district_name_edt + ', ' + province_name_edt);
+        //     return false;
+        // });
+
+    });
+
+    // function edit_shipping_address(id) {
+    //     //Ajax Load data from ajax
+    //     $.ajax({
+    //         url: "<?php echo base_url('member/get/shipping_address') ?>/" + id,
+    //         type: "GET",
+    //         dataType: "JSON",
+    //         success: function(data) {
+    //             $('[name="id_member_shipping"]').val(data.id_member_shipping);
+    //             $('[name="nama_penerima_edt"]').val(data.nama_penerima);
+    //             $('[name="no_hp_penerima_edt"]').val(data.no_hp_penerima);
+    //             $('[name="id_province_edt"]').val(data.id_province);
+    //             $('[name="id_district_edt"]').val(data.id_district);
+    //             $('[name="id_subdistrict_edt"]').val(data.id_subdistrict);
+    //             $('[name="province_name_edt"]').val(data.province_name);
+    //             $('[name="district_name_edt"]').val(data.district_name);
+    //             $('[name="subdistrict_name_edt"]').val(data.subdistrict_name);
+    //             $('[name="postal_code_edt"]').val(data.postal_code);
+    //             $('[name="full_address_edt"]').val(data.full_address);
+    //             $('[name="status"]').val(data.status);
+
+    //             $('#modal_edit_shipping_address').modal('show');
+    //             $('.modal-title').text('Edit Alamat Pengiriman');
+
+    //             $('#id_province_edt').select2().trigger('change');
+    //             $('#id_district_edt').select2().trigger('change');
+    //             $('#id_subdistrict_edt').select2().trigger('change');
+    //         },
+    //         error: function(jqXHR, textStatus, errorThrown) {
+    //             alert('Error get data from ajax server');
+    //         }
+    //     });
+    // }
+</script>

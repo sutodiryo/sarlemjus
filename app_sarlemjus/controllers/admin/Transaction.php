@@ -29,7 +29,7 @@ class Transaction extends CI_Controller
     if ($x == 'all') {
       $data['title'] = 'Daftar Transaksi';
       $data['title2'] = '';
-      $data['transaction'] = $this->db->query("$q ORDER BY date_created ASC, status ASC")->result();
+      $data['transaction'] = $this->db->query("$q ORDER BY date_created DESC, status ASC")->result();
     } else {
       # code...
     }

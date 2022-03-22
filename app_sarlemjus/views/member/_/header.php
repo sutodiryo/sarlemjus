@@ -29,7 +29,11 @@
     <?php if ($page['id'] == "transaction" || $page['id'] == "store") { ?>
         <!-- <link rel="stylesheet" href="<?= ASSETS ?>css/plugins/select2.min.css"> -->
         <link rel="stylesheet" href="<?= ASSETS ?>css/plugins/dataTables.bootstrap4.min.css">
-    <?php } ?>
+    <?php } elseif ($page['id'] == "profile") { ?>
+
+        <link rel="stylesheet" href="<?php echo ASSETS ?>css/plugins/select2.min.css">
+    <?php
+    } ?>
 
     <link rel="stylesheet" href="<?php echo ASSETS ?>css/style.css">
 </head>
@@ -69,9 +73,9 @@
                         <label>Navigation</label>
                     </li>
 
-                    <li class="nav-item <?php if ($page['id'] == "dashboard") {
-                                            echo "active";
-                                        } ?>"><a href="<?php echo base_url('member') ?>" class="nav-link"><span class="pcoded-micon"><i class="fas fa-home"></i></span><span class="pcoded-mtext">Home</span></a></li> <!-- fas fa-tachometer-alt -->
+                    <!-- <li class="nav-item <?php if ($page['id'] == "dashboard") {
+                                                    echo "active";
+                                                } ?>"><a href="<?php echo base_url('member') ?>" class="nav-link"><span class="pcoded-micon"><i class="fas fa-home"></i></span><span class="pcoded-mtext">Home</span></a></li> -->
 
                     <li class="nav-item <?php if ($page['id'] == "store") {
                                             echo "active";
@@ -140,9 +144,12 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <!-- <li>
+                <li>
                     <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-shopping-cart"></i> <span class="pcoded-badge badge badge-warning">12</span></a>
+                        <!-- <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-shopping-cart"></i> <span class="pcoded-badge badge badge-warning">12</span></a> -->
+                        <a class="btn btn-outline-warning" data-toggle="modal" href="#modal_cart"><i class="icon feather icon-shopping-cart"></i> Keranjang Belanja <span class="pcoded-badge badge badge-warning" id="cart_qty"></span></a>
+                        <!-- <a data-toggle="modal" href="#modal_cart" class="btn btn-lg btn-primary"><i class="feather icon-shopping-cart"></i> Keranjang Belanja</a> -->
+
                         <div class="dropdown-menu dropdown-menu-right notification">
                             <div class="noti-head">
                                 <h6 class="d-inline-block m-b-0 text-center">Keranjang Belanja</h6>
@@ -196,8 +203,8 @@
                             </div>
                         </div>
                     </div>
-                </li> -->
-                <li>
+                </li>
+                <!-- <li>
                     <div class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i> </a>
                         <div class="dropdown-menu dropdown-menu-right notification">
@@ -257,7 +264,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
                 <!-- <li>
                     <div class="dropdown drp-user">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">

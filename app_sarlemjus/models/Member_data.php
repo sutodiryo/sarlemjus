@@ -73,7 +73,8 @@ class Member_data extends CI_Model
                                         (SELECT name FROM location_district WHERE id=m1.district) AS district_name,
                                         (SELECT name FROM location_province WHERE id=m1.province) AS province_name,
                                         (SELECT id FROM member m2 WHERE m2.id=m1.upline) AS id_member_up
-                                    FROM member m1 WHERE id='$id'")->row();
+                                    FROM member m1
+                                    WHERE id='$id'")->row();
         
     }
     

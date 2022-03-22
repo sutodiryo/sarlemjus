@@ -7,7 +7,7 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="about-img-wrapper">
                         <div class="about-img position-relative d-inline-block wow fadeInLeft" data-wow-delay=".3s">
-                            <img src="<?php echo FRONT_ASSETS ?>img/about.png" alt="">
+                            <img src="<?php echo FRONT_ASSETS ?>img/mom.png" alt="">
 
                             <div class="about-experience">
                                 <h3>Visi Sarlemjus</h3>
@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-8 col-lg-8 col-md-9 mx-auto">
-                <div class="section-title text-center mb-55">
+                <div class="section-title text-center mt-55 mb-55">
                     <!-- <span class="wow fadeInDown" data-wow-delay=".2s">Services</span> -->
                     <h3 class="wow fadeInUp" data-wow-delay=".4s">Misi Sarlemjus</h3>
                     <!-- <p class="wow fadeInUp" data-wow-delay=".6s">At vero eos et accusamus et iusto odio dignissimos ducimus quiblanditiis praesentium</p> -->
