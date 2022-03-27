@@ -31,10 +31,11 @@
         <link rel="stylesheet" href="<?= ASSETS ?>css/plugins/dataTables.bootstrap4.min.css">
     <?php } elseif ($page['id'] == "profile") { ?>
 
-        <link rel="stylesheet" href="<?php echo ASSETS ?>css/plugins/select2.min.css">
+        <!-- <link rel="stylesheet" href="<?php echo ASSETS ?>css/plugins/select2.min.css"> -->
     <?php
     } ?>
 
+    <link rel="stylesheet" href="<?php echo ASSETS ?>css/plugins/select2.min.css">
     <link rel="stylesheet" href="<?php echo ASSETS ?>css/style.css">
 </head>
 
@@ -147,7 +148,7 @@
                 <li>
                     <div class="dropdown">
                         <!-- <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-shopping-cart"></i> <span class="pcoded-badge badge badge-warning">12</span></a> -->
-                        <a class="btn btn-outline-warning" data-toggle="modal" href="#modal_cart"><i class="icon feather icon-shopping-cart"></i> Keranjang Belanja <span class="pcoded-badge badge badge-warning" id="cart_qty"></span></a>
+                        <a class="btn btn-lg btn-outline-warning" data-toggle="modal" href="#modal_cart"><i class="icon feather icon-shopping-cart"></i> Keranjang Belanja <span class="pcoded-badge badge badge-warning" id="cart_qty"></span></a>
                         <!-- <a data-toggle="modal" href="#modal_cart" class="btn btn-lg btn-primary"><i class="feather icon-shopping-cart"></i> Keranjang Belanja</a> -->
 
                         <div class="dropdown-menu dropdown-menu-right notification">

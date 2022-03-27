@@ -41,9 +41,9 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                 </span>
                             </div>
                             <div class="row invoice-contact">
-                                <div class="col-md-8">
+                                <div class="col-8">
                                     <div class="invoice-box row">
-                                        <div class="col-sm-12">
+                                        <div class="col-12">
                                             <table class="table table-responsive invoice-table table-borderless p-l-20">
                                                 <tbody>
                                                     <tr>
@@ -55,7 +55,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                                         <td>Nama : <?php echo $inv->member_name ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alamat : <small><?php echo $inv->full_address; ?></small></td>
+                                                        <td>Alamat : <small><?= "$inv->home_detail, $inv->village_name, $inv->subdistrict_name, $inv->district_name, $inv->province_name - $inv->postal_code" ?></small></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Tanggal : <?php echo $date_created ?></td>
@@ -75,7 +75,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-4">
                                     <div class="invoice-box row">
                                         <div class="col-sm-12">
                                             <table class="table table-responsive invoice-table table-borderless p-l-20">
@@ -183,7 +183,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-8">
+                                    <div class="col-8">
                                         <h6>Catatan :</h6>
                                         <p>1. Pengiriman dilakukan setelah pembayaran</p>
                                         <p>2. Transfer ke Bank BCA/Mandiri/BRI A.n Efri Korina</p>
@@ -193,7 +193,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                         <p>Mandiri : </p>
                                         <p>BRI : </p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-4">
                                         <table class="table table-responsive invoice-table invoice-total">
                                             <tbody>
                                                 <tr>
@@ -238,16 +238,13 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                 </div>
                                 <hr>
                                 <div class="row" style="margin-top:30px;">
-                                    <div class="col-sm-4 text-center">
+                                    <div class="col-6 text-center">
                                         <p>Dibuat Oleh :</p>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
+                                        <?= ($inv->status >= 0) ? '<img src="' . base_url() . 'public/back/images/anjelita.png" height="90px">' : '<br><br><br><br>'; ?>
                                         <h6><u>Anjelita</u></h6>
                                         <p>Keuangan</p>
                                     </div>
-                                    <div class="col-sm-4 text-center">
+                                    <!-- <div class="col-sm-4 text-center">
                                         <p>Disetujui Oleh :</p>
                                         <br>
                                         <br>
@@ -255,8 +252,8 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                         <br>
                                         <h6><u>Efri Korina</u></h6>
                                         <p>Direktur</p>
-                                    </div>
-                                    <div class="col-sm-4 text-center">
+                                    </div> -->
+                                    <div class="col-6 text-center">
                                         <p>Konfirmasi :</p>
                                         <br>
                                         <br>
