@@ -1,45 +1,22 @@
-/* ===========================
-Index Of css
-
-01. Common CSS
-02. Header CSS
-03. Hero CSS
-04. About CSS
-05. Service CSS
-06. Process CSS
-07. Pricing CSS
-08. Testimonial CSS
-09. Team CSS
-10. Subscribe CSS
-11. Blog CSS
-12. Contact CSS
-13. Footer CSS
-
-========================== */
-
-
-/*===========================
-    01. Common CSS
-===========================*/
-
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&amp;display=swap";
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: normal;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
     font-style: normal;
     color: #e62129;
     overflow-x: hidden;
+    position: relative
 }
 
 * {
-    margin: 0;
+  margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .navbar-toggler:focus,
@@ -53,28 +30,28 @@ button:focus,
 .btn:not(:disabled):not(.disabled):active {
     text-decoration: none;
     outline: none;
-    box-shadow: none;
+    box-shadow: none
 }
 
 a:hover {
-    transition: all 0.3s ease-out 0s;
-    color: #e62129;
+    transition: all .3s ease-out 0s;
+    color: #e62129
 }
 
 a:focus,
 a:hover {
-    text-decoration: none;
+    text-decoration: none
 }
 
 button {
-    cursor: pointer;
+    cursor: pointer
 }
 
 i,
 span,
 a {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none
 }
 
 audio,
@@ -83,7 +60,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+    vertical-align: middle
 }
 
 h1,
@@ -94,7 +71,7 @@ h5,
 h6 {
     font-weight: 600;
     color: #e62129;
-    margin: 0px;
+    margin: 0
 }
 
 h1 a,
@@ -103,44 +80,44 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: inherit;
+    color: inherit
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 50px
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 40px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     h2 {
-        font-size: 31px;
+        font-size: 31px
     }
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 30px
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 25px
 }
 
 h5 {
-    font-size: 20px;
+    font-size: 20px
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 16px
 }
 
 ul,
 ol {
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none
 }
 
 p {
@@ -148,20 +125,20 @@ p {
     font-weight: 400;
     line-height: 26px;
     color: #e62129;
-    margin: 0px;
+    margin: 0
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     p {
         font-size: 16px;
-        line-height: 26px;
+        line-height: 26px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     p {
         font-size: 16px;
-        line-height: 26px;
+        line-height: 26px
     }
 }
 
@@ -170,40 +147,37 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .container {
-        width: 450px;
+        width: 450px
     }
 }
 
 .gray-bg {
-    background: #EFF2F9;
+    background: #eff2f9
 }
 
 .alert-link {
-    font-weight: 600;
+    font-weight: 600
 }
 
 .alert h4 {
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .page-404-content h2 {
     font-size: 120px;
     font-weight: 900;
-    color: #e62129;
+    color: #e62129
 }
 
 .page-404-content h4 {
     font-size: 40px;
-    color: #e62129;
+    color: #e62129
 }
-
-
-/*===== All Button Style =====*/
 
 .theme-btn-white {
     display: inline-block;
@@ -240,25 +214,25 @@ p {
     z-index: 5;
     transition: all .4s ease-in-out;
     border: none;
-    background: linear-gradient(to left, #eb3737 0%, #e85858 50.39%, #eb3737 100%);
+    background: linear-gradient(to left, #e62129 0%, #e62129 50.39%, #e62129 100%);
     background-size: 200% auto;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .theme-btn:hover,
 .theme-btn:focus {
     background-position: right center;
     color: #fff;
-    box-shadow: 0px 0px 30px #e62129;
+    box-shadow: 0 0 30px rgba(46, 87, 217, .45)
 }
 
 .theme-btn.border-btn {
     padding: 14px 40px;
-    background: transparent;
+    background: 0 0;
     border: 1.5px solid #e62129;
     color: #e62129;
     font-size: 18px;
-    box-shadow: none;
+    box-shadow: none
 }
 
 .scroll-top {
@@ -275,83 +249,75 @@ p {
     right: 30px;
     z-index: 9;
     cursor: pointer;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .scroll-top:hover {
-    background: rgba(235, 55, 55, 0.7);
-    color: #fff;
+    background: #e62129;
+    color: #fff
 }
 
 @keyframes animation1 {
     0% {
         transform: translateY(0px);
-        opacity: 0.29;
+        opacity: .29
     }
 
     50% {
         transform: translateY(-700px);
-        opacity: 0;
+        opacity: 0
     }
 
     100% {
         transform: translateY(0px);
-        opacity: 0;
+        opacity: 0
     }
 }
-
-
-/*===== All Section Title Style =====*/
 
 .section-title span {
     font-size: 25px;
     font-weight: 700;
     color: #e62129;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .section-title span {
-        font-size: 20px;
+        font-size: 20px
     }
 }
 
 .section-title h2 {
     line-height: 55px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .section-title h2 {
-        line-height: 41px;
+        line-height: 41px
     }
 }
 
 .section-title p {
-    font-size: 18px;
+    font-size: 18px
 }
 
-
-/*===== All Preloader Style =====*/
-
 .preloader {
-    /* Body Overlay */
     position: fixed;
     top: 0;
     left: 0;
     display: table;
     height: 100%;
     width: 100%;
-    /* Change Background Color */
     background: #fff;
-    z-index: 99999;
+    z-index: 99999
 }
 
 .preloader .loader {
     display: table-cell;
     vertical-align: middle;
-    text-align: center;
+    text-align: center
 }
 
 .preloader .loader .spinner {
@@ -361,7 +327,7 @@ p {
     width: 64px;
     margin-left: -32px;
     z-index: 18;
-    pointer-events: none;
+    pointer-events: none
 }
 
 .preloader .loader .spinner .spinner-container {
@@ -373,14 +339,14 @@ p {
     left: 50%;
     margin-top: -50%;
     margin-left: -50%;
-    animation: spinner-linspin 1568.2353ms linear infinite;
+    animation: spinner-linspin 1568.2353ms linear infinite
 }
 
 .preloader .loader .spinner .spinner-container .spinner-rotator {
     position: absolute;
     width: 100%;
     height: 100%;
-    animation: spinner-easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    animation: spinner-easespin 5332ms cubic-bezier(.4, 0, .2, 1) infinite both
 }
 
 .preloader .loader .spinner .spinner-container .spinner-rotator .spinner-left {
@@ -389,7 +355,7 @@ p {
     left: 0;
     bottom: 0;
     overflow: hidden;
-    right: 50%;
+    right: 50%
 }
 
 .preloader .loader .spinner .spinner-container .spinner-rotator .spinner-right {
@@ -398,7 +364,7 @@ p {
     right: 0;
     bottom: 0;
     overflow: hidden;
-    left: 50%;
+    left: 50%
 }
 
 .preloader .loader .spinner-circle {
@@ -407,104 +373,92 @@ p {
     width: 200%;
     height: 100%;
     border-style: solid;
-    /* Spinner Color */
-    border-color: #e62129 #e62129 #F4EEFB;
+    border-color: #e62129 #e62129 #f4eefb;
     border-radius: 50%;
-    border-width: 6px;
+    border-width: 6px
 }
 
 .preloader .loader .spinner-left .spinner-circle {
     left: 0;
     right: -100%;
-    border-right-color: #F4EEFB;
-    animation: spinner-left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    border-right-color: #f4eefb;
+    animation: spinner-left-spin 1333ms cubic-bezier(.4, 0, .2, 1) infinite both
 }
 
 .preloader .loader .spinner-right .spinner-circle {
     left: -100%;
     right: 0;
-    border-left-color: #F4EEFB;
-    animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    border-left-color: #f4eefb;
+    animation: right-spin 1333ms cubic-bezier(.4, 0, .2, 1) infinite both
 }
-
-
-/* Preloader Animations */
 
 @keyframes spinner-linspin {
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg)
     }
 }
 
 @keyframes spinner-easespin {
     12.5% {
-        transform: rotate(135deg);
+        transform: rotate(135deg)
     }
 
     25% {
-        transform: rotate(270deg);
+        transform: rotate(270deg)
     }
 
     37.5% {
-        transform: rotate(405deg);
+        transform: rotate(405deg)
     }
 
     50% {
-        transform: rotate(540deg);
+        transform: rotate(540deg)
     }
 
     62.5% {
-        transform: rotate(675deg);
+        transform: rotate(675deg)
     }
 
     75% {
-        transform: rotate(810deg);
+        transform: rotate(810deg)
     }
 
     87.5% {
-        transform: rotate(945deg);
+        transform: rotate(945deg)
     }
 
     to {
-        transform: rotate(1080deg);
+        transform: rotate(1080deg)
     }
 }
 
 @keyframes spinner-left-spin {
     0% {
-        transform: rotate(130deg);
+        transform: rotate(130deg)
     }
 
     50% {
-        transform: rotate(-5deg);
+        transform: rotate(-5deg)
     }
 
     to {
-        transform: rotate(130deg);
+        transform: rotate(130deg)
     }
 }
 
 @keyframes right-spin {
     0% {
-        transform: rotate(-130deg);
+        transform: rotate(-130deg)
     }
 
     50% {
-        transform: rotate(5deg);
+        transform: rotate(5deg)
     }
 
     to {
-        transform: rotate(-130deg);
+        transform: rotate(-130deg)
     }
 }
-
-
-/*===========================
-    02. Header CSS 
-===========================*/
-
-
-/*===== NAVBAR =====*/
 
 .navbar-area {
     position: fixed;
@@ -512,44 +466,44 @@ p {
     left: 0;
     width: 100%;
     z-index: 99;
-    transition: all 0.3s ease-out 0s;
-    padding: 0;
+    transition: all .3s ease-out 0s;
+    padding: 0
 }
 
 .navbar-area.header-3 {
-    background: #fff;
+    background: #fff
 }
 
 .sticky {
     position: fixed;
     z-index: 99;
     background: #e62129;
-    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease-out 0s;
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, .05);
+    transition: all .3s ease-out 0s;
     background: #fff;
-    padding: 0px 0;
+    padding: 0 0
 }
 
 .sticky .navbar {
-    padding: 10px 0;
+    padding: 10px 0
 }
 
 .navbar {
     padding: 20px 0;
     position: relative;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .navbar-brand {
-    padding: 0;
+    padding: 0
 }
 
 .navbar-brand img {
-    max-width: 150px;
+    max-width: 150px
 }
 
 .navbar-toggler {
-    padding: 0px;
+    padding: 0
 }
 
 .navbar-toggler .toggler-icon {
@@ -559,24 +513,24 @@ p {
     display: block;
     margin: 5px 0;
     position: relative;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .navbar-toggler.active .toggler-icon:nth-of-type(1) {
     transform: rotate(45deg);
-    top: 7px;
+    top: 7px
 }
 
 .navbar-toggler.active .toggler-icon:nth-of-type(2) {
-    opacity: 0;
+    opacity: 0
 }
 
 .navbar-toggler.active .toggler-icon:nth-of-type(3) {
     transform: rotate(135deg);
-    top: -7px;
+    top: -7px
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -584,14 +538,14 @@ p {
         width: 100%;
         background-color: #fff;
         z-index: 9;
-        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 20px 0 rgba(0, 0, 0, .1);
         padding: 10px 20px;
         max-height: 350px;
-        overflow-y: scroll;
+        overflow-y: scroll
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -599,59 +553,59 @@ p {
         width: 100%;
         background-color: #fff;
         z-index: 9;
-        box-shadow: 0px 15px 20px 0px rgba(5, 20, 65, 0.1);
+        box-shadow: 0 15px 20px 0 rgba(5, 20, 65, .1);
         padding: 5px 12px;
         max-height: 350px;
-        overflow-y: scroll;
+        overflow-y: scroll
     }
 }
 
 .navbar-nav .nav-item {
     position: relative;
-    z-index: 1;
+    z-index: 1
 }
 
 .navbar-nav .nav-item:hover a {
-    color: #e62129;
+    color: #e62129
 }
 
 .navbar-nav .nav-item a {
     font-size: 16px;
     color: #e62129;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s;
     position: relative;
     padding: 20px;
     display: inline-flex;
-    align-items: center;
+    align-items: center
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .navbar-nav .nav-item a {
-        padding: 20px 15px;
+        padding: 20px 15px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .navbar-nav .nav-item a {
         color: #e62129;
         display: flex;
         justify-content: space-between;
-        padding: 10px 0;
+        padding: 10px 0
     }
 }
 
 .navbar-nav .nav-item a.active {
-    color: #e62129;
+    color: #e62129
 }
 
 .navbar-nav .nav-item a.dd-menu {
-    padding-right: 34px;
+    padding-right: 34px
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .navbar-nav .nav-item a.dd-menu {
-        padding-right: 30px;
+        padding-right: 30px
     }
 }
 
@@ -663,68 +617,68 @@ p {
     font-size: 12px;
     top: 25px;
     margin-left: 5px;
-    margin-top: 0px;
-    transition: all 0.3s ease-out 0s;
+    margin-top: 0;
+    transition: all .3s ease-out 0s
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .navbar-nav .nav-item a.dd-menu::after {
-        right: 13px;
+        right: 13px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .navbar-nav .nav-item a.dd-menu::after {
         top: 16px;
         right: 0;
-        transform: rotate(180deg);
+        transform: rotate(180deg)
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .navbar-nav .nav-item a.collapsed::after {
-        transform: rotate(0deg);
+        transform: rotate(0deg)
     }
 }
 
 .navbar-nav .nav-item:hover>.sub-menu {
     top: 100%;
     opacity: 1;
-    visibility: visible;
+    visibility: visible
 }
 
 .navbar-nav .nav-item:hover>.sub-menu .sub-menu {
     left: 100%;
-    top: 0;
+    top: 0
 }
 
 .navbar-nav .nav-item .sub-menu {
     min-width: 200px;
     background-color: #fff;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
     position: absolute;
     top: 110%;
     left: 0;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-out 0s;
-    padding: 0;
+    transition: all .3s ease-out 0s;
+    padding: 0
 }
 
 .navbar-nav .nav-item .sub-menu.left-menu {
-    left: -100%;
+    left: -100%
 }
 
 .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
-    display: block;
+    display: block
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
-        display: none;
+        display: none
     }
 }
 
@@ -737,37 +691,37 @@ p {
     top: -10px;
     left: 20%;
     transform: rotate(45deg);
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    border-left: 1px solid rgba(0, 0, 0, .05)
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .navbar-nav .nav-item .sub-menu {
         position: static;
         width: 100%;
         opacity: 1;
         visibility: visible;
-        box-shadow: none;
+        box-shadow: none
     }
 
     .navbar-nav .nav-item .sub-menu::after {
-        display: none;
+        display: none
     }
 }
 
 .navbar-nav .nav-item .sub-menu>li {
     display: block;
-    margin-left: 0;
+    margin-left: 0
 }
 
 .navbar-nav .nav-item .sub-menu>li:last-child {
-    border: none;
+    border: none
 }
 
 .navbar-nav .nav-item .sub-menu>li.active>a,
 .navbar-nav .nav-item .sub-menu>li:hover>a {
-    color: #e62129;
+    color: #e62129
 }
 
 .navbar-nav .nav-item .sub-menu>li>a {
@@ -776,11 +730,11 @@ p {
     padding: 10px 15px;
     font-size: 14px;
     color: #222;
-    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, .03)
 }
 
 .navbar-nav .nav-item .sub-menu>li>a:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, .05)
 }
 
 .search-form {
@@ -788,26 +742,26 @@ p {
     width: 236px;
     height: 56px;
     border-radius: 50px;
-    margin-left: 20px;
+    margin-left: 20px
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .search-form {
-        width: 220px;
+        width: 220px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .search-form {
         width: 100%;
-        margin: 10px 0;
+        margin: 10px 0
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .search-form {
         width: 100%;
-        margin: 10px 0;
+        margin: 10px 0
     }
 }
 
@@ -815,91 +769,86 @@ p {
     width: 100%;
     height: 100%;
     padding: 0 25px;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     background: #fff;
     border-radius: 50px;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .search-form input:focus {
-    box-shadow: 0px 0px 30px #e62129;
+    box-shadow: 0 0 30px #e62129
 }
 
 .search-form button {
-    background: none;
+    background: 0 0;
     border: none;
     position: absolute;
     right: 25px;
-    top: 17px;
+    top: 17px
 }
 
-
-/*===========================
-    03. Hero CSS
-===========================*/
-
 .hero-section {
-    padding-top: 50px;
+    padding-top: 100px;
     position: relative;
     height: 870px;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width:1400px) {
     .hero-section {
-        height: 870px;
+        height: 870px
     }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .hero-section {
-        height: 700px;
+        height: 700px
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .hero-section {
-        height: 650px;
+        height: 650px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .hero-section {
         height: auto;
-        padding-top: 80px;
+        padding-top: 150px
     }
 }
 
 .hero-section .hero-content-wrapper h2 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 50px;
     color: #e62129;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .hero-section .hero-content-wrapper h1 {
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 75px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 65px;
     color: #e62129;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px),
-only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:992px) and (max-width:1199px),
+only screen and (min-width:1200px) and (max-width:1399px) {
     .hero-section .hero-content-wrapper h1 {
         font-size: 45px;
-        line-height: 60px;
+        line-height: 60px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .hero-section .hero-content-wrapper h1 {
         font-size: 40px;
-        line-height: 52px;
+        line-height: 52px
     }
 }
 
@@ -907,8 +856,8 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     font-size: 18px;
     line-height: 26px;
     color: #e62129;
-    opacity: 0.8;
-    margin-bottom: 30px;
+    opacity: .8;
+    margin-bottom: 30px
 }
 
 .hero-section .hero-img {
@@ -918,36 +867,36 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     transform: translateY(-50%);
     width: 48%;
     text-align: right;
-    margin: 40px 0;
+    margin: 60px 0
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .hero-section .hero-img {
         position: relative;
         width: 100%;
         top: 0;
-        transform: translate(0, 0);
+        transform: translate(0, 0)
     }
 }
 
 .hero-section .hero-img.hero-img-2 {
-    top: 40%;
+    top: 50%
 }
 
 .hero-section .hero-img .hero-img-right {
-    position: relative;
+    position: relative
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .hero-section .hero-img .hero-img-right {
-        position: static;
+        position: static
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .hero-section .hero-img .hero-img-right {
-        position: static;
+        position: static
     }
 }
 
@@ -955,25 +904,25 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     position: absolute;
     left: -60px;
     bottom: 60px;
-    z-index: -1;
+    z-index: -1
 }
 
 .hero-section .hero-img .image {
-    width: 100%;
+    width: 100%
 }
 
 .hero-section .hero-img .video-btn {
     position: absolute;
     left: -40px;
-    top: 40%;
-    transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%)
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .hero-section .hero-img .video-btn {
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
     }
 }
 
@@ -987,41 +936,41 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     align-items: center;
     text-align: center;
     color: #e62129;
-    transition: all 0.3s ease-out 0s;
-    box-shadow: 0px 0px 20px rgba(249, 170, 170, 0.45);
+    transition: all .3s ease-out 0s;
+    box-shadow: 0 0 20px rgba(170, 189, 249, .45)
 }
 
 .hero-section .hero-img .video-btn a:hover {
-    box-shadow: 0px 0px 50px rgba(249, 170, 170, 0.65);
+    box-shadow: 0 0 50px rgba(170, 189, 249, .65)
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+@media only screen and (min-width:768px) and (max-width:991px),
+(max-width:767px) {
     .hero-section.hero-section-2 {
-        display: block;
+        display: block
     }
 }
 
 .hero-section.hero-section-2 .border-btn:hover {
-    background: rgba(235, 55, 55, 0.7);
-    color: #fff;
+    background: #e62129;
+    color: #fff
 }
 
 .client-logo-section .client-logo-wrapper .client-logo-carousel .client-logo {
     padding: 10px;
     text-align: center;
-    margin: auto;
+    margin: auto
 }
 
 .client-logo-section .client-logo-wrapper .client-logo-carousel .client-logo img {
     max-width: 220px;
     width: 100%;
     opacity: .3;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .client-logo-section .client-logo-wrapper .client-logo-carousel .client-logo img:hover {
-    opacity: 1;
+    opacity: 1
 }
 
 .product-box {
@@ -1036,63 +985,26 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 }
 
 .box-style {
-    /* padding: 0px 0px; */
     padding: 40px 30px;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     border-radius: 10px;
     margin-bottom: 30px;
-    align-items: center;
-    /* justify-content: center; */
-    transition: all 0.3s ease-out 0s;
-}
-
-.img-box-style img {
-    max-width: 100%;
-    padding: 0px 0px;
-    /* padding: 40px 30px; */
-    border: 1px solid #F4EEFB;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    align-items: center;
-    /* justify-content: center; */
-    transition: all 0.3s ease-out 0s;
-    /* object-fit: contain; */
-    object-fit: cover;
-    /* object-fit: fill; */
-}
-
-.img-box-style-full-width img {
-    /* width: 2000px;
-    border-radius: 10px;
-    margin-bottom: 30px; */
-    max-width: 100%;
-    /* height: 300px; */
-    padding: 0px 0px;
-    /* padding: 40px 30px; */
-    border: 1px solid #F4EEFB;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    align-items: center;
-    /* justify-content: center; */
-    transition: all 0.3s ease-out 0s;
-    /* object-fit: contain; */
-    object-fit: cover;
-    /* object-fit: fill; */
+    transition: all .3s ease-out 0s
 }
 
 .box-style:hover {
-    box-shadow: 0px 0px 30px rgba(252, 215, 215, 0.45);
+    box-shadow: 0 0 30px #e62129
 }
 
 .box-style:hover .box-icon-style {
     color: #fff;
     border-color: transparent;
-    background: linear-gradient(#e62129 0%, #e85858 100%);
+    background: linear-gradient(#e62129 0%, #e62129 100%)
 }
 
 .box-style:hover .box-icon-style::after {
     opacity: 1;
-    visibility: visible;
+    visibility: visible
 }
 
 .box-style .box-icon-style {
@@ -1107,8 +1019,8 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     justify-content: center;
     color: #e62129;
     font-size: 40px;
-    transition: all 0.3s ease-out 0s;
-    position: relative;
+    transition: all .3s ease-out 0s;
+    position: relative
 }
 
 .box-style .box-icon-style::after {
@@ -1120,70 +1032,67 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    background: linear-gradient(#e62129 0%, #e85858 100%);
-    transition: all 0.3s ease-out 0s;
+    background: linear-gradient(#e62129 0%, #e62129 100%);
+    transition: all .3s ease-out 0s;
     z-index: -1;
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: 1px solid transparent
 }
 
 .box-style .box-content-style h4 {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
-/*===========================
-    04. About CSS 
-===========================*/
 .about-section {
-    background: #EFF2F9;
-    padding: 40px 0;
-    position: relative;
+    background: #eff2f9;
+    padding: 180px 0;
+    position: relative
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .about-section {
-        padding: 20px 0;
+        padding: 120px 0
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .about-section {
-        padding: 20px 0;
+        padding: 120px 0
     }
 }
 
 .about-section .about-img-wrapper {
     position: absolute;
     left: 0;
-    top: 0%;
+    top: 50%;
     width: 46%;
-    transform: translateY(-0%);
+    transform: translateY(-50%)
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .about-section .about-img-wrapper {
         position: relative;
         top: 0;
         transform: translateY(0);
         width: 100%;
-        margin-bottom: 0px;
+        margin-bottom: 50px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .about-section .about-img-wrapper {
         position: relative;
         top: 0;
         transform: translateY(0);
         width: 100%;
-        margin-bottom: 0px;
+        margin-bottom: 50px
     }
 }
 
 .about-section .about-img-wrapper img {
-    width: 100%;
+    width: 100%
 }
 
 .about-section .about-img-wrapper .about-experience {
@@ -1191,21 +1100,21 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     border-radius: 27px;
     background: linear-gradient(to top left, #e62129 0%, #e62129 100%);
     border: 5px solid #eff2f9;
-    padding: 40px 10px;
+    padding: 40px 20px;
     position: absolute;
     right: -40px;
-    bottom: 0px;
+    bottom: 10px
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .about-section .about-img-wrapper .about-experience {
-        right: 40px;
+        right: 40px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .about-section .about-img-wrapper .about-experience {
-        right: 40px;
+        right: 40px
     }
 }
 
@@ -1213,36 +1122,36 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     font-size: 26px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .about-section .about-img-wrapper .about-experience p {
-    color: #fff;
+    color: #fff
 }
 
 .about-section .about-content-wrapper .about-content .counter-up {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .about-section .about-content-wrapper .about-content .counter-up {
-        display: block;
+        display: block
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .about-section .about-content-wrapper .about-content .counter-up {
-        display: flex;
+        display: flex
     }
 }
 
 .about-section .about-content-wrapper .about-content .counter-up .counter {
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 .about-section .about-content-wrapper .about-content .counter-up .counter:last-child {
-    margin-right: 0;
+    margin-right: 0
 }
 
 .about-section .about-content-wrapper .about-content .counter-up .counter span {
@@ -1250,20 +1159,20 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     font-weight: 600;
     color: #e62129;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 8px
 }
 
 .about-section .about-content-wrapper .about-content .counter-up .counter h4 {
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .time-line {
-    position: relative;
+    position: relative
 }
 
 .time-line .row {
-    position: relative;
+    position: relative
 }
 
 .time-line::after {
@@ -1273,19 +1182,19 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     height: 100%;
     left: 50%;
     top: 0;
-    background: #F4EEFB;
-    z-index: -1;
+    background: #f4eefb;
+    z-index: -1
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .time-line::after {
-        display: none;
+        display: none
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .time-line::after {
-        display: none;
+        display: none
     }
 }
 
@@ -1296,88 +1205,85 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 2;
     background-color: #fff;
     transform: translate(-50%, -50%);
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .time-line .box-icon-style {
         position: static;
         transform: translate(0);
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .time-line .box-icon-style {
         position: static;
         transform: translate(0);
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 }
 
 .time-line .box-icon-style i {
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s;
     font-size: 20px;
     padding: 2px;
-    color: #e62129;
+    color: #e62129
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .time-line .single-timeline {
-        margin-bottom: 50px;
+        margin-bottom: 50px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .time-line .single-timeline {
-        margin-bottom: 50px;
+        margin-bottom: 50px
     }
 }
 
 .time-line .single-timeline:hover .box-icon-style {
     background: linear-gradient(#e62129 0%, #e62129 100%);
     color: #fff;
-    border-color: transparent;
+    border-color: transparent
 }
 
 .time-line .single-timeline:hover .box-icon-style i {
-    color: #fff;
+    color: #fff
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .time-line .single-timeline .timeline-img {
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .time-line .single-timeline .timeline-img {
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 }
 
 .time-line .single-timeline .timeline-img img {
-    width: 100%;
+    width: 100%
 }
 
-/*===========================
-    05. Service CSS 
-===========================*/
 .service-section .service-box-style-2 {
     padding: 0;
-    text-align: center;
+    text-align: center
 }
 
 .service-section .service-box-style-2 .service-thumbnail img {
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0
 }
 
 .service-section .service-box-style-2 .box-icon-style {
@@ -1390,7 +1296,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     margin-top: -27px;
     background: #fff;
     position: relative;
-    z-index: 9;
+    z-index: 9
 }
 
 .service-section .service-box-style-2 .box-icon-style i {
@@ -1399,33 +1305,90 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     -ms-background-clip: text;
     background-clip: text;
     background-image: linear-gradient(#e62129 0%, #e62129 100%);
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .service-section .service-box-style-2:hover .box-icon-style {
-    background: linear-gradient(#e62129 0%, #e62129 100%);
+    background: linear-gradient(#e62129 0%, #e62129 100%)
 }
 
 .service-section .service-box-style-2:hover .box-icon-style i {
-    color: #fff;
+    color: #fff
 }
 
 .service-section .service-box-style-2 .box-content-style {
-    padding: 0 30px 35px;
+    padding: 0 30px 35px
 }
 
-/*===========================
-    07. Pricing CSS 
-===========================*/
+.process-section .process-img-wrapper {
+    position: relative;
+    z-index: 1
+}
+
+.process-section .process-img-wrapper::before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    bottom: -50px;
+    width: 463px;
+    height: 552px;
+    border-radius: 10px 10px 231px 231px;
+    background: linear-gradient(#f37da7 0%, #fed9b4 100%);
+    opacity: .1
+}
+
+.process-section .process-img-wrapper .process-img-top {
+    margin-bottom: 20px;
+    text-align: right
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .process-section .process-img-wrapper .process-img-top {
+        text-align: center
+    }
+}
+
+.process-section .process-img-wrapper .process-img-top .img-1 {
+    border-radius: 275px 275px 0 0
+}
+
+@media(max-width:767px) {
+    .process-section .process-img-wrapper .process-img-top .img-1 {
+        width: 100%
+    }
+}
+
+.process-section .process-img-wrapper .process-img-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .process-section .process-img-wrapper .process-img-bottom {
+        justify-content: center
+    }
+}
+
+.process-section .process-img-wrapper .process-img-bottom .img-2 {
+    border-radius: 10px;
+    margin-right: 20px;
+    vertical-align: top
+}
+
+.process-section .process-img-wrapper .process-img-bottom .img-3 {
+    border-radius: 0 0 250px 250px
+}
+
 .pricing-section .pricing-btn ul {
     display: inline-flex;
-    border: 1px solid #F4EEFB;
-    border-radius: 50px;
+    border: 1px solid #f4eefb;
+    border-radius: 50px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .pricing-section .pricing-btn ul {
-        margin-bottom: 40px;
+        margin-bottom: 40px
     }
 }
 
@@ -1435,13 +1398,13 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     font-size: 16px;
     font-weight: 700;
     color: #e62129;
-    box-shadow: 0px 0px 47px rgba(255, 161, 161, 0.16);
+    box-shadow: 0 0 47px rgba(161, 192, 255, .16)
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .pricing-section .pricing-btn ul li.nav-item a {
         padding: 20px;
-        font-size: 14px;
+        font-size: 14px
     }
 }
 
@@ -1449,42 +1412,42 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     color: #fff;
     background: linear-gradient(to left, #e62129 0%, #e62129 50.39%, #e62129 100%);
     background-size: 200%;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .pricing-section .pricing-btn ul li.nav-item:first-child .nav-link {
-    border-radius: 50px 0 0 50px;
+    border-radius: 50px 0 0 50px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .pricing-section .pricing-btn ul li.nav-item:first-child .nav-link {
         border-radius: 50px;
-        padding: 20px 35px;
+        padding: 20px 35px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .pricing-section .pricing-btn ul li.nav-item:first-child .nav-link {
         border-radius: 50px 0 0 50px;
-        padding: 20px 30px;
+        padding: 20px 30px
     }
 }
 
 .pricing-section .pricing-btn ul li.nav-item:last-child .nav-link {
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 50px 50px 0
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .pricing-section .pricing-btn ul li.nav-item:last-child .nav-link {
         border-radius: 50px;
-        padding: 20px 35px;
+        padding: 20px 35px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .pricing-section .pricing-btn ul li.nav-item:last-child .nav-link {
         border-radius: 0 50px 50px 0;
-        padding: 20px 30px;
+        padding: 20px 30px
     }
 }
 
@@ -1493,59 +1456,436 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     padding: 50px;
     border-radius: 10px;
     background: #fff;
-    box-shadow: 0px 0px 47px #e62129;
+    box-shadow: 0 0 47px rgba(161, 192, 255, .16);
     position: relative;
-    z-index: 1;
+    z-index: 1
 }
 
 .pricing-section .single-pricing h4 {
     margin-bottom: 25px;
     color: #e62129;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .pricing-section .single-pricing h3 {
     margin-bottom: 25px;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 40px
 }
 
 .pricing-section .single-pricing ul {
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .pricing-section .single-pricing ul li {
     font-size: 16px;
-    line-height: 40px;
+    line-height: 40px
 }
 
 .pricing-section .single-pricing a {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .pricing-section .single-pricing a.border-btn:hover {
-    background: #e62129;
-    color: #fff;
+    background: rgba(55, 99, 235, .8);
+    color: #fff
 }
 
 .pricing-section .single-pricing.active {
     transform: scale(1.15);
-    z-index: 2;
+    z-index: 2
 }
 
 .pricing-section .single-pricing.active h3 {
-    color: #e62129;
+    color: #e62129
 }
 
-/*===========================
-    10. Subscribe CSS 
-===========================*/
-.subscribe-section {
+.testimonial-section {
+    background-color: #eff2f9;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%)
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .testimonial-section {
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%)
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .testimonial-section {
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%)
+    }
+}
+
+@media(max-width:767px) {
+    .testimonial-section {
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%)
+    }
+}
+
+.testimonial-section .testimonial-logo-wrapper {
+    margin-bottom: 60px
+}
+
+@media only screen and (min-width:1200px) and (max-width:1399px) {
+    .testimonial-section .testimonial-logo-wrapper {
+        margin-bottom: 0
+    }
+}
+
+.testimonial-section .testimonial-logo-wrapper .img {
+    margin-right: 40px;
+    width: 116px
+}
+
+.testimonial-section .testimonial-logo-wrapper .img:last-child {
+    margin-right: 0
+}
+
+.testimonial-section .testimonial-logo-wrapper .img img {
+    width: 100%
+}
+
+.testimonial-section .testimonial-wrapper .single-testimonial {
+    display: flex;
+    padding: 2px
+}
+
+.testimonial-section .testimonial-wrapper .single-testimonial .testimonial-img {
+    margin-right: 60px;
+    margin-top: 40px
+}
+
+@media(max-width:767px) {
+    .testimonial-section .testimonial-wrapper .single-testimonial .testimonial-img {
+        display: none
+    }
+}
+
+.testimonial-section .testimonial-wrapper .single-testimonial .testimonial-img img {
+    width: 100%;
+    width: 133px;
+    height: 133px;
+    border-radius: 50%
+}
+
+.testimonial-section .testimonial-content .quote {
+    margin-bottom: 30px
+}
+
+.testimonial-section .testimonial-content p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e62129;
+    font-style: italic
+}
+
+.testimonial-section .testimonial-info {
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+.testimonial-section .testimonial-info .testimonial-meta h5 {
+    margin-bottom: 5px
+}
+
+.testimonial-section .testimonial-info .testimonial-meta span {
+    font-size: 16px;
+    color: #e62129
+}
+
+.testimonial-wrapper {
+    position: relative
+}
+
+.testimonial-wrapper .tns-controls {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    z-index: 99
+}
+
+.testimonial-wrapper .tns-controls button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 2;
+    color: #e62129;
+    font-size: 20px;
+    background: #fff;
+    border: 1px solid #f4eefb;
+    padding: 2px 5px;
+    border-radius: 50%;
+    transition: all .3s ease-out 0s
+}
+
+.testimonial-wrapper .tns-controls button:hover {
+    color: #fff;
+    background: #e62129
+}
+
+.testimonial-wrapper .tns-controls button:first-child {
+    margin-right: 20px
+}
+
+.portfolio-section .portfolio-btn-wrapper {
+    margin-bottom: 50px
+}
+
+.portfolio-section .portfolio-btn-wrapper button {
+    padding: 10px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background: #eff2f9;
+    color: #e62129;
+    border-radius: 50px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    transition: all .3s ease-out 0s
+}
+
+.portfolio-section .portfolio-btn-wrapper button.active {
+    background-image: linear-gradient(to right, #e62129 0%, #e62129 100%);
+    color: #fff
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .portfolio-section .portfolio-btn-wrapper button {
+        margin-right: 10px;
+        padding: 7px 18px;
+        font-size: 16px
+    }
+}
+
+@media(max-width:767px) {
+    .portfolio-section .portfolio-btn-wrapper button {
+        margin-right: 10px;
+        padding: 7px 18px;
+        font-size: 16px
+    }
+}
+
+.portfolio-section .portfolio-btn-wrapper button:last-child {
+    margin-right: 0
+}
+
+.portfolio-item-wrapper {
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px
+}
+
+.portfolio-item-wrapper:hover .portfolio-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1)
+}
+
+.portfolio-item-wrapper .portfolio-img img {
+    width: 100%
+}
+
+.portfolio-item-wrapper .portfolio-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background: linear-gradient(#e62129 0%, #e62129 100%);
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out 0s;
+    transform: scale(.9)
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .portfolio-item-wrapper .portfolio-overlay {
+        padding: 30px 20px
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .portfolio-item-wrapper .portfolio-overlay {
+        padding: 30px 20px
+    }
+}
+
+.portfolio-item-wrapper .portfolio-overlay .overlay-content h4 {
+    color: #fff;
+    margin-bottom: 20px
+}
+
+.portfolio-item-wrapper .portfolio-overlay .overlay-content p {
+    color: #fff;
+    margin-bottom: 35px
+}
+
+.portfolio-item-wrapper .portfolio-overlay .overlay-content .border-btn {
+    padding: 8px 27px;
+    color: #fff;
+    border: 2px solid #fff
+}
+
+.portfolio-item-wrapper .portfolio-overlay .overlay-content .border-btn:hover {
+    color: #e62129;
+    background: #fff
+}
+
+.single-portfolio .single-portfolio-img {
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.single-portfolio .single-portfolio-img img {
+    width: 100%
+}
+
+.project-info-box ul li {
+    margin-bottom: 15px;
+    display: flex;
+    font-size: 14px
+}
+
+.project-info-box ul li:last-child {
+    margin-bottom: 0
+}
+
+.project-info-box ul li .destination {
+    width: 40%;
+    color: #e62129;
+    text-transform: uppercase
+}
+
+.team-section {
+    position: relative;
+    z-index: 1
+}
+
+.team-section.img-bg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #eff2f9;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 12%, 100% 75%, 0 95%)
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .team-section.img-bg::before {
+        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%)
+    }
+}
+
+@media(max-width:767px) {
+    .team-section.img-bg::before {
+        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%)
+    }
+}
+
+.team-section .single-team {
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #f4eefb;
+    overflow: hidden;
+    transition: all .3s ease-out 0s
+}
+
+.team-section .single-team:hover {
+    box-shadow: 0 0 30px #e62129
+}
+
+.team-section .single-team:hover .team-img .team-social {
+    opacity: 1;
+    visibility: visible
+}
+
+.team-section .single-team .team-img {
+    overflow: hidden;
+    position: relative
+}
+
+.team-section .single-team .team-img img {
+    width: 100%
+}
+
+.team-section .single-team .team-img .team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(74, 114, 237, 0.9) 78.23%, #e62129 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out 0s
+}
+
+.team-section .single-team .team-img .team-social ul {
+    display: flex;
+    justify-content: center
+}
+
+.team-section .single-team .team-img .team-social ul li a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .2);
+    color: #fff;
+    margin: 0 5px;
+    font-size: 14px
+}
+
+.team-section .single-team .team-img .team-social ul li a:hover {
+    background: #fff;
+    color: #e62129
+}
+
+.team-section .single-team .team-info {
+    padding: 25px
+}
+
+.team-section .single-team .team-info h4 {
+    margin-bottom: 5px
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .team-section .single-team .team-info h4 {
+        font-size: 20px
+    }
+}
+
+.team-section .single-team .team-info span {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px
+}
+
+.subscribe-section {
+    position: relative
 }
 
 .subscribe-section .subscribe-form {
-    position: relative;
+    position: relative
 }
 
 .subscribe-section .subscribe-form input {
@@ -1555,11 +1895,11 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     font-size: 16px;
     padding: 18px 30px;
     background: #fff;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .subscribe-section .subscribe-form input:focus {
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 30px rgba(255, 255, 255, .15)
 }
 
 .subscribe-section .subscribe-form button {
@@ -1570,119 +1910,116 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     border: none;
     background: linear-gradient(to left, #e62129 0%, #e62129 50.39%, #e62129 100%);
     background-size: 200%;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s;
     position: absolute;
     height: 54px;
     width: 54px;
     top: 5px;
-    right: 5px;
+    right: 5px
 }
 
 .subscribe-section .subscribe-form button:hover {
-    background-position: right center;
+    background-position: right center
 }
 
-/*===========================
-    11. Blog CSS
-===========================*/
 .blog-section .single-blog {
     border-radius: 10px;
     background: #fff;
-    border: 1px solid #F4EEFB;
-    transition: all 0.3s ease-out 0s;
+    border: 1px solid #f4eefb;
+    transition: all .3s ease-out 0s
 }
 
 .blog-section .single-blog:hover {
-    box-shadow: 0px 0px 47px #e62129;
+    box-shadow: 0 0 47px rgba(161, 192, 255, .16)
 }
 
 .blog-section .single-blog .blog-img {
     overflow: hidden;
     border-radius: 10px 10px 0 0;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 40px
 }
 
 .blog-section .single-blog .blog-img a {
     display: block;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .blog-section .single-blog .blog-img img {
     width: 100%;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .blog-section .single-blog .blog-img .date-meta {
     position: absolute;
     bottom: 20px;
     left: 30px;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     padding: 8px 16px;
     border-radius: 30px;
     background: #fff;
     display: inline-block;
-    z-index: 2;
+    z-index: 2
 }
 
 .blog-section .single-blog:hover .blog-img img {
-    transform: scale(1.3) rotate(-7deg);
+    transform: scale(1.3) rotate(-7deg)
 }
 
 .blog-section .single-blog:hover .blog-img.blog-img-2 img {
-    transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0)
 }
 
 .blog-section .single-blog .blog-content {
-    padding: 0 20px 35px 30px;
+    padding: 0 20px 35px 30px
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .blog-section .single-blog .blog-content {
-        padding: 0 20px 35px;
+        padding: 0 20px 35px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .blog-section .single-blog .blog-content {
-        padding: 0 20px 35px;
+        padding: 0 20px 35px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .blog-section .single-blog .blog-content {
-        padding: 0 20px 35px;
+        padding: 0 20px 35px
     }
 }
 
 .blog-section .single-blog .blog-content h4 {
     margin-bottom: 25px;
-    font-weight: 600;
+    font-weight: 600
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .blog-section .single-blog .blog-content h4 {
-        font-size: 25px;
+        font-size: 25px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .blog-section .single-blog .blog-content h4 {
-        font-size: 25px;
+        font-size: 25px
     }
 }
 
 .blog-section .single-blog .blog-content p {
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .blog-section .single-blog .blog-content p.quote {
     font-weight: 500;
     padding: 20px 30px;
-    background: #EFF2F9;
+    background: #eff2f9;
     color: #e62129;
     border-radius: 0 5px 5px 0;
-    border-left: 5px solid #e62129;
+    border-left: 5px solid #e62129
 }
 
 .blog-section .single-blog .blog-content .read-more-btn {
@@ -1690,70 +2027,70 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     font-size: 18px;
     color: #e62129;
     border-radius: 50px;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .blog-section .single-blog .blog-content .read-more-btn i {
-    padding-left: 7px;
+    padding-left: 7px
 }
 
 .blog-section .single-blog .blog-content .read-more-btn:hover {
-    color: #e62129;
+    color: #e62129
 }
 
 .blog-section .blog-style-2 {
     padding: 0;
-    border: none;
+    border: none
 }
 
 .blog-section .blog-style-2:hover {
-    box-shadow: none;
+    box-shadow: none
 }
 
 .blog-section .blog-style-2 .blog-img {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .blog-section .blog-style-2 .blog-img img {
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .blog-section .blog-style-2 .blog-content {
-    padding: 0;
+    padding: 0
 }
 
 .blog-section .blog-style-2 .blog-content h4 {
-    margin-bottom: 18px;
+    margin-bottom: 18px
 }
 
 .blog-section .blog-style-2 .blog-content p {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .blog-section .blog-style-2 .blog-content .blog-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .blog-section .blog-style-2 .blog-content .blog-meta .read-more-btn {
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 10px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .blog-section .blog-style-2 .blog-content .blog-meta .read-more-btn {
-        font-size: 16px;
+        font-size: 16px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .blog-section .blog-style-2 .blog-content .blog-meta .read-more-btn {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
@@ -1764,10 +2101,10 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #EFF2F9;
+    background: #eff2f9;
     padding-right: 5px;
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .blog-section .blog-style-2 .blog-content .blog-meta .comment {
@@ -1775,43 +2112,43 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #e62129;
+    color: #e62129
 }
 
 .blog-section .blog-style-2 .blog-content .blog-meta .comment:hover {
-    color: #e62129;
+    color: #e62129
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .blog-section .blog-style-2 .blog-content .blog-meta .comment {
-        font-size: 16px;
+        font-size: 16px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .blog-section .blog-style-2 .blog-content .blog-meta .comment {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
 .blog-section .blog-style-2 .blog-content .blog-meta .comment i {
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 .blog-section .pagination {
     text-align: center;
-    justify-content: center;
+    justify-content: center
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .blog-section .pagination {
-        margin-bottom: 60px;
+        margin-bottom: 60px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .blog-section .pagination {
-        margin-bottom: 60px;
+        margin-bottom: 60px
     }
 }
 
@@ -1822,22 +2159,22 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #EFF2F9;
+    background: #eff2f9;
     color: #e62129;
-    margin: 0 5px;
+    margin: 0 5px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .blog-section .pagination ul li a {
         width: 40px;
-        height: 40px;
+        height: 40px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .blog-section .pagination ul li a {
         width: 50px;
-        height: 50px;
+        height: 50px
     }
 }
 
@@ -1845,153 +2182,153 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 .blog-section .pagination ul li a:hover {
     background: linear-gradient(#e62129 0%, #e62129 100%);
     color: #fff;
-    box-shadow: 0px 0px 3ppx #e62129;
+    box-shadow: 0 0 3ppx rgba(46, 87, 217, .45)
 }
 
 .left-side-wrapper {
-    margin-right: 40px;
+    margin-right: 40px
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .left-side-wrapper {
-        margin-right: 30px;
+        margin-right: 30px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .left-side-wrapper {
-        margin-right: 0px;
+        margin-right: 0
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .left-side-wrapper {
-        margin-right: 0px;
+        margin-right: 0
     }
 }
 
 .sidebar-wrapper .sidebar-box {
     padding: 30px;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     border-radius: 10px;
     background: #fff;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .sidebar-wrapper .sidebar-box {
-        padding: 30px 20px;
+        padding: 30px 20px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .sidebar-wrapper .sidebar-box {
-        padding: 30px;
+        padding: 30px
     }
 }
 
 .sidebar-wrapper .sidebar-box:hover {
-    box-shadow: 0px 0px 30px #e62129;
+    box-shadow: 0 0 30px #e62129
 }
 
 .sidebar-wrapper .sidebar-box.search-form-box {
-    padding: 20px 25px;
+    padding: 20px 25px
 }
 
 .sidebar-wrapper .sidebar-box.search-form-box .search-form {
     width: 100%;
     position: relative;
-    margin: 0;
+    margin: 0
 }
 
 .sidebar-wrapper .sidebar-box.search-form-box .search-form input {
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .sidebar-wrapper .sidebar-box.search-form-box .search-form input:focus {
-    border-color: #e62129;
+    border-color: #e62129
 }
 
 .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog {
-    display: flex;
+    display: flex
 }
 
 .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-img {
     border-radius: 10px;
     width: 100%;
     max-width: 100px;
-    height: 100px;
+    height: 100px
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-img {
         max-width: 90px;
-        height: 90px;
+        height: 90px
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-img {
         max-width: 90px;
-        height: 90px;
+        height: 90px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-img {
         max-width: 80px;
-        height: 80px;
+        height: 80px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-img {
         max-width: 90px;
-        height: 90px;
+        height: 90px
     }
 }
 
 .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-img img {
-    width: 100%;
+    width: 100%
 }
 
 .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-content {
-    margin-left: 20px;
+    margin-left: 20px
 }
 
 .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-content h5 {
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 8px
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-content h5 {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-content h5 {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-content h5 {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .sidebar-wrapper .sidebar-box.recent-blog-box .recent-blog-items .recent-blog .recent-blog-content h5 {
-        font-size: 20px;
+        font-size: 20px
     }
 }
 
 .sidebar-wrapper .sidebar-box.catagories-box ul li {
     margin-bottom: 20px;
     padding-left: 25px;
-    position: relative;
+    position: relative
 }
 
 .sidebar-wrapper .sidebar-box.catagories-box ul li::before {
@@ -2004,19 +2341,19 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     height: 7px;
     border-radius: 50%;
     background: #e62129;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .sidebar-wrapper .sidebar-box.catagories-box ul li:hover::before {
-    background: #e62129;
+    background: #e62129
 }
 
 .sidebar-wrapper .sidebar-box.catagories-box ul li:hover a {
-    color: #e62129;
+    color: #e62129
 }
 
 .sidebar-wrapper .sidebar-box.catagories-box ul li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .sidebar-wrapper .sidebar-box.catagories-box ul li a {
@@ -2025,95 +2362,92 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     align-items: center;
     flex-wrap: wrap;
     font-size: 18px;
-    color: #e62129;
+    color: #e62129
 }
 
 .sidebar-wrapper .sidebar-box.tags-box ul {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -20px;
+    margin-right: -20px
 }
 
 .sidebar-wrapper .sidebar-box.tags-box ul li {
-    margin-right: 20px;
+    margin-right: 20px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .sidebar-wrapper .sidebar-box.tags-box ul li {
-        margin-right: 15px;
+        margin-right: 15px
     }
 }
 
 .sidebar-wrapper .sidebar-box.tags-box ul li:last-child {
-    margin-right: 0px;
+    margin-right: 0
 }
 
 .sidebar-wrapper .sidebar-box.tags-box ul li a {
     font-size: 18px;
     padding: 12px 23px;
     border-radius: 30px;
-    background: #EFF2F9;
+    background: #eff2f9;
     margin-bottom: 15px;
-    color: #e62129;
+    color: #e62129
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .sidebar-wrapper .sidebar-box.tags-box ul li a {
         font-size: 16px;
-        padding: 12px 18px;
+        padding: 12px 18px
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .sidebar-wrapper .sidebar-box.tags-box ul li a {
-        font-size: 16px;
+        font-size: 16px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .sidebar-wrapper .sidebar-box.tags-box ul li a {
         font-size: 16px;
-        padding: 12px 18px;
+        padding: 12px 18px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .sidebar-wrapper .sidebar-box.tags-box ul li a {
-        font-size: 18px;
+        font-size: 18px
     }
 }
 
 .sidebar-wrapper .sidebar-box.tags-box ul li a:hover {
     background: linear-gradient(#e62129 0%, #e62129 100%);
-    color: #fff;
+    color: #fff
 }
 
 .sidebar-wrapper .sidebar-box h4 {
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
 
-/*===========================
-    12. Contact CSS 
-===========================*/
 .contact-section {
     position: relative;
-    z-index: 3;
+    z-index: 3
 }
 
 .contact-section.cta-bg {
     clip-path: polygon(0 0, 100% 12%, 100% 88%, 0 100%);
-    z-index: 3;
+    z-index: 3
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .contact-section.cta-bg {
-        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%);
+        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%)
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .contact-section.cta-bg {
-        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%);
+        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%)
     }
 }
 
@@ -2125,42 +2459,42 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to left, rgba(111, 88, 232, 0.18) 0%, #e62129 100%);
+    background: linear-gradient(to left, rgba(111, 88, 232, 0.18) 0%, #e62129 100%)
 }
 
 .contact-section .contact-item-wrapper .contact-item {
     display: flex;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     border-radius: 10px;
     background: #fff;
     margin-bottom: 30px;
     padding: 20px 30px;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .contact-section .contact-item-wrapper .contact-item:hover {
-    box-shadow: 0px 0px 30px #e62129;
+    box-shadow: 0 0 30px #e62129
 }
 
 .contact-section .contact-item-wrapper .contact-item:hover .contact-icon {
-    box-shadow: 0px 0px 30px #e62129;
+    box-shadow: 0 0 30px rgba(46, 87, 217, .45)
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .contact-section .contact-item-wrapper .contact-item {
-        padding: 20px;
+        padding: 20px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .contact-section .contact-item-wrapper .contact-item {
-        flex-direction: column;
+        flex-direction: column
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .contact-section .contact-item-wrapper .contact-item {
-        flex-direction: column;
+        flex-direction: column
     }
 }
 
@@ -2174,59 +2508,59 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     border-radius: 50%;
     background: linear-gradient(#e62129 0%, #e62129 100%);
     color: #fff;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .contact-section .contact-item-wrapper .contact-item .contact-content {
-    margin-left: 25px;
+    margin-left: 25px
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
     .contact-section .contact-item-wrapper .contact-item .contact-content {
-        margin-left: 20px;
+        margin-left: 20px
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .contact-section .contact-item-wrapper .contact-item .contact-content {
-        margin-left: 0px;
-        margin-top: 20px;
+        margin-left: 0;
+        margin-top: 20px
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .contact-section .contact-item-wrapper .contact-item .contact-content {
-        margin-left: 0px;
-        margin-top: 20px;
+        margin-left: 0;
+        margin-top: 20px
     }
 }
 
 .contact-section .contact-item-wrapper .contact-item .contact-content h4 {
     font-size: 20px;
     color: #e62129;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .comment-form-wrapper,
 .contact-form-wrapper {
     padding: 50px 40px;
     background: #fff;
-    border: 1px solid #F4EEFB;
-    margin-left: 0px;
+    border: 1px solid #f4eefb;
+    margin-left: 0;
     border-radius: 10px;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
 .comment-form-wrapper:hover,
 .contact-form-wrapper:hover {
-    box-shadow: 0px 0px 30px #e62129;
+    box-shadow: 0 0 30px #e62129
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width:1200px) and (max-width:1399px) {
 
     .comment-form-wrapper,
     .contact-form-wrapper {
-        margin-left: 30px;
+        margin-left: 30px
     }
 }
 
@@ -2240,13 +2574,13 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 .contact-form-wrapper .contact-form textarea {
     padding: 18px 25px;
     border-radius: 30px;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     margin-bottom: 25px;
     width: 100%;
-    transition: all 0.3s ease-out 0s;
+    transition: all .3s ease-out 0s
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
 
     .comment-form-wrapper .comment-form input,
     .comment-form-wrapper .comment-form textarea,
@@ -2256,7 +2590,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     .contact-form-wrapper .comment-form textarea,
     .contact-form-wrapper .contact-form input,
     .contact-form-wrapper .contact-form textarea {
-        padding: 12px 25px;
+        padding: 12px 25px
     }
 }
 
@@ -2268,14 +2602,14 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 .contact-form-wrapper .comment-form textarea:focus,
 .contact-form-wrapper .contact-form input:focus,
 .contact-form-wrapper .contact-form textarea:focus {
-    border-color: #e62129;
+    border-color: #e62129
 }
 
 .comment-form-wrapper .comment-form textarea,
 .comment-form-wrapper .contact-form textarea,
 .contact-form-wrapper .comment-form textarea,
 .contact-form-wrapper .contact-form textarea {
-    border-radius: 18px;
+    border-radius: 18px
 }
 
 .comment-form-wrapper .comment-form .theme-btn,
@@ -2283,71 +2617,71 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 .contact-form-wrapper .comment-form .theme-btn,
 .contact-form-wrapper .contact-form .theme-btn {
     font-weight: 500;
-    padding: 18px 90px;
+    padding: 18px 90px
 }
 
 .page-banner-section {
-    margin-top: 107px;
+    margin-top: 107px
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .page-banner-section {
-        margin-top: 94px;
+        margin-top: 94px
     }
 }
 
 .page-banner-section .banner-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .page-banner-section .banner-content .page-breadcrumb nav ol {
-    background: none;
-    padding: 0;
+    background: 0 0;
+    padding: 0
 }
 
 .page-banner-section .banner-content .page-breadcrumb nav ol li {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, .7);
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .page-banner-section .banner-content .page-breadcrumb nav ol li::before {
-    color: #fff;
+    color: #fff
 }
 
 .page-banner-section .banner-content .page-breadcrumb nav ol li a {
-    color: #fff;
+    color: #fff
 }
 
 .carousel-section-wrapper {
     position: relative;
-    z-index: 3;
+    z-index: 3
 }
 
 .carousel-section-wrapper .carousel-section {
     position: relative;
-    z-index: 3;
+    z-index: 3
 }
 
 .carousel-section-wrapper .carousel-section.clip-bg {
-    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%)
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .carousel-section-wrapper .carousel-section.clip-bg {
-        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%)
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .carousel-section-wrapper .carousel-section.clip-bg {
-        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%)
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .carousel-section-wrapper .carousel-section.clip-bg {
-        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%)
     }
 }
 
@@ -2359,116 +2693,171 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to right, rgba(232, 88, 88, 0.8) 0%, #e62129 100%);
+    background: linear-gradient(to right, rgba(111, 88, 232, 0.8) 0%, #e62129 100%)
 }
 
 .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .section-title h2 {
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .section-title p {
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .border-btn {
     border-color: #fff;
-    color: #fff;
+    color: #fff
 }
 
 .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .border-btn:hover {
-    background: #e62129;
+    background: rgba(255, 255, 255, .2)
 }
 
 .carousel-section-wrapper .carousel-control {
-    background: none;
+    background: 0 0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid #F4EEFB;
+    border: 1px solid #f4eefb;
     color: #fff;
     top: 50%;
     left: 30px;
     transform: translateY(-50%);
-    z-index: 99;
+    z-index: 99
 }
 
 .carousel-section-wrapper .carousel-control:hover {
     background: #fff;
-    color: #e62129;
+    color: #e62129
 }
 
 .carousel-section-wrapper .carousel-control.carousel-control-next {
     left: auto;
-    right: 30px;
+    right: 30px
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width:768px) and (max-width:991px) {
     .carousel-section-wrapper .carousel-control {
         top: auto;
         transform: translateY(0);
         bottom: 80px;
-        margin: auto;
+        margin: auto
     }
 
     .carousel-section-wrapper .carousel-control.carousel-control-prev {
         left: 42%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 
     .carousel-section-wrapper .carousel-control.carousel-control-next {
         left: 10%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .carousel-section-wrapper .carousel-control {
         top: auto;
         transform: translateY(0);
         bottom: 80px;
-        margin: auto;
+        margin: auto
     }
 
     .carousel-section-wrapper .carousel-control.carousel-control-prev {
-        left: 37%;
+        left: 37%
     }
 
     .carousel-section-wrapper .carousel-control.carousel-control-next {
-        left: 23%;
+        left: 23%
     }
 }
 
 .carousel-section-wrapper .carousel-control span {
-    background: none;
+    background: 0 0;
     width: auto;
-    height: auto;
+    height: auto
 }
 
-/*===========================
-    13. Footer CSS 
-===========================*/
+.map-section {
+    margin-top: -130px
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .map-section {
+        margin-top: 130px
+    }
+}
+
+@media(max-width:767px) {
+    .map-section {
+        margin-top: 130px
+    }
+}
+
+.accordion-style .single-accordion {
+    border: 1px solid #f4eefb;
+    border-radius: 5px
+}
+
+.accordion-style .single-accordion .accordion-btn button {
+    background: #fff;
+    border: none;
+    padding: 12px 30px;
+    padding-right: 50px;
+    font-weight: 500;
+    border-radius: 5px;
+    position: relative;
+    width: 100%
+}
+
+.accordion-style .single-accordion .accordion-btn button::after {
+    content: "\ea5e";
+    font: normal normal normal 1em/1 "LineIcons";
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    transition: all .3s ease-out 0s
+}
+
+.accordion-style .single-accordion .accordion-btn button.collapsed::after {
+    transform: rotate(180deg)
+}
+
+.accordion-style .single-accordion .accordion-content {
+    padding: 20px 30px
+}
+
+.accordion-style.theme-accordion .single-accordion .accordion-btn button {
+    background: linear-gradient(to left, #e62129 0%, #e62129 100%);
+    color: #fff
+}
+
+.accordion-style.theme-accordion .single-accordion .accordion-btn button::after {
+    color: #fff
+}
+
 .footer {
     position: relative;
     z-index: 2;
-    background: #EFF2F9;
+    background: #eff2f9
 }
 
 .footer .footer-widget .footer-desc {
-    line-height: 30px;
+    line-height: 30px
 }
 
 .footer .footer-widget h4 {
     margin-bottom: 35px;
-    font-weight: 500;
+    font-weight: 500
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width:992px) and (max-width:1199px) {
     .footer .footer-widget h4 {
-        font-size: 22px;
+        font-size: 22px
     }
 }
 
@@ -2476,76 +2865,76 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     color: #e62129;
     display: block;
     line-height: 35px;
-    transition: all .3s;
+    transition: all .3s
 }
 
 .footer .footer-widget ul.footer-links li a:hover {
-    color: #e62129;
+    color: #e62129
 }
 
 .footer .footer-widget ul {
-    padding-left: 20px;
+    padding-left: 20px
 }
 
 .footer .footer-widget ul li {
-    list-style: disc;
+    list-style: disc
 }
 
 .footer .footer-widget .footer-contact li p {
-    line-height: 35px;
+    line-height: 35px
 }
 
 .footer .copyright-area {
-    border-top: 2px solid rgba(146, 106, 106, 0.44);
+    border-top: 2px solid rgba(106, 124, 146, .44);
     padding: 25px 0;
     font-size: 16px;
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
 .footer .copyright-area p {
-    text-align: right;
+    text-align: right
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .footer .copyright-area p {
         font-size: 14px;
-        text-align: center;
+        text-align: center
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width:480px) and (max-width:767px) {
     .footer .copyright-area p {
-        font-size: 15px;
+        font-size: 15px
     }
 }
 
 .footer .copyright-area p a {
-    color: #e62129;
+    color: #e62129
 }
 
 .footer .copyright-area p a:hover {
-    color: #e62129;
+    color: #e62129
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .footer-social-links {
-        margin-bottom: 15px;
+        margin-bottom: 15px
     }
 }
 
 .footer-social-links ul {
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .footer-social-links ul {
-        justify-content: center;
+        justify-content: center
     }
 }
 
 .footer-social-links ul li {
-    display: inline-block;
+    display: inline-block
 }
 
 .footer-social-links ul li a {
@@ -2554,741 +2943,741 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     border-radius: 50%;
     text-align: center;
     line-height: 45px;
-    background: rgba(146, 106, 106, 0.1);
+    background: rgba(106, 124, 146, .1);
     display: block;
     font-size: 18px;
     color: #e62129;
-    margin-right: 15px;
+    margin-right: 15px
 }
 
-@media (max-width: 767px) {
+@media(max-width:767px) {
     .footer-social-links ul li a {
         padding: 0 7px;
-        margin-right: 10px;
+        margin-right: 10px
     }
 }
 
 .footer-social-links ul li a:hover {
     background: linear-gradient(#e62129 0%, #e62129 100%);
-    color: #fff;
+    color: #fff
 }
 
 .mt-5 {
-    margin-top: 5px;
+    margin-top: 5px
 }
 
 .mt-10 {
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .mt-15 {
-    margin-top: 15px;
+    margin-top: 15px
 }
 
 .mt-20 {
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .mt-25 {
-    margin-top: 25px;
+    margin-top: 25px
 }
 
 .mt-30 {
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .mt-35 {
-    margin-top: 35px;
+    margin-top: 35px
 }
 
 .mt-40 {
-    margin-top: 40px;
+    margin-top: 40px
 }
 
 .mt-45 {
-    margin-top: 45px;
+    margin-top: 45px
 }
 
 .mt-50 {
-    margin-top: 50px;
+    margin-top: 50px
 }
 
 .mt-55 {
-    margin-top: 55px;
+    margin-top: 55px
 }
 
 .mt-60 {
-    margin-top: 60px;
+    margin-top: 60px
 }
 
 .mt-65 {
-    margin-top: 65px;
+    margin-top: 65px
 }
 
 .mt-70 {
-    margin-top: 70px;
+    margin-top: 70px
 }
 
 .mt-75 {
-    margin-top: 75px;
+    margin-top: 75px
 }
 
 .mt-80 {
-    margin-top: 80px;
+    margin-top: 80px
 }
 
 .mt-85 {
-    margin-top: 85px;
+    margin-top: 85px
 }
 
 .mt-90 {
-    margin-top: 90px;
+    margin-top: 90px
 }
 
 .mt-95 {
-    margin-top: 95px;
+    margin-top: 95px
 }
 
 .mt-100 {
-    margin-top: 100px;
+    margin-top: 100px
 }
 
 .mt-105 {
-    margin-top: 105px;
+    margin-top: 105px
 }
 
 .mt-110 {
-    margin-top: 110px;
+    margin-top: 110px
 }
 
 .mt-115 {
-    margin-top: 115px;
+    margin-top: 115px
 }
 
 .mt-120 {
-    margin-top: 120px;
+    margin-top: 120px
 }
 
 .mt-125 {
-    margin-top: 125px;
+    margin-top: 125px
 }
 
 .mt-130 {
-    margin-top: 130px;
+    margin-top: 130px
 }
 
 .mt-135 {
-    margin-top: 135px;
+    margin-top: 135px
 }
 
 .mt-140 {
-    margin-top: 140px;
+    margin-top: 140px
 }
 
 .mt-145 {
-    margin-top: 145px;
+    margin-top: 145px
 }
 
 .mt-150 {
-    margin-top: 150px;
+    margin-top: 150px
 }
 
 .mt-155 {
-    margin-top: 155px;
+    margin-top: 155px
 }
 
 .mt-160 {
-    margin-top: 160px;
+    margin-top: 160px
 }
 
 .mt-165 {
-    margin-top: 165px;
+    margin-top: 165px
 }
 
 .mt-170 {
-    margin-top: 170px;
+    margin-top: 170px
 }
 
 .mt-175 {
-    margin-top: 175px;
+    margin-top: 175px
 }
 
 .mt-180 {
-    margin-top: 180px;
+    margin-top: 180px
 }
 
 .mt-185 {
-    margin-top: 185px;
+    margin-top: 185px
 }
 
 .mt-190 {
-    margin-top: 190px;
+    margin-top: 190px
 }
 
 .mt-195 {
-    margin-top: 195px;
+    margin-top: 195px
 }
 
 .mt-200 {
-    margin-top: 200px;
+    margin-top: 200px
 }
 
 .mt-205 {
-    margin-top: 205px;
+    margin-top: 205px
 }
 
 .mt-210 {
-    margin-top: 210px;
+    margin-top: 210px
 }
 
 .mt-215 {
-    margin-top: 215px;
+    margin-top: 215px
 }
 
 .mt-220 {
-    margin-top: 220px;
+    margin-top: 220px
 }
 
 .mt-225 {
-    margin-top: 225px;
+    margin-top: 225px
 }
 
 .mb-5 {
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 .mb-10 {
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .mb-15 {
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 .mb-25 {
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .mb-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .mb-35 {
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
 
 .mb-40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .mb-45 {
-    margin-bottom: 45px;
+    margin-bottom: 45px
 }
 
 .mb-50 {
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
 
 .mb-55 {
-    margin-bottom: 55px;
+    margin-bottom: 55px
 }
 
 .mb-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px
 }
 
 .mb-65 {
-    margin-bottom: 65px;
+    margin-bottom: 65px
 }
 
 .mb-70 {
-    margin-bottom: 70px;
+    margin-bottom: 70px
 }
 
 .mb-75 {
-    margin-bottom: 75px;
+    margin-bottom: 75px
 }
 
 .mb-80 {
-    margin-bottom: 80px;
+    margin-bottom: 80px
 }
 
 .mb-85 {
-    margin-bottom: 85px;
+    margin-bottom: 85px
 }
 
 .mb-90 {
-    margin-bottom: 90px;
+    margin-bottom: 90px
 }
 
 .mb-95 {
-    margin-bottom: 95px;
+    margin-bottom: 95px
 }
 
 .mb-100 {
-    margin-bottom: 100px;
+    margin-bottom: 100px
 }
 
 .mb-105 {
-    margin-bottom: 105px;
+    margin-bottom: 105px
 }
 
 .mb-110 {
-    margin-bottom: 110px;
+    margin-bottom: 110px
 }
 
 .mb-115 {
-    margin-bottom: 115px;
+    margin-bottom: 115px
 }
 
 .mb-120 {
-    margin-bottom: 120px;
+    margin-bottom: 120px
 }
 
 .mb-125 {
-    margin-bottom: 125px;
+    margin-bottom: 125px
 }
 
 .mb-130 {
-    margin-bottom: 130px;
+    margin-bottom: 130px
 }
 
 .mb-135 {
-    margin-bottom: 135px;
+    margin-bottom: 135px
 }
 
 .mb-140 {
-    margin-bottom: 140px;
+    margin-bottom: 140px
 }
 
 .mb-145 {
-    margin-bottom: 145px;
+    margin-bottom: 145px
 }
 
 .mb-150 {
-    margin-bottom: 150px;
+    margin-bottom: 150px
 }
 
 .mb-155 {
-    margin-bottom: 155px;
+    margin-bottom: 155px
 }
 
 .mb-160 {
-    margin-bottom: 160px;
+    margin-bottom: 160px
 }
 
 .mb-165 {
-    margin-bottom: 165px;
+    margin-bottom: 165px
 }
 
 .mb-170 {
-    margin-bottom: 170px;
+    margin-bottom: 170px
 }
 
 .mb-175 {
-    margin-bottom: 175px;
+    margin-bottom: 175px
 }
 
 .mb-180 {
-    margin-bottom: 180px;
+    margin-bottom: 180px
 }
 
 .mb-185 {
-    margin-bottom: 185px;
+    margin-bottom: 185px
 }
 
 .mb-190 {
-    margin-bottom: 190px;
+    margin-bottom: 190px
 }
 
 .mb-195 {
-    margin-bottom: 195px;
+    margin-bottom: 195px
 }
 
 .mb-200 {
-    margin-bottom: 200px;
+    margin-bottom: 200px
 }
 
 .mb-205 {
-    margin-bottom: 205px;
+    margin-bottom: 205px
 }
 
 .mb-210 {
-    margin-bottom: 210px;
+    margin-bottom: 210px
 }
 
 .mb-215 {
-    margin-bottom: 215px;
+    margin-bottom: 215px
 }
 
 .mb-220 {
-    margin-bottom: 220px;
+    margin-bottom: 220px
 }
 
 .mb-225 {
-    margin-bottom: 225px;
+    margin-bottom: 225px
 }
 
 .pt-5 {
-    padding-top: 5px;
+    padding-top: 5px
 }
 
 .pt-10 {
-    padding-top: 10px;
+    padding-top: 10px
 }
 
 .pt-15 {
-    padding-top: 15px;
+    padding-top: 15px
 }
 
 .pt-20 {
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 .pt-25 {
-    padding-top: 25px;
+    padding-top: 25px
 }
 
 .pt-30 {
-    padding-top: 30px;
+    padding-top: 30px
 }
 
 .pt-35 {
-    padding-top: 35px;
+    padding-top: 35px
 }
 
 .pt-40 {
-    padding-top: 40px;
+    padding-top: 40px
 }
 
 .pt-45 {
-    padding-top: 45px;
+    padding-top: 45px
 }
 
 .pt-50 {
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 .pt-55 {
-    padding-top: 55px;
+    padding-top: 55px
 }
 
 .pt-60 {
-    padding-top: 60px;
+    padding-top: 60px
 }
 
 .pt-65 {
-    padding-top: 65px;
+    padding-top: 65px
 }
 
 .pt-70 {
-    padding-top: 70px;
+    padding-top: 70px
 }
 
 .pt-75 {
-    padding-top: 75px;
+    padding-top: 75px
 }
 
 .pt-80 {
-    padding-top: 80px;
+    padding-top: 80px
 }
 
 .pt-85 {
-    padding-top: 85px;
+    padding-top: 85px
 }
 
 .pt-90 {
-    padding-top: 90px;
+    padding-top: 90px
 }
 
 .pt-95 {
-    padding-top: 95px;
+    padding-top: 95px
 }
 
 .pt-100 {
-    padding-top: 100px;
+    padding-top: 100px
 }
 
 .pt-105 {
-    padding-top: 105px;
+    padding-top: 105px
 }
 
 .pt-110 {
-    padding-top: 110px;
+    padding-top: 110px
 }
 
 .pt-115 {
-    padding-top: 115px;
+    padding-top: 115px
 }
 
 .pt-120 {
-    padding-top: 120px;
+    padding-top: 120px
 }
 
 .pt-125 {
-    padding-top: 125px;
+    padding-top: 125px
 }
 
 .pt-130 {
-    padding-top: 130px;
+    padding-top: 130px
 }
 
 .pt-135 {
-    padding-top: 135px;
+    padding-top: 135px
 }
 
 .pt-140 {
-    padding-top: 140px;
+    padding-top: 140px
 }
 
 .pt-145 {
-    padding-top: 145px;
+    padding-top: 145px
 }
 
 .pt-150 {
-    padding-top: 150px;
+    padding-top: 150px
 }
 
 .pt-155 {
-    padding-top: 155px;
+    padding-top: 155px
 }
 
 .pt-160 {
-    padding-top: 160px;
+    padding-top: 160px
 }
 
 .pt-165 {
-    padding-top: 165px;
+    padding-top: 165px
 }
 
 .pt-170 {
-    padding-top: 170px;
+    padding-top: 170px
 }
 
 .pt-175 {
-    padding-top: 175px;
+    padding-top: 175px
 }
 
 .pt-180 {
-    padding-top: 180px;
+    padding-top: 180px
 }
 
 .pt-185 {
-    padding-top: 185px;
+    padding-top: 185px
 }
 
 .pt-190 {
-    padding-top: 190px;
+    padding-top: 190px
 }
 
 .pt-195 {
-    padding-top: 195px;
+    padding-top: 195px
 }
 
 .pt-200 {
-    padding-top: 200px;
+    padding-top: 200px
 }
 
 .pt-205 {
-    padding-top: 205px;
+    padding-top: 205px
 }
 
 .pt-210 {
-    padding-top: 210px;
+    padding-top: 210px
 }
 
 .pt-215 {
-    padding-top: 215px;
+    padding-top: 215px
 }
 
 .pt-220 {
-    padding-top: 220px;
+    padding-top: 220px
 }
 
 .pt-225 {
-    padding-top: 225px;
+    padding-top: 225px
 }
 
 .pb-5 {
-    padding-bottom: 5px;
+    padding-bottom: 5px
 }
 
 .pb-10 {
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 .pb-15 {
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
 
 .pb-20 {
-    padding-bottom: 20px;
+    padding-bottom: 20px
 }
 
 .pb-25 {
-    padding-bottom: 25px;
+    padding-bottom: 25px
 }
 
 .pb-30 {
-    padding-bottom: 30px;
+    padding-bottom: 30px
 }
 
 .pb-35 {
-    padding-bottom: 35px;
+    padding-bottom: 35px
 }
 
 .pb-40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px
 }
 
 .pb-45 {
-    padding-bottom: 45px;
+    padding-bottom: 45px
 }
 
 .pb-50 {
-    padding-bottom: 50px;
+    padding-bottom: 50px
 }
 
 .pb-55 {
-    padding-bottom: 55px;
+    padding-bottom: 55px
 }
 
 .pb-60 {
-    padding-bottom: 60px;
+    padding-bottom: 60px
 }
 
 .pb-65 {
-    padding-bottom: 65px;
+    padding-bottom: 65px
 }
 
 .pb-70 {
-    padding-bottom: 70px;
+    padding-bottom: 70px
 }
 
 .pb-75 {
-    padding-bottom: 75px;
+    padding-bottom: 75px
 }
 
 .pb-80 {
-    padding-bottom: 80px;
+    padding-bottom: 80px
 }
 
 .pb-85 {
-    padding-bottom: 85px;
+    padding-bottom: 85px
 }
 
 .pb-90 {
-    padding-bottom: 90px;
+    padding-bottom: 90px
 }
 
 .pb-95 {
-    padding-bottom: 95px;
+    padding-bottom: 95px
 }
 
 .pb-100 {
-    padding-bottom: 100px;
+    padding-bottom: 100px
 }
 
 .pb-105 {
-    padding-bottom: 105px;
+    padding-bottom: 105px
 }
 
 .pb-110 {
-    padding-bottom: 110px;
+    padding-bottom: 110px
 }
 
 .pb-115 {
-    padding-bottom: 115px;
+    padding-bottom: 115px
 }
 
 .pb-120 {
-    padding-bottom: 120px;
+    padding-bottom: 120px
 }
 
 .pb-125 {
-    padding-bottom: 125px;
+    padding-bottom: 125px
 }
 
 .pb-130 {
-    padding-bottom: 130px;
+    padding-bottom: 130px
 }
 
 .pb-135 {
-    padding-bottom: 135px;
+    padding-bottom: 135px
 }
 
 .pb-140 {
-    padding-bottom: 140px;
+    padding-bottom: 140px
 }
 
 .pb-145 {
-    padding-bottom: 145px;
+    padding-bottom: 145px
 }
 
 .pb-150 {
-    padding-bottom: 150px;
+    padding-bottom: 150px
 }
 
 .pb-155 {
-    padding-bottom: 155px;
+    padding-bottom: 155px
 }
 
 .pb-160 {
-    padding-bottom: 160px;
+    padding-bottom: 160px
 }
 
 .pb-165 {
-    padding-bottom: 165px;
+    padding-bottom: 165px
 }
 
 .pb-170 {
-    padding-bottom: 170px;
+    padding-bottom: 170px
 }
 
 .pb-175 {
-    padding-bottom: 175px;
+    padding-bottom: 175px
 }
 
 .pb-180 {
-    padding-bottom: 180px;
+    padding-bottom: 180px
 }
 
 .pb-185 {
-    padding-bottom: 185px;
+    padding-bottom: 185px
 }
 
 .pb-190 {
-    padding-bottom: 190px;
+    padding-bottom: 190px
 }
 
 .pb-195 {
-    padding-bottom: 195px;
+    padding-bottom: 195px
 }
 
 .pb-200 {
-    padding-bottom: 200px;
+    padding-bottom: 200px
 }
 
 .pb-205 {
-    padding-bottom: 205px;
+    padding-bottom: 205px
 }
 
 .pb-210 {
-    padding-bottom: 210px;
+    padding-bottom: 210px
 }
 
 .pb-215 {
-    padding-bottom: 215px;
+    padding-bottom: 215px
 }
 
 .pb-220 {
-    padding-bottom: 220px;
+    padding-bottom: 220px
 }
 
 .pb-225 {
-    padding-bottom: 225px;
+    padding-bottom: 225px
 }

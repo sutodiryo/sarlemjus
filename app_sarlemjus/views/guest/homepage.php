@@ -851,7 +851,6 @@
 		</div>
 	</div>
 </section> -->
-<!-- ========================= subscribe-section end ========================= -->
 
 
 <?php $this->load->view('guest/_/footer'); ?>

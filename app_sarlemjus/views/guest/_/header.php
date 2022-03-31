@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="<?php echo FRONT_ASSETS ?>css/tiny-slider.css">
   <link rel="stylesheet" href="<?php echo FRONT_ASSETS ?>css/glightbox.min.css">
   <link rel="stylesheet" href="<?php echo FRONT_ASSETS ?>css/main.css">
+
 </head>
 
 <body>
@@ -57,8 +58,12 @@
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url('about') ?>"><?php echo ($page == 'about') ? '<b>About Us</b>' : 'About Us'; ?></a></li>
                 <!-- <li class="nav-item"><a class="page-scroll" href="<?= base_url('contact') ?>"><?php echo ($page == 'contact') ? '<b>Contact Us</b>' : 'Contact Us'; ?></a></li> -->
                 <li class="nav-item"><a class="page-scroll" href="<?= base_url('lp') ?>">Blog</a></li>
-                <li class="nav-item"><a class="page-scroll" href="<?= base_url('#') ?>"><?php echo ($page == 'shop') ? '<b>Shop</b>' : 'Shop'; ?></a></li>
+                <li class="nav-item"><a class="page-scroll" href="<?= base_url('shop') ?>"><?php echo ($page == 'shop') ? '<b>Shop</b>' : 'Shop'; ?></a></li>
               </ul>
+              <!-- <a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a> -->
+              <button class="theme-btn-white" data-toggle="modal" href="#modal_cart" style="background-color: white;"><i class="lni lni-cart"></i>(<span id="cart_qty"></span>)</button>
+              <!-- <a class="btn btn-lg btn-outline-warning" data-toggle="modal" href="#modal_cart"><i class="icon feather icon-shopping-cart"></i> Keranjang Belanja <span class="pcoded-badge badge badge-warning" id="cart_qty"></span></a> -->
+
               <a href="<?= base_url('login') ?>" class="theme-btn">Daftar/Login</a>
               <!--
               <form action="#" class="search-form">

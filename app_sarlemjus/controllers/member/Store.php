@@ -207,10 +207,18 @@ class Store extends CI_Controller
                   <td>
                     <table class="table table-borderless">
                       <tbody>
-                        <tr><th style="text-align:right;"><p style="color:orange;">Subtotal :</p>
-                        <p style="color:green;">Discount Level (' . $discount . '%) :</p>
-                        <p style="color:orange;">Biaya Pengiriman :</p></th></tr>
-                        <tr><th style="text-align:right;"><p style="color:red;"><b>Total Tagihan :</b></p></th></tr>
+                        <tr>
+                          <th style="text-align:right;">
+                            <p style="color:orange;">Subtotal :</p>
+                            <p style="color:green;">Discount Level (' . $discount . '%) :</p>
+                            <p style="color:orange;">Biaya Pengiriman :</p>
+                          </th>
+                        </tr>
+                        <tr>
+                          <th style="text-align:right;">
+                            <p style="color:red;"><b>Total Tagihan :</b></p>
+                          </th>
+                        </tr>
                       </tbody>
                     </table>
                   </td>

@@ -69,12 +69,16 @@ class Transaction_data extends CI_Model
 
     function get_member_discount()
     {
-        $member_id = $this->session->userdata('log_id');
+        if ($this->session->userdata('log_valid') == TRUE) {
+            $member_id = $this->session->userdata('log_id');
 
-        $q = $this->db->query("SELECT ml.discount FROM member m
+            $q = $this->db->query("SELECT ml.discount FROM member m
                                 LEFT JOIN member_level ml ON m.level=ml.id
                                 WHERE m.id='$member_id'")->row();
-        $discount = $q->discount;
+            $discount = $q->discount;
+        } else {
+            $discount = 0;
+        }
 
         if ($discount > 0) {
             $discount = $q->discount;
@@ -94,14 +98,17 @@ class Transaction_data extends CI_Model
 
     function get_member_discount_value()
     {
-        $member_id = $this->session->userdata('log_id');
         $total = $this->cart->total();
 
-        $q = $this->db->query("SELECT ml.discount FROM member m
+        if ($this->session->userdata('log_valid') == TRUE) {
+            $member_id = $this->session->userdata('log_id');
+            $q = $this->db->query("SELECT ml.discount FROM member m
                                 LEFT JOIN member_level ml ON m.level=ml.id
                                 WHERE m.id='$member_id'")->row();
-        $discount = $q->discount;
-
+            $discount = $q->discount;
+        } else {
+            $discount = 0;
+        }
         if ($discount > 0) {
             $discount_value = ($discount / 100) * $total;
         } else {

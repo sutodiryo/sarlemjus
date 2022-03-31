@@ -1,11 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['default_controller']    = 'guest';
-$route['join']                  = 'guest/join';
-$route['about']                 = 'guest/about';
-$route['contact']               = 'guest/contact';
-$route['join_us']               = 'guest/join_us';
+$route['default_controller'] = 'guest';
+$route['join'] = 'guest/join';
+$route['about'] = 'guest/about';
+$route['shop'] = 'guest/shop';
+$route['contact'] = 'guest/contact';
+$route['join_us'] = 'guest/join_us';
 
 $route['lp/(:any)/(:any)'] = 'guest/lp/$1/$2';
 
