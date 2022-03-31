@@ -58,57 +58,45 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h4>Keranjang Belanja</h4>
         <button class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
+      <div class="modal-body" id="cart">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="5%"></th>
+                <th width="40%">Produk</th>
+                <th width="20%">Harga</th>
+                <th width="10%">Jumlah Barang</th>
+                <th width="25%" class="text-right">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="detail_cart"></tbody>
+            <tr id="btn_checkout"></tr>
+            <form method="POST" action="<?php echo base_url('member/store/act_add_transaction/') ?>" id="act_checkout_form">
+              <input type="hidden" name="home_detail" id="home_detail">
+              <input type="hidden" name="village_name" id="village_name">
+              <input type="hidden" name="subdistrict_name" id="subdistrict_name">
+              <input type="hidden" name="subdistrict_id" id="subdistrict_id">
+              <input type="hidden" name="district_name" id="district_name">
+              <input type="hidden" name="district_id" id="district_id">
+              <input type="hidden" name="province_name" id="province_name">
+              <input type="hidden" name="province_id" id="province_id">
+              <input type="hidden" name="shipping_costs" id="shipping_costs_checkout">
+              <input type="hidden" name="courier_name" id="courier_name">
+            </form>
+          </table>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Save changes</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
-      
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="card" id="cart">
-            <div class="card-header text-center">
-              <h4>Keranjang Belanja</h4>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th width="40%">Produk</th>
-                      <th width="20%">Harga</th>
-                      <th width="10%">Jumlah Barang</th>
-                      <th width="25%" class="text-right">Subtotal</th>
-                      <th width="5%"></th>
-                    </tr>
-                  </thead>
-                  <tbody id="detail_cart"></tbody>
-                  <tr id="btn_checkout"></tr>
-                  <form method="POST" action="<?php echo base_url('member/store/act_add_transaction/') ?>" id="act_checkout_form">
-                    <input type="hidden" name="home_detail" id="home_detail">
-                    <input type="hidden" name="village_name" id="village_name">
-                    <input type="hidden" name="subdistrict_name" id="subdistrict_name">
-                    <input type="hidden" name="subdistrict_id" id="subdistrict_id">
-                    <input type="hidden" name="district_name" id="district_name">
-                    <input type="hidden" name="district_id" id="district_id">
-                    <input type="hidden" name="province_name" id="province_name">
-                    <input type="hidden" name="province_id" id="province_id">
-                    <input type="hidden" name="shipping_costs" id="shipping_costs_checkout">
-                    <input type="hidden" name="courier_name" id="courier_name">
-                  </form>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </div>
@@ -539,16 +527,6 @@
 
     function total_tagihan() {
       var x = "";
-      // console.log(shipping_costs);
-
-      // $.ajax({
-      //     type: "GET",
-      //     dataType: "html",
-      //     url: "<?= base_url('guest/cart_qty_value') ?>",
-      //     success: function(qty) {
-      // $("select#new_province").html(msg);
-      // if (qty > 0) {
-      // alert('lebih 0');
 
       var subtotal = $('#nilai_subtotal').val();
       var shipping_costs = $('#shipping_costs').val();
