@@ -19,7 +19,6 @@
       </div>
     </div>
 
-
     <div class="row">
 
       <div class="col-lg-12">
@@ -54,6 +53,7 @@
                     <div class="col-4 text-center">
                       <input <?= $stock >= 1  ? "" : "disabled"; ?> type='number' name='quantity' id='qty_<?= $p->id ?>' value='1' min='1' max='<?= $stock ?>' class='quantity form-control form-control-sm'>
                       <p class="text-muted m-b-0">Quantity (<?= $p->unit ?>)</p>
+                      
                       <!-- <i class="feather icon-bar-chart-2 f-28"></i> -->
                     </div>
                   </div>

@@ -37,7 +37,7 @@ class Store extends CI_Controller
 
   function cart_add()
   {
-    // $id_member  = $this->session->userdata('log_id');
+    // $member_id  = $this->session->userdata('log_id');
     $qty = $this->input->post('quantity');
     $id_produk  = $this->input->post('id_produk');
     $q = $this->Transaction_data->get_product_purchase_cart($qty, $id_produk);
@@ -67,6 +67,13 @@ class Store extends CI_Controller
     // echo $this->cart_show(0);
   }
 
+  function cart_qty_value()
+  {
+    $tot_qty = array_sum(array_column($this->cart->contents(), 'qty'));
+
+    echo $tot_qty;
+  }
+
   function cart_load()
   {
     echo $this->cart_show(0);
@@ -81,8 +88,8 @@ class Store extends CI_Controller
       'qty' => $qty
     );
 
-    $id_member  = $this->session->userdata('log_id');
-    $q          = $this->Transaction_data->get_product_purchase_cart($id_member, $id_produk);
+    $member_id  = $this->session->userdata('log_id');
+    $q          = $this->Transaction_data->get_product_purchase_cart($member_id, $id_produk);
     $stock      = $q->stock_plus - $q->stock_min;
     if ($stock < $qty) {
       // $this->alert('warning', 'Gagal, Anda melebih stok yang ada...');
@@ -105,56 +112,57 @@ class Store extends CI_Controller
 
   function cart_show()
   {
-    $id_member  = $this->session->userdata('log_id');
+    $member_id  = $this->session->userdata('log_id');
 
     $output     = '';
     $no         = 0;
     $tot_qty    = array_sum(array_column($this->cart->contents(), 'qty'));
 
-    $member_shipping_default  = $this->Transaction_data->get_member_shipping_default($id_member);
+    if ($tot_qty > 0) {
+      $member_shipping_default  = $this->Transaction_data->get_member_shipping_default($member_id);
 
-    $str        = "'";
-    foreach ($this->cart->contents() as $items) {
-      $no++;
+      $str        = "'";
+      foreach ($this->cart->contents() as $items) {
+        $no++;
 
-      $id_produk  =  $items['id'];
-      $id_member  = $this->session->userdata('log_id');
-      $q = $this->Transaction_data->get_product_purchase_cart($id_member, $id_produk);
+        $id_produk  =  $items['id'];
+        $member_id  = $this->session->userdata('log_id');
+        $q = $this->Transaction_data->get_product_purchase_cart($member_id, $id_produk);
 
-      $stock = $q->stock_plus - $q->stock_min;
+        $stock = $q->stock_plus - $q->stock_min;
 
-      $output .= '<tr>
+        $output .= '<tr>
                     <td title="' . $items['name'] . '">' . substr($items['name'], 0, 20) . '</td>
                     <td>' . number_format($items['price'], 0, ',', ',') . '</td>
                     <td class="text-center"><input id="qty' . $items['rowid'] . '" onchange="updateQty(' . $str . '' . $items['rowid'] . '' . $str . ',' . $str . '' . $items['id'] . '' . $str . ');" class="form-control form-control-sm" type="number" name="num-product' . $no++ . '" value="' . $items['qty'] . '" min="1" max="' . $stock . '"></td>
                     <td style="text-align:right; padding-right:20px;"><p>' . number_format($items['subtotal'], 0, ',', ',') . '</p></td>
                     <td><a href="#" id="' . $items['rowid'] . '" class="hapus_cart table-action table-action-delete"><i class="fas fa-trash"></i></a></td>
                   </tr>';
-    }
+      }
 
-    $output .= '<tr>
+      $output .= '<tr>
                   <td colspan="2">
                   <table class="table table-striped">
                   <tbody>';
-    if (!empty($member_shipping_default)) {
+      if (!empty($member_shipping_default)) {
 
-      $output .= '<tr style="border:1px;">
+        $output .= '<tr style="border:1px;">
                     <th>
                       <label class="form-control-label" for="alamat"> Alamat Penerima</label>
-                      <h4 class="mb-0">' . $member_shipping_default->nama_penerima . '</h4>
-                      <input type="hidden" name="shipping_selected_name" id="shipping_selected_name" value="' . $member_shipping_default->nama_penerima . '">
-                      <input type="hidden" name="shipping_selected_no_hp" id="shipping_selected_no_hp" value="' . $member_shipping_default->no_hp_penerima . '">
-                      <input type="hidden" name="id_subdistrict" id="id_subdistrict" value="' . $member_shipping_default->id_subdistrict . '">
-                      <small>' . $member_shipping_default->no_hp_penerima . '</small>
+                      <h4 class="mb-0">' . $member_shipping_default->recipients_name . '</h4>
+                      <input type="hidden" name="shipping_selected_name" id="shipping_selected_name" value="' . $member_shipping_default->recipients_name . '">
+                      <input type="hidden" name="shipping_selected_no_hp" id="shipping_selected_no_hp" value="' . $member_shipping_default->recipients_phone . '">
+                      <input type="hidden" name="subdistrict_id" id="subdistrict_id" value="' . $member_shipping_default->subdistrict_id . '">
+                      <small>' . $member_shipping_default->recipients_phone . '</small>
                       <br>
-                      <textarea class="form-control" style="padding: 0px; outline: none !important; border:0px ; font-size: 12px; background-color:transparent;" disabled>' . $member_shipping_default->full_address . ' - ' . $member_shipping_default->postal_code . '</textarea>
+                      <textarea class="form-control" style="padding: 0px; outline: none !important; border:0px ; font-size: 12px; background-color:transparent;" disabled>' . $member_shipping_default->home_detail . ', ' . $member_shipping_default->village_name . ', ' . $member_shipping_default->subdistrict_name . ', ' . $member_shipping_default->district_name . ', ' . $member_shipping_default->province_name . ' - ' . $member_shipping_default->postal_code . '</textarea>
                     </th>
                   </tr>';
 
-      $tb_gram    = $this->get_weight('return');
-      $tb_kg      = $tb_gram / 1000;
+        $tb_gram    = $this->get_weight('return');
+        $tb_kg      = $tb_gram / 1000;
 
-      $output .= '<tr>
+        $output .= '<tr>
                     <th>
                       <label class="form-control-label" for="id_kurir">Pilih Jasa Pengiriman <small><font id="total_weight" color="blue">Total Berat : (' . $tb_kg . ' Kg)</font></small></label>
                       <select class="form-control form-control-sm" id="kurir" onchange="set_kurir()" required="">
@@ -171,33 +179,46 @@ class Store extends CI_Controller
                       <div id="datakurir"></div>
                     </th>
                   <tr>';
-    } else {
-      // <a href="' . base_url('member/profile') . '" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></a>
+      } else {
+        // <a href="' . base_url('member/profile') . '" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></a>
 
-      $output .= '<tr>
-                    <div id="add_new_address_form">
+        $output .= '<tr id="add_new_address_form">
+                    <div>
                       <th style="text-align:right;"><small><font color="red" >Anda belum mengatur alamat pengiriman</font></small></th>
-                      <th style="text-align:right;"><button onclick="add_new_address()" title="Tambah Alamat Pengiriman" class="btn btn-sm btn-default"><small>Tambah Alamat</small></button></th>
+                      <th style="text-align:right;"><button onclick="add_new_address()" title="Tambah Alamat Pengiriman" class="btn btn-info"><i class="feather icon-map-pin"></i> Tambah Alamat</button></th>
                     </div>
                   </tr>';
-    }
+      }
 
-    $total_cart = $this->cart->total();
+      $total_cart = $this->cart->total();
+      if ($total_cart != 0) {
+        $discount = $this->Transaction_data->get_member_discount();
+        $discount_value = $this->Transaction_data->get_member_discount_value();
+        $total = $total_cart - $discount_value;
+      } else {
+        $discount = 0;
+        $discount_value = 0;
+        $total = 0;
+      }
 
-    $discount = $this->Transaction_data->get_member_discount();
-    $discount_value = $this->Transaction_data->get_member_discount_value();
-    $total = $total_cart - $discount_value;
-
-    $output .= '  </tbody>
+      $output .= '  </tbody>
                   </table>
                   </td>
                   <td>
                     <table class="table table-borderless">
                       <tbody>
-                        <tr><th style="text-align:right;"><p style="color:orange;">Subtotal :</p>
-                        <p style="color:green;">Discount Level (' . $discount . '%) :</p>
-                        <p style="color:orange;">Biaya Pengiriman :</p></th></tr>
-                        <tr><th style="text-align:right;"><p style="color:red;"><b>Total Tagihan :</b></p></th></tr>
+                        <tr>
+                          <th style="text-align:right;">
+                            <p style="color:orange;">Subtotal :</p>
+                            <p style="color:green;">Discount Level (' . $discount . '%) :</p>
+                            <p style="color:orange;">Biaya Pengiriman :</p>
+                          </th>
+                        </tr>
+                        <tr>
+                          <th style="text-align:right;">
+                            <p style="color:red;"><b>Total Tagihan :</b></p>
+                          </th>
+                        </tr>
                       </tbody>
                     </table>
                   </td>
@@ -223,6 +244,14 @@ class Store extends CI_Controller
                     </table>
                   </td>
                 </tr>';
+    } else {
+      $output .= '<tr>
+                    <td class="text-center" colspan="4">
+                      <h2>Keranjang anda masih kosong...</h2>
+                      <a href="' . base_url('member/store') . '"><h2 class="text-info">Silahkan pilih produk disini...</h2></a>
+                    </td>
+                  </tr>';
+    }
 
     return $output;
   }
@@ -249,10 +278,10 @@ class Store extends CI_Controller
 
   function get_cost($cour)
   {
-    $id_member  = $this->session->userdata('log_id');
-    $q          = $this->Transaction_data->get_member_shipping_default($id_member);
+    $member_id  = $this->session->userdata('log_id');
+    $q          = $this->Transaction_data->get_member_shipping_default($member_id);
 
-    $des = $q->id_subdistrict;
+    $des = $q->subdistrict_id;
     $weight = $this->get_weight('return');
 
     // $gatewayname = "Raja Ongkir";
@@ -273,6 +302,7 @@ class Store extends CI_Controller
     $courier_name = $this->input->post('courier_name'); //nama kurir
 
     $data = $this->Transaction_data->transaction_calculation($shipping_costs, $courier_name);
+    // $member_id = $this->session->userdata('log_id');
 
     $this->db->insert('transaction', $data);
     $insert_id = $this->db->insert_id();
@@ -281,16 +311,17 @@ class Store extends CI_Controller
     foreach ($this->cart->contents() as $cart) {
       $product_id  = $cart['id'];
       $q = $this->db->query("SELECT p.name FROM product p WHERE p.id='$product_id'")->row();
-      // $ppv        = $q->nilai;
+      // $ppv = $q->nilai;
       $transaction_product[] = array(
         'transaction_id' => $insert_id,
         'product_id' => $product_id,
         'product_name' => $q->name,
         'price' => $cart['price'],
         'quantity' => $cart['qty'],
-        // 'point'            => $cart['qty'] * $ppv
+        // 'point' => $cart['qty'] * $ppv
       );
     }
+
     $this->db->insert_batch('transaction_product', $transaction_product);
 
     $this->cart->destroy();
@@ -302,7 +333,6 @@ class Store extends CI_Controller
     $message = "------------";
     $from = "noreply.dev.std@gmail.com";
     $nama = "aaa";
-
 
     $this->load->library('Email');
     $email = new Email;

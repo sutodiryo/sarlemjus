@@ -124,30 +124,66 @@
 <section class="feature-section pt-75">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-6 pt-100">
+
+			<div class="col-xl-12 col-lg-12 col-md-12 mx-auto">
+				<div class="section-title text-center mt-55 mb-55">
+					<!-- <span class="wow fadeInDown" data-wow-delay=".2s">Services</span> -->
+					<h1 class="wow fadeInUp" data-wow-delay=".4s">Gabung Bisnis Sarlemjus</h1>
+					<!-- <p class="wow fadeInUp" data-wow-delay=".6s">At vero eos et accusamus et iusto odio dignissimos ducimus quiblanditiis praesentium</p> -->
+				</div>
+			</div>
+
+			<div class="col-lg-2 col-md-6 pt-125">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">0</h3>
+						<h6 class="text-center pt-20">Dropship</h6>
+						<p class="text-center pt-20">Diskon 15%</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6 pt-100">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">500K</h3>
+						<h6 class="text-center pt-20">Reseller</h6>
+						<p class="text-center pt-20">Diskon 20%</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6 pt-75">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">2.5Jt</h3>
+						<h6 class="text-center pt-20">Sub Agen</h6>
+						<p class="text-center pt-20">Diskon 25%</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6 pt-50">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">5Jt</h3>
+						<h6 class="text-center pt-20">Agen</h6>
+						<p class="text-center pt-20">Diskon 30%</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6 pt-25">
+				<div class="feature-box box-style">
+					<div class="box-content-style feature-content">
+						<h3 class="text-center">20Jt</h3>
+						<h6 class="text-center pt-20">Mitra</h6>
+						<p class="text-center pt-20">Diskon 40%</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6">
 				<div class="feature-box box-style" style="background-color: red;">
 					<div class="box-content-style feature-content">
-						<h3 class="text-center" style="color: white;">200k</h3>
-						<h6 class="text-center pt-20" style="color: white;">Ipsum fugiat</h6>
-						<p class="text-center pt-20" style="color: white;">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 pt-50">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
-						<h3 class="text-center">200k</h3>
-						<h6 class="text-center pt-20">Ipsum fugiat</h6>
-						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="feature-box box-style">
-					<div class="box-content-style feature-content">
-						<h3 class="text-center">200k</h3>
-						<h6 class="text-center pt-20">Ipsum fugiat</h6>
-						<p class="text-center pt-20">Ipsum fugiat veniam irure tempor ut proident voluptate eiusmod</p>
+						<h3 class="text-center" style="color: white;">50Jt</h3>
+						<h6 class="text-center pt-20" style="color: white;">Mitra VIP</h6>
+						<p class="text-center pt-20" style="color: white;">Diskon 45%</p>
 					</div>
 				</div>
 			</div>
@@ -244,14 +280,14 @@
 				<div class="col-xl-8 col-lg-12">
 					<div class="about-content-wrapper">
 						<div class="section-title">
-							<h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight; color:white;">Anda Mau jadi Reseller Sarlemjus??</h2>
-							<span class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color:white;">Gabung menjadi Reseller Sarlemjus itu seru banget lohh... ada banyak sekali keuntungan yang bisa anda dapat seperti :</span>
+							<h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight; color:white;">Anda Mau Join Binis Sarlemjus ??</h2>
+							<span class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color:white;">Gabung menjadi Mitra Bisnis Sarlemjus itu seru banget lohh... Berikut keuntungannya :</span>
 						</div>
 						<div class="about-content">
-							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Menggunakan suport system berupa platfrom Dropship.Sarlemjus.com yang sangat mudah digunakan.</p>
-							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Anda akan mendapatkan Reward/keuntungan yang terdiri dari Potongan Harga, Bonus Belanja, Bonus Refferal, Top Belanja, & Top Rekrut.</p>
-							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Bonus-Bonus lainnya.</p>
-							<p class="mt-10 mb-45 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Baru awam berbisnis?? tenang aja karena di Sarlemjus Anda akan wajib mengikuti kelas yang kita sediakan untuk belajar bisnis dari A-Z.</p>
+							<h5 class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Timeless business</h5>
+							<h5 class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> 100% membantu menyehatkan tubuh -Produk alami tanpa pengawet.</h5>
+							<h5 class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Langsung jualan tanpa ribet</h5>
+							<h5 class="mt-10 mb-45 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> GRATIS foto + materi posting</h5>
 
 							<!-- <div class="counter-up wow fadeInUp" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
 								<div class="counter">
@@ -815,7 +851,6 @@
 		</div>
 	</div>
 </section> -->
-<!-- ========================= subscribe-section end ========================= -->
 
 
 <?php $this->load->view('guest/_/footer'); ?>

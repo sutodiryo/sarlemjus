@@ -282,38 +282,43 @@ class Shipping extends CI_Controller
   function add_shipping_address()
   {
     $id = $this->session->userdata('log_id');
-    $q = $this->db->query("SELECT * FROM member_shipping WHERE id_member='$id'")->num_rows();
+    $member = $this->db->query("SELECT name,phone FROM member WHERE id='$id'")->row();
+    $q = $this->db->query("SELECT * FROM member_shipping WHERE member_id='$id'")->num_rows();
     if ($q == 0) {
       $status = 1;
     } else {
       $status = 0;
     }
 
+    date_default_timezone_set('Asia/Jakarta');
+    $now = date("Y-m-d H:i:s");
+
     $data = [
-      'id' => "ms-" . $id . "-" . ($q + 1),
-      'id_member' => $id,
-      'nama_penerima' => $this->input->post('nama_penerima'),
-      'no_hp_penerima'  => $this->input->post('no_hp_penerima'),
-      'id_province'    => $this->input->post('id_province'),
-      'id_district'    => $this->input->post('id_district'),
-      'id_subdistrict' => $this->input->post('id_subdistrict'),
-      'province_name'    => $this->input->post('province_name'),
-      'district_name'    => $this->input->post('district_name'),
-      'subdistrict_name'    => $this->input->post('subdistrict_name'),
-      'postal_code'    => $this->input->post('postal_code'),
-      'full_address'    => $this->input->post('full_address'),
-      'status'    => $status
+      // 'id' => "ms-" . $id . "-" . ($q + 1),
+      'member_id' => $id,
+      'recipients_name' => $member->name,
+      'recipients_phone' => $member->phone,
+      'province_id' => $this->input->post('province_id'),
+      'district_id' => $this->input->post('district_id'),
+      'subdistrict_id' => $this->input->post('subdistrict_id'),
+      'province_name' => $this->input->post('province_name'),
+      'district_name' => $this->input->post('district_name'),
+      'subdistrict_name' => $this->input->post('subdistrict_name'),
+      'village_name' => $this->input->post('village_name'),
+      'home_detail' => $this->input->post('home_detail'),
+      'date_created' => $now,
+      'status' => $status
     ];
 
     $this->db->insert('member_shipping', $data);
 
-    if ($this->input->post('cart') == 1) {
-      $q = $this->db->query("SELECT id FROM member_shipping WHERE id_member='$id' ORDER BY date_created ASC LIMIT 1")->row();
-      $idsa = $q->id;
-      $this->load_shipping_address($idsa);
-    } else {
-      $this->alert('success', 'Alamat Pengiriman Baru Berhasil Ditambahkan...');
-      redirect('member/profile');
-    }
+    // if ($this->input->post('cart') == 1) {
+    //   $q = $this->db->query("SELECT id FROM member_shipping WHERE id_member='$id' ORDER BY date_created ASC LIMIT 1")->row();
+    //   $idsa = $q->id;
+    //   $this->load_shipping_address($idsa);
+    // } else {
+    //   $this->alert('success', 'Alamat Pengiriman Baru Berhasil Ditambahkan...');
+    //   redirect('member/profile');
+    // }
   }
 }

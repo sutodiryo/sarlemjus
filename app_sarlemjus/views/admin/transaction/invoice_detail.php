@@ -41,9 +41,9 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                 </span>
                             </div>
                             <div class="row invoice-contact">
-                                <div class="col-md-8">
+                                <div class="col-8">
                                     <div class="invoice-box row">
-                                        <div class="col-sm-12">
+                                        <div class="col-12">
                                             <table class="table table-responsive invoice-table table-borderless p-l-20">
                                                 <tbody>
                                                     <tr>
@@ -55,7 +55,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                                         <td>Nama : <?php echo $inv->member_name ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alamat : <small><?php echo $inv->full_address; ?></small></td>
+                                                        <td>Alamat : <small><?= "$inv->home_detail, $inv->village_name, $inv->subdistrict_name, $inv->district_name, $inv->province_name" ?></small></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Tanggal : <?php echo $date_created ?></td>
@@ -68,26 +68,11 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                                                                 <a class='dropdown-item' href='#'>Set Batal</a>
                                                                             </div>
                                                                         </div>";
-
-                                                                            $s1 = "<br><br><br><br>"; // Tanda tangan 1 kosong
-                                                                            $s2 = "<br><br><br><br>"; // Tanda tangan 2 kosong
                                                                         } elseif ($inv->status == 1) {
-                                                                            echo "<button type='button' class='btn btn-sm btn-success has-ripple'><i class='fas fa-truck'></i> Diproses</span></button>";
-
-                                                                            $s1 = "<img src='" . FRONT_ASSETS . "img/logo-1.png' height='90px'>"; // Tanda tangan 1
+                                                                            echo "<button type='button' class='btn btn-sm btn-success has-ripple'><i class='fas fa-play-circle'></i> Diproses</span></button>";
                                                                         } elseif ($inv->status == 2) {
-                                                                            echo "<button type='button' class='btn btn-sm btn-info has-ripple'><i class='fas fa-box-open'></i> Diterima</span></button>";
-
-                                                                            $s1 = "<img src='" . FRONT_ASSETS . "img/logo-1.png' height='90px'>"; // Tanda tangan 1
-                                                                        } elseif ($inv->status == 3) {
-                                                                            echo "<button type='button' class='btn btn-sm btn-info has-ripple'><i class='fas fa-check-circle'></i> Selesai</span></button>";
-
-                                                                            $s1 = "<img src='" . FRONT_ASSETS . "img/logo-1.png' height='90px'>"; // Tanda tangan 1
-                                                                        } elseif ($inv->status == 4) {
-                                                                            echo "<button type='button' class='btn btn-sm btn-dark has-ripple'><i class='fas fa-times-circle'></i> Dibatalkan</span></button>";
-
-                                                                            $s1 = "<img src='" . FRONT_ASSETS . "img/logo-1.png' height='90px'>"; // Tanda tangan 1
-                                                                        }  ?>
+                                                                            echo "<button type='button' class='btn btn-sm btn-info has-ripple'><i class='fas fa-check-circle'></i> Diterima</span></button>";
+                                                                        } ?>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -95,7 +80,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-4">
                                     <div class="invoice-box row">
                                         <div class="col-sm-12">
                                             <table class="table table-responsive invoice-table table-borderless p-l-20">
@@ -123,6 +108,44 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                 </div>
                             </div>
                             <div class="card-body">
+                                <!-- <div class="row invoive-info">
+                                <div class="col-md-4 col-xs-12 invoice-client-info">
+                                    <h6>Client Information :</h6>
+                                    <h6 class="m-0">Josephin Villa</h6>
+                                    <p class="m-0 m-t-10">1065 Mandan Road, Columbia MO, Missouri. (123)-65202</p>
+                                    <p class="m-0">(1234) - 567891</p>
+                                    <p><a class="text-secondary" href="mailto:demo@gmail.com" target="_top">demo@gmail.com</a></p>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <h6>Order Information :</h6>
+                                    <table class="table table-responsive invoice-table invoice-order table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <th>Date :</th>
+                                                <td>November 14</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Status :</th>
+                                                <td>
+                                                    <span class="label label-warning">Pending</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Id :</th>
+                                                <td>
+                                                    #146859
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <h6 class="m-b-20">Invoice Number <span>#125863478945</span></h6>
+                                    <h6 class="text-uppercase text-primary">Total Due :
+                                        <span>$950.00</span>
+                                    </h6>
+                                </div>
+                            </div> -->
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="table-responsive">
@@ -165,7 +188,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-8">
+                                    <div class="col-8">
                                         <h6>Catatan :</h6>
                                         <p>1. Pengiriman dilakukan setelah pembayaran</p>
                                         <p>2. Transfer ke Bank BCA/Mandiri/BRI A.n Efri Korina</p>
@@ -175,7 +198,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                         <p>Mandiri : </p>
                                         <p>BRI : </p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-4">
                                         <table class="table table-responsive invoice-table invoice-total">
                                             <tbody>
                                                 <tr>
@@ -220,13 +243,22 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                 </div>
                                 <hr>
                                 <div class="row" style="margin-top:30px;">
-                                    <div class="col-sm-6 text-center">
+                                    <div class="col-6 text-center">
                                         <p>Dibuat Oleh :</p>
-                                        <?php echo $s1; ?>
-                                        <h6><u>Anjelita Rizkina</u></h6>
+                                        <?= ($inv->status >= 0) ? '<img src="' . base_url() . 'public/back/images/anjelita.png" height="90px">' : '<br><br><br><br>'; ?>
+                                        <h6><u>Anjelita</u></h6>
                                         <p>Keuangan</p>
                                     </div>
-                                    <div class="col-sm-6 text-center">
+                                    <!-- <div class="col-sm-4 text-center">
+                                        <p>Disetujui Oleh :</p>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <h6><u>Efri Korina</u></h6>
+                                        <p>Direktur</p>
+                                    </div> -->
+                                    <div class="col-6 text-center">
                                         <p>Konfirmasi :</p>
                                         <br>
                                         <br>
@@ -242,7 +274,6 @@ $total = $subtotal_disc + $inv->shipping_costs;
                     <div class="row text-center">
                         <div class="col-sm-12 invoice-btn-group text-center">
                             <button type="button" class="btn waves-effect waves-light btn-info m-b-10" onClick="printdiv('print_invoice');"><i class="feather icon-printer"></i> Print</button>
-                            <!-- <a href="<?php echo base_url('admin/transaction') ?>" class="btn waves-effect waves-light btn-secondary m-b-10"><i class="feather icon-corner-up-left"></i> Semua Transaksi</a> -->
                         </div>
                     </div>
                 </div>

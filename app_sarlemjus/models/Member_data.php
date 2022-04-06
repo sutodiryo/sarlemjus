@@ -9,29 +9,6 @@ class Member_data extends CI_Model
         $this->load->database();
     }
 
-    function get_stat_member_dashboard()
-    {
-        date_default_timezone_set('Asia/Jakarta');
-        // $now 	= date("Y-m-d h:i:s");
-        // $now     = "MONTH(registration_date) = MONTH(CURRENT_DATE())";
-        // $total     = "SELECT SUM(total) FROM transaksi WHERE transaksi.id_member=member.id";
-        // $tnow     = " AND MONTH(tgl_pesan) = MONTH(CURRENT_DATE())";
-        // $tm1     = " AND MONTH(tgl_pesan) IN ( (MONTH(CURRENT_DATE()) -1),(MONTH(CURRENT_DATE()) -2) ) ";
-        // $tm2     = " AND MONTH(tgl_pesan) IN ( MONTH(CURRENT_DATE()),(MONTH(CURRENT_DATE()) -1),(MONTH(CURRENT_DATE()) -2) ) ";
-
-        return $this->db->query("SELECT COUNT(*) AS member")->row();
-    }
-
-    function get_stat_sales_dashboard()
-    {
-        return $this->db->query("SELECT   SUM(total) AS tot,
-                                            MONTH(tgl_pesan) AS bulan,
-                                            YEAR(tgl_pesan) AS th
-                                    FROM transaksi
-                                    WHERE YEAR(tgl_pesan)=YEAR(CURDATE()) AND status IN (3,4)
-                                    GROUP BY bulan,th ORDER BY th ASC, bulan ASC")->result();
-    }
-
     function get_member_stat()
     {
         return $this->db->query("SELECT   id,name,
