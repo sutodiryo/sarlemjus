@@ -55,7 +55,7 @@ $total = $subtotal_disc + $inv->shipping_costs;
                                                         <td>Nama : <?php echo $inv->member_name ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Alamat : <small><?= "$inv->home_detail, $inv->village_name, $inv->subdistrict_name, $inv->district_name, $inv->province_name - $inv->postal_code" ?></small></td>
+                                                        <td>Alamat : <small><?= "$inv->home_detail, $inv->village_name, $inv->subdistrict_name, $inv->district_name, $inv->province_name" ?></small></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Tanggal : <?php echo $date_created ?></td>

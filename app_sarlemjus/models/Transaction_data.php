@@ -9,6 +9,63 @@ class Transaction_data extends CI_Model
         $this->load->database();
     }
 
+    public function transaction_calculation_new($member_id, $shipping_costs, $courier_name)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $now = date("Y-m-d h:i:s");
+        $my = date("mY"); // month year
+
+        $trans = $this->db->query("SELECT id FROM transaction WHERE member_id='$member_id'");
+        $count = $trans->num_rows();
+
+        $invoice_number = "TR$member_id$my" . ($count + 1) . "";
+
+        $total = $this->cart->total();
+
+        // $q3 = $this->db->query("	SELECT	COUNT(id_transaction) AS tr
+        // 								FROM transaction
+        // 								WHERE member_id='$im'")->row();
+        // $tr = $q3->tr;
+        if ($count > 0) {
+
+            $q = $this->db->query("SELECT ml.discount
+                                    FROM member m
+                                    LEFT JOIN member_level ml ON m.level=ml.id
+                                    WHERE m.id='$member_id'")->row();
+
+            $discount = $q->discount;
+            $discount_value = $this->get_member_discount_value();
+        } else {
+
+            $q = $this->db->query("SELECT id,discount
+                                    FROM member_level
+                                    WHERE min_trans < $total
+                                    ORDER BY min_trans DESC
+                                    LIMIT 1")->row();
+
+            $discount = $q->discount;
+            $discount_value = ($discount / 100) * $total;
+
+            $this->db->query("UPDATE member SET level = '$q->id' WHERE member.id = '$member_id'"); // uodate level member by first transaction
+        }
+
+        $data = array(
+            'invoice_number' => $invoice_number,
+            'member_id' => $member_id,
+            'total' => $total,
+            'shipping_costs' => $shipping_costs,
+            'courier_name' => $courier_name,
+            'discount' => $discount,
+            'discount_value' => $discount_value,
+            'date_created' => $now,
+            'type' => 0,
+            'notif_admin' => 1,
+            'status' => 0
+        );
+
+        return $data;
+    }
+
     public function transaction_calculation($shipping_costs, $courier_name)
     {
         $member_id = $this->session->userdata('log_id');
@@ -191,7 +248,6 @@ class Transaction_data extends CI_Model
         return $stock;
     }
 
-
     function get_transaction_by_product($id)
     {
         return "SELECT    t.id,t.invoice_number,t.member_id,t.total,t.date_created,t.date_paid,t.date_accepted,t.status,t.type,
@@ -200,8 +256,6 @@ class Transaction_data extends CI_Model
                     LEFT JOIN member m ON t.member_id=m.id
                     WHERE id_product='$id'";
     }
-
-    // End stock
 
     function get_product_list()
     {

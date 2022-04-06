@@ -280,14 +280,14 @@
 				<div class="col-xl-8 col-lg-12">
 					<div class="about-content-wrapper">
 						<div class="section-title">
-							<h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight; color:white;">Anda Mau jadi Reseller Sarlemjus??</h2>
-							<span class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color:white;">Gabung menjadi Reseller Sarlemjus itu seru banget lohh... ada banyak sekali keuntungan yang bisa anda dapat seperti :</span>
+							<h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight; color:white;">Anda Mau Join Binis Sarlemjus ??</h2>
+							<span class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; color:white;">Gabung menjadi Mitra Bisnis Sarlemjus itu seru banget lohh... Berikut keuntungannya :</span>
 						</div>
 						<div class="about-content">
-							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Menggunakan suport system berupa platfrom Dropship.Sarlemjus.com yang sangat mudah digunakan.</p>
-							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Anda akan mendapatkan Reward/keuntungan yang terdiri dari Potongan Harga, Bonus Belanja, Bonus Refferal, Top Belanja, & Top Rekrut.</p>
-							<p class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Bonus-Bonus lainnya.</p>
-							<p class="mt-10 mb-45 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Baru awam berbisnis?? tenang aja karena di Sarlemjus Anda akan wajib mengikuti kelas yang kita sediakan untuk belajar bisnis dari A-Z.</p>
+							<h5 class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Timeless business</h5>
+							<h5 class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> 100% membantu menyehatkan tubuh -Produk alami tanpa pengawet.</h5>
+							<h5 class="mt-10 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> Langsung jualan tanpa ribet</h5>
+							<h5 class="mt-10 mb-45 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp; color:white;"><i class="lni lni-checkmark-circle"></i> GRATIS foto + materi posting</h5>
 
 							<!-- <div class="counter-up wow fadeInUp" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
 								<div class="counter">

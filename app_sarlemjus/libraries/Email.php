@@ -1,46 +1,108 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Email{
+class Email
+{
 
-	function send($to,$subject,$message,$from=null,$nama=null){
+	// function notif()
+	// {
+	// 	use PHPMailer\PHPMailer\PHPMailer;
+	// 	use PHPMailer\PHPMailer\SMTP;
+	// 	use PHPMailer\PHPMailer\Exception;
 
-        $ci = & get_instance();
-        $ci->load->library('email');
+	// 	require_once __DIR__ . '/vendor/phpmailer/src/Exception.php';
+	// 	require_once __DIR__ . '/vendor/phpmailer/src/PHPMailer.php';
+	// 	require_once __DIR__ . '/vendor/phpmailer/src/SMTP.php';
+
+	// 	// passing true in constructor enables exceptions in PHPMailer
+	// 	$mail = new PHPMailer(true);
+
+	// 	try {
+	// 		// Server settings
+	// 		$mail->SMTPDebug = SMTP::DEBUG_SERVER; // for detailed debug output
+	// 		$mail->isSMTP();
+	// 		$mail->Host = 'smtp.gmail.com';
+	// 		$mail->SMTPAuth = true;
+	// 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+	// 		$mail->Port = 587;
+
+	// 		$mail->Username = 'example@gmail.com'; // YOUR gmail email
+	// 		$mail->Password = 'YOUR_GMAIL_PASSWORD'; // YOUR gmail password
+
+	// 		// Sender and recipient settings
+	// 		$mail->setFrom('example@gmail.com', 'Sender Name');
+	// 		$mail->addAddress('phppot@example.com', 'Receiver Name');
+	// 		$mail->addReplyTo('example@gmail.com', 'Sender Name'); // to set the reply to
+
+	// 		// Setting the email content
+	// 		$mail->IsHTML(true);
+	// 		$mail->Subject = "Send email using Gmail SMTP and PHPMailer";
+	// 		$mail->Body = 'HTML message body. <b>Gmail</b> SMTP email body.';
+	// 		$mail->AltBody = 'Plain text message body for non-HTML email client. Gmail SMTP email body.';
+
+	// 		$mail->send();
+	// 		echo "Email message sent.";
+	// 	} catch (Exception $e) {
+	// 		echo "Error in sending email. Mailer Error: {$mail->ErrorInfo}";
+	// 	}
+	// }
+
+	// $config = Array(
+	// 	'protocol' => 'smtp',
+	// 	'smtp_host' => 'ssl://smtp.googlemail.com',
+	// 	'smtp_port' => 465,
+	// 	'smtp_user' => 'xxx',
+	// 	'smtp_pass' => 'xxx',
+	// 	'mailtype'  => 'html', 
+	// 	'charset'   => 'iso-8859-1'
+	// 	);
+	// 	$this->load->library('email', $config);
+	// 	$this->email->set_newline("\r\n");
+		
+	// 	// Set to, from, message, etc.
+		
+	// 	$result = $this->email->send();
+
+	function send($to, $subject, $message, $from = null, $nama = null)
+	{
+
+		$ci = &get_instance();
+		$ci->load->library('email');
 
 		$message = $this->viewEmail($message);
 
 		$config['protocol']		= "smtps";
-        $config['smtp_host'] 	= "ssl://smtp.gmail.com";
-        $config['smtp_port'] 	= "465";
-        $config['smtp_user'] 	= "noreply.dev.std@gmail.com"; 
-        $config['smtp_pass'] 	= "Yogi@jowo";
-        $config['charset'] 		= "utf-8";
-        $config['mailtype'] 	= "html";
-        $config['newline'] 		= "\r\n";
-        $config['wordwrap'] 	= TRUE;
+		$config['smtp_host'] 	= "ssl://smtp.gmail.com";
+		$config['smtp_port'] 	= "465";
+		$config['smtp_user'] 	= "noreply.dev.std@gmail.com";
+		$config['smtp_pass'] 	= "Yogi@jowo";
+		$config['charset'] 		= "utf-8";
+		$config['mailtype'] 	= "html";
+		$config['newline'] 		= "\r\n";
+		$config['wordwrap'] 	= TRUE;
 
-        $ci->email->initialize($config);
+		$ci->email->initialize($config);
 
-		if($from != null){
-            $ci->email->from($from,$nama);
-        }else{
-            $ci->email->from('noreply.dev.std@gmail.com','noreply.dev.std@gmail.com');
-        }
+		if ($from != null) {
+			$ci->email->from($from, $nama);
+		} else {
+			$ci->email->from('noreply.dev.std@gmail.com', 'noreply.dev.std@gmail.com');
+		}
 
 		$ci->email->to($to);
-        $ci->email->subject($subject);
-        $ci->email->message($message);
+		$ci->email->subject($subject);
+		$ci->email->message($message);
 
-		if($ci->email->send()){
+		if ($ci->email->send()) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
-    }
+	}
 
 
-	function viewEmail($message){
+	function viewEmail($message)
+	{
 
 		return "
 	<!doctype html>
@@ -1165,7 +1227,7 @@ class Email{
 
                         
 
-                        <td class='mcnTextContent' style='padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;' valign='top'>".$message."</td>
+                        <td class='mcnTextContent' style='padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;' valign='top'>" . $message . "</td>
 
                     </tr>
 
@@ -1272,7 +1334,4 @@ Copyright © sekolahbisnisfjs.com, All rights reserved.</span><br>
 
 ";
 	}
-
 }
-
-	

@@ -12,18 +12,21 @@ class Dashboard extends CI_Controller
     } elseif ($this->session->userdata('log_admin') == FALSE) {
       echo "Akses ditolak";
     }
-    $this->load->model('Member_data');
-    $this->load->model('Transaction_data');
+    $this->load->model('Dashboard_data');
   }
 
   function index()
   {
-    $data['title']    = 'Dashboard Admin';
-    $data['page']     = 'dashboard';
+    $data['title'] = 'Dashboard Admin';
+    $data['page'] = 'dashboard';
 
-    $data['member_stat']    = $this->Member_data->get_stat_member_dashboard();
+    $data['monthly_income'] = $this->Dashboard_data->get_monthly_income('now');
+    $data['member_stat'] = $this->Dashboard_data->get_stat_member_dashboard();
+    $data['produk_stat'] = $this->Dashboard_data->get_stat_product_sales_dashboard();
+    $data['last_sales'] = $this->Dashboard_data->get_last_sales_list_dashboard();
+    // $data['sales_stat'] = $this->Transaction_data->get_stat_sales_dashboard();
+
     // $data['sales_stat']     = $this->Admin_model->get_stat_sales_dashboard();
-    // $data['produk_stat']  = $this->db->query("SELECT id_produk,nama_produk,img_1,satuan FROM produk WHERE status=1")->result();
     // $data['produk']       = $this->db->query("SELECT * FROM produk")->result();
 
     $this->load->view('admin/dashboard', $data);

@@ -24,7 +24,7 @@
             <li><a href="<?= base_url('lp') ?>">Blog</a></li>
             <li><a href="#">Shop</a></li>
             <li><a href="<?= base_url('login') ?>">Login/Register</a></li>
-            <li><a href="<?= base_url('tc') ?>">Terms & Condition</a></li>
+            <li><a href="#">Terms & Condition</a></li>
           </ul>
         </div>
       </div>
@@ -76,8 +76,9 @@
               </tr>
             </thead>
             <tbody id="detail_cart"></tbody>
-            <tr id="btn_checkout"></tr>
-            <form method="POST" action="<?php echo base_url('member/store/act_add_transaction/') ?>" id="act_checkout_form">
+            <form method="POST" action="<?= ($this->session->userdata('log_valid') == FALSE) ? base_url('guest/act_add_transaction/') : base_url('member/store/act_add_transaction/'); ?>" id="act_checkout_form">
+              <input type="hidden" name="full_name" id="full_name">
+              <input type="hidden" name="phone" id="phone">
               <input type="hidden" name="home_detail" id="home_detail">
               <input type="hidden" name="village_name" id="village_name">
               <input type="hidden" name="subdistrict_name" id="subdistrict_name">
@@ -89,14 +90,13 @@
               <input type="hidden" name="shipping_costs" id="shipping_costs_checkout">
               <input type="hidden" name="courier_name" id="courier_name">
             </form>
+            <tr id="courier_div"></tr>
+            <tr id="btn_checkout">
+              <button class="btn btn-success" onclick="loader()">aaaa</button>
+            </tr>
           </table>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-
     </div>
   </div>
 </div>
@@ -139,8 +139,23 @@
     );
   });
 
+  function loader() {
+    $('body').append('<div class="preloader"><div class="loader"><div class="spinner"><div class="spinner-container"><div class="spinner-rotator"><div class="spinner-left"><div class="spinner-circle"></div></div><div class="spinner-right"><div class="spinner-circle"></div></div></div></div></div></div></div>');
+    $(window).on('load', function() {
+      setTimeout(removeLoader, 500);
+    });
+
+    function removeLoader() {
+      $("#loadingDiv").fadeOut(500, function() {
+        // fadeOut complete. Remove the loading div
+        $("#loadingDiv").remove(); //makes page more lightweight 
+      });
+    }
+  }
+
   // LOCATION
   function add_new_address() {
+
     $.ajax({
       type: "GET",
       dataType: "html",
@@ -151,58 +166,75 @@
     });
 
     var x = "";
-
-    x += ('<div class="col-md-12">\
-                                <h4 class="mt-2">Alamat Pengiriman</h4>\
+    x += ('<div class="col-md-12 class="text-center">\
+                                <h5 class="mt-2">Alamat Pengiriman</h5>\
                                 <hr>\
                                 <form method="POST" action="<?= base_url() ?>">\
                                     <div class="form-group row">\
-                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small>Provinsi</small></label>\
+                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small>Nama Penerima</small></label>\
                                         <div class="col-sm-9">\
-                                            <select class="form-control col-sm-12" name="id_province" id="new_province" onchange="new_district()">\
-                                            </select>\
+                                            <input type="text" class="form-control col-sm-12" placeholder="Nama Lengkap" id="new_name" onkeyup="new_phone()">\
                                         </div>\
                                     </div>\
-                                    <div class="form-group row">\
-                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small>Kota/Kabupaten</small></label>\
-                                        <div class="col-sm-9">\
-                                            <select class="form-control col-sm-12" name="id_district" id="new_district" onchange="new_subdistrict()">\
-                                            </select>\
-                                        </div>\
+                                    <div class="form-group row" id="phone_div">\
                                     </div>\
-                                    <div class="form-group row">\
-                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small>Kecamatan</small></label>\
-                                        <div class="col-sm-9">\
-                                            <select class="form-control col-sm-12" name="subdistrict_id" id="new_subdistrict" onchange="new_village()">\
-                                            </select>\
-                                        </div>\
+                                    <div class="form-group row" id="province_div">\
                                     </div>\
-                                    <div class="form-group row">\
-                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small>Desa/Kelurahan</small></label>\
-                                        <div class="col-sm-9">\
-                                            <input type="text" class="form-control" placeholder="Desa/Kelurahan" name="village_name" id="new_village" onchange="new_home_detail()">\
-                                        </div>\
+                                    <div class="form-group row" id="district_div">\
                                     </div>\
-                                    <div class="form-group row">\
-                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small></small></label>\
-                                        <div class="col-sm-9">\
-                                            <input type="text" class="form-control" placeholder="Jalan, No rumah/RT RW" name="home_detail" id="new_home_detail" onkeyup="add_location_text()">\
-                                        </div>\
+                                    <div class="form-group row" id="subdistrict_div">\
                                     </div>\
-                                    <div class="form-group row">\
-                                        <label for="colFormLabel" class="col-sm-3 col-form-label"><small>Alamat Lengkap</small></label>\
-                                        <div class="col-sm-9">\
-                                            <textarea class="form-control" name="full_address" id="new_full_address" rows="3" readonly></textarea>\
-                                        </div>\
+                                    <div class="form-group row" id="village_div">\
                                     </div>\
-                                    <button type="submit" onclick="SubmitAddress()" class="btn btn-primary has-ripple">Submit<span class="ripple ripple-animate"></span></button>\
+                                    <div class="form-group row" id="home_div">\
+                                    </div>\
+                                    <div class="form-group row" id="fulladdress_div" required>\
+                                    </div>\
                                 </form>\
                             </div>');
+    // <button type="submit" onclick="SubmitAddress()" class="btn btn-primary has-ripple">Submit<span class="ripple ripple-animate"></span></button>\
 
     $("#add_new_address_form").html(x);
   }
 
+  function new_phone() {
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small>Nomor WA</small></label>\
+                                        <div class="col-sm-9">\
+                                            <input type="number" class="form-control" placeholder="Nomor Handphone" name="phone" id="new_phone" onkeyup="new_province()">\
+                                        </div>');
+    $("#phone_div").html(x);
+  }
+
+  function new_province() {
+    $.ajax({
+      type: "GET",
+      dataType: "html",
+      url: "<?php echo base_url('api/location/get_province') ?>",
+      success: function(msg) {
+        $("select#new_province").html(msg);
+      }
+    });
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small>Provinsi</small></label>\
+                                        <div class="col-sm-9">\
+                                            <select class="form-control col-sm-12" name="id_province" id="new_province" onchange="new_district()">\
+                                            </select>\
+                                        </div>');
+    $("#province_div").html(x);
+
+    return false;
+  }
+
   function new_district() {
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small>Kota/Kabupaten</small></label>\
+                                        <div class="col-sm-9">\
+                                            <select class="form-control col-sm-12" name="id_district" id="new_district" onchange="new_subdistrict()">\
+                                            </select>\
+                                        </div>');
+    $("#district_div").html(x);
+
     var province_id = $('#new_province').val();
 
     $('#new_district').after('<i class="fa fa-spinner fa-pulse fa-2x fa-fw loading"></i>');
@@ -210,10 +242,18 @@
       if (statusTxt === "success")
         $('.loading').remove();
     });
+
     return false;
   }
 
   function new_subdistrict() {
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small>Kecamatan</small></label>\
+                                        <div class="col-sm-9">\
+                                            <select class="form-control col-sm-12" name="subdistrict_id" id="new_subdistrict" onchange="new_village()">\
+                                            </select>\
+                                        </div>');
+    $("#subdistrict_div").html(x);
     var district_id = $('#new_district').val();
 
     $('#new_subdistrict').after('<i class="fa fa-spinner fa-pulse fa-2x fa-fw loading"></i>');
@@ -221,14 +261,38 @@
       if (statusTxt === "success")
         $('.loading').remove();
     });
+
     return false;
   }
 
-  function new_village() {}
+  function new_village() {
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small>Desa/Kelurahan</small></label>\
+                                        <div class="col-sm-9">\
+                                            <input type="text" class="form-control" placeholder="Desa/Kelurahan" name="village_name" id="new_village" onkeyup="new_home_detail()">\
+                                        </div>');
+    $("#village_div").html(x);
+  }
 
-  function new_home_detail() {}
+  function new_home_detail() {
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small></small></label>\
+                                        <div class="col-sm-9">\
+                                            <input type="text" class="form-control" placeholder="Jalan, No rumah/RT RW" name="home_detail" id="new_home_detail" onkeyup="add_location_text()">\
+                                        </div>');
+    $("#home_div").html(x);
+  }
 
   function add_location_text() {
+    var x = "";
+    x += ('<label for="colFormLabel" class="col-sm-3 col-form-label"><small>Alamat Lengkap</small></label>\
+                                        <div class="col-sm-9">\
+                                            <textarea class="form-control" name="full_address" id="new_full_address" rows="3" readonly></textarea>\
+                                        </div>');
+    $("#fulladdress_div").html(x);
+
+    var new_name = $("#new_name").val();
+    var new_phone = $("#new_phone").val();
     var province_name = $("#new_province option:selected").text();
     var district_name = $("#new_district option:selected").text();
     var subdistrict_name = $("#new_subdistrict option:selected").text();
@@ -241,6 +305,8 @@
     var district_id = $('#new_district').val();
     var subdistrict_id = $('#new_subdistrict').val();
 
+    $("#full_name").val(new_name);
+    $("#phone").val(new_phone);
     $("#province_name").val(province_name);
     $("#province_id").val(province_id);
     $("#district_name").val(district_name);
@@ -249,7 +315,7 @@
     $("#subdistrict_id").val(subdistrict_id);
     $("#village_name").val(village_name);
     $("#home_detail").val(home_detail);
-    // cartshow();
+    courier_show();
   }
 
   function SubmitAddress() {
@@ -292,6 +358,48 @@
   <?php
   if ($this->session->userdata('log_valid') == FALSE) { ?>
 
+    function courier_show() {
+      if (home_detail == "" || village_name == "") {
+        alert("Please fill all fields");
+      } else {
+        $.ajax({
+          type: "POST",
+          url: "<?= base_url('guest/get_weight/echo') ?>",
+          cache: false,
+          success: function(data) {
+
+            var tb_kg = data / 1000;
+
+            var x = "";
+            x += ('<td colspan="5">\
+              <table class="table table-striped">\
+              <tbody>\
+              <tr>\
+                    <th>\
+                    <label class="form-control-label" for="id_kurir">Pilih Jasa Pengiriman <small><font id="total_weight" color="blue">Total Berat : (' + tb_kg + ' Kg)</font></small></label>\
+                    <select class="form-control form-control-sm" id="kurir" onchange="set_kurir()" required="">\
+                      <option value=""> Pilih Kurir</option>\
+                      <option value="anteraja">Anteraja</option>\
+                      <option value="jne">JNE - Jalur Nugraha Ekakurir</option>\
+                      <option value="jnt">JNT</option>\
+                      <option value="ninja">Ninja Express</option>\
+                      <option value="pos">POS Indonesia</option>\
+                      <option value="sicepat">Sicepat</option>\
+                      <option value="tiki">Tiki - Titipan Kilat</option>\
+                    </select>\
+                    <br>\
+                    <div id="datakurir"></div>\
+                    </th>\
+                  <tr></tbody></table></td>');
+
+            $("#courier_div").html(x);
+
+          }
+        });
+      }
+
+    }
+
     function btn_add_to_cart(product_id, stok) {
       let id = product_id;
 
@@ -321,13 +429,11 @@
       }
     }
 
-
     function cartshow() {
       let id_kurir = $('#id_kurir').val();
       $('#cart_qty').load("<?php echo base_url('guest/cart_qty/'); ?>");
       $('#detail_cart').load("<?php echo base_url('guest/cart_load/'); ?>");
       total_tagihan();
-
     }
 
     $('#id_kurir').on('change', function() {
@@ -444,7 +550,7 @@
       // alert(courier);
       var des = $('#subdistrict_id').val();
 
-      // alert(des);
+      // alert(courier);
       $.ajax({
         url: "<?php echo base_url('guest/get_weight/echo'); ?>",
         method: "GET",
@@ -476,9 +582,10 @@
       // var $op = $("#datakurir");
       var i, j, x = "";
       var add = 0;
+      var des = $('#subdistrict_id').val();
       //biaya tambahan, misal tambahan berat kemasan dll
       $('#datakurir').after('<th class="loading"><i class="fa fa-spinner fa-pulse fa-2x fa-fw color0"></i>Loading ...</th>');
-      $.getJSON("<?php echo base_url('guest/get_cost/') ?>" + courier, function(data) {
+      $.getJSON("<?php echo base_url('guest/get_cost/') ?>" + courier + "/" + des, function(data) {
         // alert(data);
         if (data.rajaongkir.status.code != "200") {
           alert(data.rajaongkir.status.description);
@@ -536,28 +643,21 @@
 
         var total_tagihan = ((parseInt(subtotal) - parseInt(discount_value)));
 
-        // x += ('');
-        x += ('<td colspan="5"><button form="save" class="btn btn-success btn-lg btn-block disabled" readonly onclick="alert(\'Silahkan pilih jasa pengiriman terlebih dahulu\')">Ke Pembayaran <i class="fa fa-arrow-right"></i></button></td>');
+        x += ('<td colspan="5" class="text-center"><div class="col-md-12"><div class="row">\
+        <button form="save" class="btn btn-success btn-lg btn-block" disabled onclick="alert(\'Silahkan pilih jasa pengiriman terlebih dahulu\')">Ke Pembayaran <i class="lni lni-arrow-right"></i></button>\
+        </div></div></td>');
       } else {
         var total_tagihan = ((parseInt(subtotal) + parseInt(shipping_costs)) - parseInt(discount_value));
         if (typeof shipping_costs == 'undefined') {
           // x += ('<td colspan="5"><button form="save" class="btn btn-success btn-lg btn-block disabled" readonly onclick="alert(\'Silahkan pilih jasa pengiriman terlebih dahulu\')">Ke Pembayaran <i class="fa fa-arrow-right"></i></button></td>');
         } else {
-          x += ('<td colspan="5"><button id="pay-button" onclick="act_checkout()" form="save" class="btn btn-success btn-lg btn-block">Ke Pembayaran <i class="fa fa-arrow-right"></i></button></td>');
+          x += ('<td colspan="5"><div class="col-md-12"><div class="row"><button id="pay-button" onclick="act_checkout(); this.disabled=true;" form="save" class="btn btn-success btn-lg btn-block">Ke Pembayaran <i class="lni lni-arrow-right"></i></button></div></div></td>');
         }
       }
 
       $('#shipping_costs_text').html('Rp.' + number_idr((parseInt(shipping_costs))) + '');
       $('#total_tagihan').html('Rp.' + number_idr((total_tagihan)) + '');
       $("#btn_checkout").html(x);
-      // console.log(discount_value);
-      // } else {
-      //     x += ('<div class="card-header text-center"><h1>Keranjang Belanja anda masih kosong</h1></div><div class="card-body text-center"><a href="<?= base_url('guest') ?>"><h2 class="text-info">Silahkan pilih produk disini...</h2></a></div><div class="card-footer"></div>');
-
-      //     $("#cart").html(x);
-      // }
-      // }
-      // });
     }
 
     function act_checkout() {
@@ -690,7 +790,6 @@
       $("#modal_cart").on('shown.bs.modal', function(e) {
         cartshow();
       });
-
 
       // Load shopping cart
       $('#cart_qty').load("<?php echo base_url('member/store/cart_qty/'); ?>");
@@ -871,6 +970,7 @@
     }
 
     function act_checkout() {
+      
       var shipping_costs = $('#shipping_costs').val();
 
       var courier = document.getElementById("shiping");

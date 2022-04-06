@@ -33,7 +33,7 @@
                             echo "<div class='col-md-4 col-lg-12 col-xl-4'>
                                     <div class='single-blog mb-40 wow fadeInUp' data-wow-delay='.2s' style='visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;'>
                                         <div class='blog-img'>
-                                            <a href='blog-single.html'><img src='" . base_url('public/upload/product/') . "" . $p->image . "' alt=''></a>";
+                                            <a href='#'><img src='" . base_url('public/upload/product/') . "" . $p->image . "' alt=''></a>";
                             if ($stock > 0) {
                                 echo "<span class='date-meta' style='background-color:#00ca4c; color:white;'>$stock $p->unit</span>";
                             } else {
@@ -43,9 +43,9 @@
 
                             echo "</div>
                                         <div class='blog-content'>                    
-                                        <h4><a href='" . base_url() . "'>$p->name</a></h4>
+                                        <h4><a href='#'>$p->name</a></h4>
                                         <p>" . idr($p->selling_price) . "</p>
-                                        <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt dolore magna.</p>"; ?>
+                                        <p>" . substr($p->description, 0, 100) . "</p>"; ?>
 
                             <div class="col-md-12">
                                 <div class="row">
